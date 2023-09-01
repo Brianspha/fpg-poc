@@ -1,0 +1,115 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/utils/FPGModifiers.sol\":\"FPGModifiers\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"appendCBOR\":false,\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":10000},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":@prb/=node_modules/@prb/\",\":@sablier/=node_modules/@sablier/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\"]},\"sources\":{\"src/utils/FPGModifiers.sol\":{\"keccak256\":\"0xdb4fa87df58dfb52dc3b6829cc908f9e9f8ddfc56c320b31b8def4de3297bd01\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1506e88816515abb6743c1e1f92ed627f4d3cec7466c836d652ab965792ff86e\",\"dweb:/ipfs/QmTsW2hNevzCWdqEBWkGhR7PDateX7ykQ47CafiePSdpNb\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.20+commit.a1b79de6"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "@prb/=node_modules/@prb/",
+        "@sablier/=node_modules/@sablier/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 10000
+      },
+      "metadata": {
+        "bytecodeHash": "none",
+        "appendCBOR": false
+      },
+      "compilationTarget": {
+        "src/utils/FPGModifiers.sol": "FPGModifiers"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/utils/FPGModifiers.sol": {
+        "keccak256": "0xdb4fa87df58dfb52dc3b6829cc908f9e9f8ddfc56c320b31b8def4de3297bd01",
+        "urls": [
+          "bzz-raw://1506e88816515abb6743c1e1f92ed627f4d3cec7466c836d652ab965792ff86e",
+          "dweb:/ipfs/QmTsW2hNevzCWdqEBWkGhR7PDateX7ykQ47CafiePSdpNb"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/utils/FPGModifiers.sol",
+    "id": 62865,
+    "exportedSymbols": {
+      "FPGModifiers": [
+        62864
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:67:108",
+    "nodes": [
+      {
+        "id": 62863,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:108",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 62864,
+        "nodeType": "ContractDefinition",
+        "src": "60:39:108",
+        "nodes": [],
+        "abstract": true,
+        "baseContracts": [],
+        "canonicalName": "FPGModifiers",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          62864
+        ],
+        "name": "FPGModifiers",
+        "nameLocation": "78:12:108",
+        "scope": 62865,
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 108
+}

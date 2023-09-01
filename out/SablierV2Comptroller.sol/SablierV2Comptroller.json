@@ -1,0 +1,2762 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "initialAdmin",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "admin",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        }
+      ],
+      "name": "CallerNotAdmin",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "admin",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "UD60x18",
+          "name": "oldFlashFee",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "UD60x18",
+          "name": "newFlashFee",
+          "type": "uint256"
+        }
+      ],
+      "name": "SetFlashFee",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "admin",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "contract IERC20",
+          "name": "asset",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "UD60x18",
+          "name": "oldProtocolFee",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "UD60x18",
+          "name": "newProtocolFee",
+          "type": "uint256"
+        }
+      ],
+      "name": "SetProtocolFee",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "admin",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "contract IERC20",
+          "name": "asset",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "newFlag",
+          "type": "bool"
+        }
+      ],
+      "name": "ToggleFlashAsset",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "oldAdmin",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newAdmin",
+          "type": "address"
+        }
+      ],
+      "name": "TransferAdmin",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "admin",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "flashFee",
+      "outputs": [
+        {
+          "internalType": "UD60x18",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "asset",
+          "type": "address"
+        }
+      ],
+      "name": "isFlashAsset",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "supported",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "asset",
+          "type": "address"
+        }
+      ],
+      "name": "protocolFees",
+      "outputs": [
+        {
+          "internalType": "UD60x18",
+          "name": "fee",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "UD60x18",
+          "name": "newFlashFee",
+          "type": "uint256"
+        }
+      ],
+      "name": "setFlashFee",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "asset",
+          "type": "address"
+        },
+        {
+          "internalType": "UD60x18",
+          "name": "newProtocolFee",
+          "type": "uint256"
+        }
+      ],
+      "name": "setProtocolFee",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "asset",
+          "type": "address"
+        }
+      ],
+      "name": "toggleFlashAsset",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newAdmin",
+          "type": "address"
+        }
+      ],
+      "name": "transferAdmin",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b5060405161066138038061066183398101604081905261002f9161007d565b600080546001600160a01b0319166001600160a01b03831690811782556040519091907fbdd36143ee09de60bdefca70680e0f71189b2ed7acee364b53917ad433fdaf80908290a3506100ad565b60006020828403121561008f57600080fd5b81516001600160a01b03811681146100a657600080fd5b9392505050565b6105a5806100bc6000396000f3fe608060405234801561001057600080fd5b50600436106100885760003560e01c8063cb01e30e1161005b578063cb01e30e14610100578063dcf844a714610113578063e07df5b414610141578063f851a4401461014a57600080fd5b80634d81e51d1461008d57806375829def146100c5578063907a267b146100da578063b5b3ca2c146100ed575b600080fd5b6100b061009b36600461053c565b60026020526000908152604090205460ff1681565b60405190151581526020015b60405180910390f35b6100d86100d336600461053c565b61018f565b005b6100d86100e8366004610560565b610277565b6100d86100fb366004610579565b610331565b6100d861010e36600461053c565b610412565b61013361012136600461053c565b60036020526000908152604090205481565b6040519081526020016100bc565b61013360015481565b60005461016a9073ffffffffffffffffffffffffffffffffffffffff1681565b60405173ffffffffffffffffffffffffffffffffffffffff90911681526020016100bc565b60005473ffffffffffffffffffffffffffffffffffffffff163314610207576000546040517fc6cce6a400000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff90911660048201523360248201526044015b60405180910390fd5b600080547fffffffffffffffffffffffff00000000000000000000000000000000000000001673ffffffffffffffffffffffffffffffffffffffff83169081178255604051909133917fbdd36143ee09de60bdefca70680e0f71189b2ed7acee364b53917ad433fdaf809190a350565b60005473ffffffffffffffffffffffffffffffffffffffff1633146102ea576000546040517fc6cce6a400000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff90911660048201523360248201526044016101fe565b6001805490829055604080518281526020810184905233917fc059ba3e07a1c4d1fa8845bdb2af2dd85e844684e0a59e6073499e4338788465910160405180910390a25050565b60005473ffffffffffffffffffffffffffffffffffffffff1633146103a4576000546040517fc6cce6a400000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff90911660048201523360248201526044016101fe565b73ffffffffffffffffffffffffffffffffffffffff82166000818152600360209081526040918290208054908590558251818152918201859052929133917f371789a3d97098f3070492613273a065a7e8a19e009fd1ae92a4b4d4c71ed62d910160405180910390a3505050565b60005473ffffffffffffffffffffffffffffffffffffffff163314610485576000546040517fc6cce6a400000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff90911660048201523360248201526044016101fe565b73ffffffffffffffffffffffffffffffffffffffff8116600081815260026020908152604091829020805460ff811680157fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0090921682179092559251928352929133917f8cd3a7bc46b26a3b0c07a05a47af78abcaa647626f631d92ea64f8867b23bbec910160405180910390a35050565b73ffffffffffffffffffffffffffffffffffffffff8116811461053957600080fd5b50565b60006020828403121561054e57600080fd5b813561055981610517565b9392505050565b60006020828403121561057257600080fd5b5035919050565b6000806040838503121561058c57600080fd5b823561059781610517565b94602093909301359350505056",
+    "sourceMap": "3060:2751:78:-:0;;;4042:160;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;4086:5;:20;;-1:-1:-1;;;;;;4086:20:78;-1:-1:-1;;;;;4086:20:78;;;;;;;4121:74;;4086:20;;:5;4121:74;;4086:5;;4121:74;4042:160;3060:2751;;14:290:119;84:6;137:2;125:9;116:7;112:23;108:32;105:52;;;153:1;150;143:12;105:52;179:16;;-1:-1:-1;;;;;224:31:119;;214:42;;204:70;;270:1;267;260:12;204:70;293:5;14:290;-1:-1:-1;;;14:290:119:o;:::-;3060:2751:78;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b50600436106100885760003560e01c8063cb01e30e1161005b578063cb01e30e14610100578063dcf844a714610113578063e07df5b414610141578063f851a4401461014a57600080fd5b80634d81e51d1461008d57806375829def146100c5578063907a267b146100da578063b5b3ca2c146100ed575b600080fd5b6100b061009b36600461053c565b60026020526000908152604090205460ff1681565b60405190151581526020015b60405180910390f35b6100d86100d336600461053c565b61018f565b005b6100d86100e8366004610560565b610277565b6100d86100fb366004610579565b610331565b6100d861010e36600461053c565b610412565b61013361012136600461053c565b60036020526000908152604090205481565b6040519081526020016100bc565b61013360015481565b60005461016a9073ffffffffffffffffffffffffffffffffffffffff1681565b60405173ffffffffffffffffffffffffffffffffffffffff90911681526020016100bc565b60005473ffffffffffffffffffffffffffffffffffffffff163314610207576000546040517fc6cce6a400000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff90911660048201523360248201526044015b60405180910390fd5b600080547fffffffffffffffffffffffff00000000000000000000000000000000000000001673ffffffffffffffffffffffffffffffffffffffff83169081178255604051909133917fbdd36143ee09de60bdefca70680e0f71189b2ed7acee364b53917ad433fdaf809190a350565b60005473ffffffffffffffffffffffffffffffffffffffff1633146102ea576000546040517fc6cce6a400000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff90911660048201523360248201526044016101fe565b6001805490829055604080518281526020810184905233917fc059ba3e07a1c4d1fa8845bdb2af2dd85e844684e0a59e6073499e4338788465910160405180910390a25050565b60005473ffffffffffffffffffffffffffffffffffffffff1633146103a4576000546040517fc6cce6a400000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff90911660048201523360248201526044016101fe565b73ffffffffffffffffffffffffffffffffffffffff82166000818152600360209081526040918290208054908590558251818152918201859052929133917f371789a3d97098f3070492613273a065a7e8a19e009fd1ae92a4b4d4c71ed62d910160405180910390a3505050565b60005473ffffffffffffffffffffffffffffffffffffffff163314610485576000546040517fc6cce6a400000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff90911660048201523360248201526044016101fe565b73ffffffffffffffffffffffffffffffffffffffff8116600081815260026020908152604091829020805460ff811680157fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0090921682179092559251928352929133917f8cd3a7bc46b26a3b0c07a05a47af78abcaa647626f631d92ea64f8867b23bbec910160405180910390a35050565b73ffffffffffffffffffffffffffffffffffffffff8116811461053957600080fd5b50565b60006020828403121561054e57600080fd5b813561055981610517565b9392505050565b60006020828403121561057257600080fd5b5035919050565b6000806040838503121561058c57600080fd5b823561059781610517565b94602093909301359350505056",
+    "sourceMap": "3060:2751:78:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3526:68;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;622:14:119;;615:22;597:41;;585:2;570:18;3526:68:78;;;;;;;;1285:274:81;;;;;;:::i;:::-;;:::i;:::-;;4473:360:78;;;;;;:::i;:::-;;:::i;4881:497::-;;;;;;:::i;:::-;;:::i;5426:383::-;;;;;;:::i;:::-;;:::i;3643:65::-;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;1671:25:119;;;1659:2;1644:18;3643:65:78;1496:206:119;3445:32:78;;;;;;543:29:81;;;;;;;;;;;;1883:42:119;1871:55;;;1853:74;;1841:2;1826:18;543:29:81;1707:226:119;1285:274:81;896:5;;:19;:5;905:10;896:19;892:116;;969:5;;938:59;;;;;969:5;;;;938:59;;;2173:34:119;984:10:81;2223:18:119;;;2216:43;2085:18;;938:59:81;;;;;;;;892:116;1408:5:::1;:16:::0;;;::::1;;::::0;::::1;::::0;;::::1;::::0;;1482:70:::1;::::0;1408:16;;1519:10:::1;::::0;1482:70:::1;::::0;1408:5;1482:70:::1;1285:274:::0;:::o;4473:360:78:-;896:5:81;;:19;:5;905:10;896:19;892:116;;969:5;;938:59;;;;;969:5;;;;938:59;;;2173:34:119;984:10:81;2223:18:119;;;2216:43;2085:18;;938:59:81;1938:327:119;892:116:81;4618:8:78::1;::::0;;4636:22;;;;4718:108:::1;::::0;;2502:25:119;;;2558:2;2543:18;;2536:34;;;4761:10:78::1;::::0;4718:108:::1;::::0;2475:18:119;4718:108:78::1;;;;;;;4543:290;4473:360:::0;:::o;4881:497::-;896:5:81;;:19;:5;905:10;896:19;892:116;;969:5;;938:59;;;;;969:5;;;;938:59;;;2173:34:119;984:10:81;2223:18:119;;;2216:43;2085:18;;938:59:81;1938:327:119;892:116:81;5050:19:78::1;::::0;::::1;5025:22;5050:19:::0;;;:12:::1;:19;::::0;;;;;;;;;;5079:36;;;;5178:193;;2502:25:119;;;2543:18;;;2536:34;;;5050:19:78;;5236:10:::1;::::0;5178:193:::1;::::0;2475:18:119;5178:193:78::1;;;;;;;4971:407;4881:497:::0;;:::o;5426:383::-;896:5:81;;:19;:5;905:10;896:19;892:116;;969:5;;938:59;;;;;969:5;;;;938:59;;;2173:34:119;984:10:81;2223:18:119;;;2216:43;2085:18;;938:59:81;1938:327:119;892:116:81;5582:19:78::1;::::0;::::1;5567:12;5582:19:::0;;;:12:::1;:19;::::0;;;;;;;;;;::::1;::::0;::::1;5633:8:::0;::::1;5611:30:::0;;;::::1;::::0;::::1;::::0;;;5708:94;;597:41:119;;;5582:19:78;;5756:10:::1;::::0;5708:94:::1;::::0;570:18:119;5708:94:78::1;;;;;;;5494:315;5426:383:::0;:::o;14:162:119:-;108:42;101:5;97:54;90:5;87:65;77:93;;166:1;163;156:12;77:93;14:162;:::o;181:271::-;256:6;309:2;297:9;288:7;284:23;280:32;277:52;;;325:1;322;315:12;277:52;364:9;351:23;383:39;416:5;383:39;:::i;:::-;441:5;181:271;-1:-1:-1;;;181:271:119:o;909:209::-;997:6;1050:2;1038:9;1029:7;1025:23;1021:32;1018:52;;;1066:1;1063;1056:12;1018:52;-1:-1:-1;1089:23:119;;909:209;-1:-1:-1;909:209:119:o;1123:368::-;1236:6;1244;1297:2;1285:9;1276:7;1272:23;1268:32;1265:52;;;1313:1;1310;1303:12;1265:52;1352:9;1339:23;1371:39;1404:5;1371:39;:::i;:::-;1429:5;1481:2;1466:18;;;;1453:32;;-1:-1:-1;;;1123:368:119:o",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "admin()": "f851a440",
+    "flashFee()": "e07df5b4",
+    "isFlashAsset(address)": "4d81e51d",
+    "protocolFees(address)": "dcf844a7",
+    "setFlashFee(uint256)": "907a267b",
+    "setProtocolFee(address,uint256)": "b5b3ca2c",
+    "toggleFlashAsset(address)": "cb01e30e",
+    "transferAdmin(address)": "75829def"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"initialAdmin\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"admin\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"caller\",\"type\":\"address\"}],\"name\":\"CallerNotAdmin\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"admin\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"UD60x18\",\"name\":\"oldFlashFee\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"UD60x18\",\"name\":\"newFlashFee\",\"type\":\"uint256\"}],\"name\":\"SetFlashFee\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"admin\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"contract IERC20\",\"name\":\"asset\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"UD60x18\",\"name\":\"oldProtocolFee\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"UD60x18\",\"name\":\"newProtocolFee\",\"type\":\"uint256\"}],\"name\":\"SetProtocolFee\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"admin\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"contract IERC20\",\"name\":\"asset\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"newFlag\",\"type\":\"bool\"}],\"name\":\"ToggleFlashAsset\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"oldAdmin\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newAdmin\",\"type\":\"address\"}],\"name\":\"TransferAdmin\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"admin\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"flashFee\",\"outputs\":[{\"internalType\":\"UD60x18\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"asset\",\"type\":\"address\"}],\"name\":\"isFlashAsset\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"supported\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"asset\",\"type\":\"address\"}],\"name\":\"protocolFees\",\"outputs\":[{\"internalType\":\"UD60x18\",\"name\":\"fee\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"UD60x18\",\"name\":\"newFlashFee\",\"type\":\"uint256\"}],\"name\":\"setFlashFee\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"asset\",\"type\":\"address\"},{\"internalType\":\"UD60x18\",\"name\":\"newProtocolFee\",\"type\":\"uint256\"}],\"name\":\"setProtocolFee\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"asset\",\"type\":\"address\"}],\"name\":\"toggleFlashAsset\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newAdmin\",\"type\":\"address\"}],\"name\":\"transferAdmin\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"events\":{\"SetFlashFee(address,uint256,uint256)\":{\"params\":{\"admin\":\"The address of the contract admin.\",\"newFlashFee\":\"The new flash fee, denoted as a fixed-point number.\",\"oldFlashFee\":\"The old flash fee, denoted as a fixed-point number.\"}},\"SetProtocolFee(address,address,uint256,uint256)\":{\"params\":{\"admin\":\"The address of the contract admin.\",\"asset\":\"The contract address of the ERC-20 asset the new protocol fee has been set for.\",\"newProtocolFee\":\"The new protocol fee, denoted as a fixed-point number.\",\"oldProtocolFee\":\"The old protocol fee, denoted as a fixed-point number.\"}},\"ToggleFlashAsset(address,address,bool)\":{\"params\":{\"admin\":\"The address of the contract admin.\",\"asset\":\"The contract address of the ERC-20 asset to toggle.\",\"newFlag\":\"Whether the ERC-20 asset can be flash loaned.\"}},\"TransferAdmin(address,address)\":{\"params\":{\"newAdmin\":\"The address of the new admin.\",\"oldAdmin\":\"The address of the old admin.\"}}},\"kind\":\"dev\",\"methods\":{\"constructor\":{\"details\":\"Emits a {TransferAdmin} event.\",\"params\":{\"initialAdmin\":\"The address of the initial contract admin.\"}},\"setFlashFee(uint256)\":{\"details\":\"Emits a {SetFlashFee} event. Notes: - Does not revert if the fee is the same. Requirements: - `msg.sender` must be the contract admin.\",\"params\":{\"newFlashFee\":\"The new flash fee to set, denoted as a fixed-point number where 1e18 is 100%.\"}},\"setProtocolFee(address,uint256)\":{\"details\":\"Emits a {SetProtocolFee} event. Notes: - The fee is not denoted in units of the asset's decimals; it is a fixed-point number. Refer to the PRBMath documentation for more detail on the logic of UD60x18. - Does not revert if the fee is the same. Requirements: - `msg.sender` must be the contract admin.\",\"params\":{\"asset\":\"The contract address of the ERC-20 asset to update the fee for.\",\"newProtocolFee\":\"The new protocol fee, denoted as a fixed-point number where 1e18 is 100%.\"}},\"toggleFlashAsset(address)\":{\"details\":\"Emits a {ToggleFlashAsset} event. Requirements: - `msg.sender` must be the admin.\",\"params\":{\"asset\":\"The address of the ERC-20 asset to toggle.\"}},\"transferAdmin(address)\":{\"details\":\"Notes: - Does not revert if the admin is the same. - This function can potentially leave the contract without an admin, thereby removing any functionality that is only available to the admin. Requirements: - `msg.sender` must be the contract admin.\",\"params\":{\"newAdmin\":\"The address of the new admin.\"}}},\"stateVariables\":{\"flashFee\":{\"details\":\"Notes: - This fee represents a percentage, not an amount. Do not confuse it with {IERC3156FlashLender.flashFee}, which calculates the fee amount for a specified flash loan amount. - Unlike the protocol fee, this is a global fee applied to all flash loans, not a per-asset fee.\"},\"isFlashAsset\":{\"params\":{\"token\":\"The contract address of the ERC-20 asset to check.\"}},\"protocolFees\":{\"params\":{\"asset\":\"The contract address of the ERC-20 asset to query.\"},\"return\":\"fee The protocol fee denoted as a fixed-point number where 1e18 is 100%.\",\"returns\":{\"fee\":\"The protocol fee denoted as a fixed-point number where 1e18 is 100%.\"}}},\"title\":\"SablierV2Comptroller\",\"version\":1},\"userdoc\":{\"errors\":{\"CallerNotAdmin(address,address)\":[{\"notice\":\"Thrown when `msg.sender` is not the admin.\"}]},\"events\":{\"SetFlashFee(address,uint256,uint256)\":{\"notice\":\"Emitted when the admin sets a new flash fee.\"},\"SetProtocolFee(address,address,uint256,uint256)\":{\"notice\":\"Emitted when the admin sets a new protocol fee for the provided ERC-20 asset.\"},\"ToggleFlashAsset(address,address,bool)\":{\"notice\":\"Emitted when the admin enables or disables an ERC-20 asset for flash loaning.\"},\"TransferAdmin(address,address)\":{\"notice\":\"Emitted when the admin is transferred.\"}},\"kind\":\"user\",\"methods\":{\"admin()\":{\"notice\":\"The address of the admin account or contract.\"},\"flashFee()\":{\"notice\":\"Retrieves the global flash fee, denoted as a fixed-point number where 1e18 is 100%.\"},\"isFlashAsset(address)\":{\"notice\":\"Retrieves a flag indicating whether the provided ERC-20 asset can be flash loaned.\"},\"protocolFees(address)\":{\"notice\":\"Retrieves the protocol fee for all streams created with the provided ERC-20 asset.\"},\"setFlashFee(uint256)\":{\"notice\":\"Updates the flash fee charged on all flash loans made with any ERC-20 asset.\"},\"setProtocolFee(address,uint256)\":{\"notice\":\"Sets a new protocol fee that will be charged on all streams created with the provided ERC-20 asset.\"},\"toggleFlashAsset(address)\":{\"notice\":\"Toggles the flash loanability of an ERC-20 asset.\"},\"transferAdmin(address)\":{\"notice\":\"Transfers the contract admin to a new address.\"}},\"notice\":\"See the documentation in {ISablierV2Comptroller}.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@sablier/v2-core/src/SablierV2Comptroller.sol\":\"SablierV2Comptroller\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"appendCBOR\":false,\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":10000},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":@prb/=node_modules/@prb/\",\":@sablier/=node_modules/@sablier/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\"]},\"sources\":{\"node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x287b55befed2961a7eabd7d7b1b2839cbca8a5b80ef8dcbb25ed3d4c2002c305\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://bd39944e8fc06be6dbe2dd1d8449b5336e23c6a7ba3e8e9ae5ae0f37f35283f5\",\"dweb:/ipfs/QmPV3FGYjVwvKSgAXKUN3r9T9GwniZz83CxBpM7vyj2G53\"]},\"node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol\":{\"keccak256\":\"0x5bce51e11f7d194b79ea59fe00c9e8de9fa2c5530124960f29a24d4c740a3266\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7e66dfde185df46104c11bc89d08fa0760737aa59a2b8546a656473d810a8ea4\",\"dweb:/ipfs/QmXvyqtXPaPss2PD7eqPoSao5Szm2n6UMoiG8TZZDjmChR\"]},\"node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol\":{\"keccak256\":\"0x75b829ff2f26c14355d1cba20e16fe7b29ca58eb5fef665ede48bc0f9c6c74b9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a0a107160525724f9e1bbbab031defc2f298296dd9e331f16a6f7130cec32146\",\"dweb:/ipfs/QmemujxSd7gX8A9M8UwmNbz4Ms3U9FG9QfudUgxwvTmPWf\"]},\"node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f\",\"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy\"]},\"node_modules/@prb/math/src/Common.sol\":{\"keccak256\":\"0x70b3a76443312b2c6c500996306a18e3d91e5d56fed0d898d98ca0bfb6225053\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be75b034b8c27e96b375e862528afb52a2d11e75c4a25918e10d7db31cdec039\",\"dweb:/ipfs/QmQ4L3tvpDx2ophHRAW7Sc52QhVZzn4e5PKTgLwqt32F1B\"]},\"node_modules/@prb/math/src/UD60x18.sol\":{\"keccak256\":\"0xb98c6f74275914d279e8af6c502c2b1f50d5f6e1ed418d3b0153f5a193206c48\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a750edde2955f160806a51083a12185fb04e20efca0e3a7ebd127dc1acc049a9\",\"dweb:/ipfs/QmeAre3mThopoQPB9mSXZq6jck59QZ7JbDFR83urd2SLvp\"]},\"node_modules/@prb/math/src/sd1x18/Casting.sol\":{\"keccak256\":\"0x9e49e2b37c1bb845861740805edaaef3fe951a7b96eef16ce84fbf76e8278670\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d3f65f257f9f516f2b40ca30b1c999819777111bd59a92376df6c5823453165a\",\"dweb:/ipfs/QmVQRKMS6ibv6x9qWXLJp2KZw9qs6Yz1sYZQWoSBQM8Pkz\"]},\"node_modules/@prb/math/src/sd1x18/Constants.sol\":{\"keccak256\":\"0xb51aab4a2ea76f530dccbf3b7d4af24c8f3ceef67f3c574b58650466ea924a3f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b9fccf58b2b69179a311f996f772d9bf255fd1d0de9ba69ab89b45ef81008770\",\"dweb:/ipfs/QmTYE7xmFqUzQ2o8SmCpMu2GxkBJLjTtSWngoe7JXzsv2D\"]},\"node_modules/@prb/math/src/sd1x18/Errors.sol\":{\"keccak256\":\"0x836cb42ba619ca369fd4765bc47fefc3c3621369c5861882af14660aca5057ee\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://58873bcebf7398f63c6d3f234073fb6739fe4fae87428010cd0bc1aa68f53499\",\"dweb:/ipfs/QmZSZ9z4ZQUGRc1TRiL2F9AL7ysnGRXwRtocMa2zhxHFDp\"]},\"node_modules/@prb/math/src/sd1x18/ValueType.sol\":{\"keccak256\":\"0x2f86f1aa9fca42f40808b51a879b406ac51817647bdb9642f8a79dd8fdb754a7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://31559dfc012ebe40fcdb38c45e7edfa16406f11c6ea219e8676749f20dbbb5dd\",\"dweb:/ipfs/QmXeYzF9hYQphVExJRp41Vkebrs51k7xgr3jXfKgdD87XC\"]},\"node_modules/@prb/math/src/sd59x18/Casting.sol\":{\"keccak256\":\"0x3b21b60ec2998c3ae32f647412da51d3683b3f183a807198cc8d157499484f99\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://08a49ba7ebf592a89e1a81e5987351e7810e371f4c3d2356d9b5a9b58462c809\",\"dweb:/ipfs/QmcvyHaUzd74eYjcZWQgUDFJfYrU8kFohiB1H5cs8HgUDp\"]},\"node_modules/@prb/math/src/sd59x18/Constants.sol\":{\"keccak256\":\"0xe0a1ca1a7b5b2d637cff83a8caa3d2e67a6a34f7ee9df58a9ca5d5fa268c474a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3e9a6980e97a68f9148c350439bc0b3ca4126a4428752b151744097da3f650c8\",\"dweb:/ipfs/QmVRJqG378u46dnvjgYkcLjnvHW8yNv5ijLoUWPMGQscuC\"]},\"node_modules/@prb/math/src/sd59x18/Errors.sol\":{\"keccak256\":\"0x83ee24e41d235bc05cb641d2c5c16c67b17fa00e4593661a8d14350435d4df04\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://40cedd66b7ba40126b2668c2fbe8ccd6ae88bd5853c205ac54f643e49acd31c1\",\"dweb:/ipfs/QmWZz7bsQceUUzJiURQE5XtfzNW2Ammiz2WSNsZGxCYT7a\"]},\"node_modules/@prb/math/src/sd59x18/Helpers.sol\":{\"keccak256\":\"0x208570f1657cf730cb6c3d81aa14030e0d45cf906cdedea5059369d7df4bb716\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4c78ca900edafa9338d4e3649a55ab0c84f76468d8a22fb945ba6d01e70f8fed\",\"dweb:/ipfs/QmeP4hQYfNxcATd1FsasdD4ebyu2vrC9K1N68swxUJzzZD\"]},\"node_modules/@prb/math/src/sd59x18/Math.sol\":{\"keccak256\":\"0xedd0635769176ab99878a91ce267cee2ca107b30e6b0db10736573ff4d102868\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://51795a2077ea6f109656048530481bb10c7f2b29e868f9a02d7b134d1b30c787\",\"dweb:/ipfs/Qmb9wBJ5vPtKNbiz9bbWz8Ufs6qLJWKanyg1zmRmSwUVze\"]},\"node_modules/@prb/math/src/sd59x18/ValueType.sol\":{\"keccak256\":\"0xe03112d145dcd5863aff24e5f381debaae29d446acd5666f3d640e3d9af738d7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://abacb7cba4bd732c961cfe7d66c5eec924c7a9ffe0bf07fafc95b65a887071f6\",\"dweb:/ipfs/QmSBefftoSJDMdmp5CFAVvJjPHJXHhd11x1FzkcHQxLjoT\"]},\"node_modules/@prb/math/src/ud2x18/Casting.sol\":{\"keccak256\":\"0x07ec9a8adddfe6bf37f0d9ce7702c5620a6215340889701da0525ed190ccc099\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3500550c9ed259e5a876d14510d7e4a2226fac41e04535dddffaf9e3e6dc67e5\",\"dweb:/ipfs/QmbA5y7zdqsFELeNPj1WgkP28GXBcnfYajj3E6nangJo2F\"]},\"node_modules/@prb/math/src/ud2x18/Constants.sol\":{\"keccak256\":\"0xbd11da8ad79ffc8b7b8244c82632b0ca31970e190a8877ba1a69b4b8065dcea5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f0d3d5cb4711d83e0fe654b8338b6685b6e9d9f234c645813533129ae48fa14b\",\"dweb:/ipfs/QmZW47VmyizEwAxuv6tdeJmrMM58KvsiaRjidcBgqKg4CP\"]},\"node_modules/@prb/math/src/ud2x18/Errors.sol\":{\"keccak256\":\"0xdf1e22f0b4c8032bcc8b7f63fe3984e1387f3dc7b2e9ab381822249f75376d33\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://975f9beb25a1ebff9b29dd5555e1f4f14a4fbf178d15ebd3add5ed5f5985fdec\",\"dweb:/ipfs/QmbvTvdtSrZi7J4sJuv6zUsymT5UctJnx4DkGezXW25r59\"]},\"node_modules/@prb/math/src/ud2x18/ValueType.sol\":{\"keccak256\":\"0x2802edc9869db116a0b5c490cc5f8554742f747183fa30ac5e9c80bb967e61a1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e9657724f5032559c953cba61db0fbca71f6b50f51edb53a08f840cb74a36c95\",\"dweb:/ipfs/QmX2KF8v7ng13NaavyogM3SGR4jCMLUuqKkxFhtxvc7D7m\"]},\"node_modules/@prb/math/src/ud60x18/Casting.sol\":{\"keccak256\":\"0x5bb532da36921cbdac64d1f16de5d366ef1f664502e3b7c07d0ad06917551f85\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f0819da49f6a86a1fc2ece8e8a4292f8d102dc1043a1d0a545c26d020d1f36fe\",\"dweb:/ipfs/QmdzLoo99EBJv2GGiZZAAY8Bfr4ivFykzeSbpF48aJxFZ9\"]},\"node_modules/@prb/math/src/ud60x18/Constants.sol\":{\"keccak256\":\"0x2b80d26153d3fdcfb3a9ca772d9309d31ed1275f5b8b54c3ffb54d3652b37d90\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7e3a6673a156f635db94dc176baaa7274db8f9bec4461cd1152596253550ee3b\",\"dweb:/ipfs/Qmc9zT4kNSbMYaXcnbxNVqmb3P3m46ieaQxkwxqLwsvRA5\"]},\"node_modules/@prb/math/src/ud60x18/Conversions.sol\":{\"keccak256\":\"0xaf7fc2523413822de3b66ba339fe2884fb3b8c6f6cf38ec90a2c3e3aae71df6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://655c9fe2434ca039b67277d753a60d39f2938260c716a36d24b591acf8c4fb75\",\"dweb:/ipfs/QmbygBAjCoFe9oUp9QkJ45jqctThk7VSmiSVLHV4Z3WHVe\"]},\"node_modules/@prb/math/src/ud60x18/Errors.sol\":{\"keccak256\":\"0xa8c60d4066248df22c49c882873efbc017344107edabc48c52209abbc39cb1e3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8fb7e1103309b4f99e95bb638850c0321272d57bd3e6b0a6331d699ff103cbaf\",\"dweb:/ipfs/QmfLFHjVJv4ibEvMmh46qC5nCbeCYSfXgCTDWQqfW3jnyB\"]},\"node_modules/@prb/math/src/ud60x18/Helpers.sol\":{\"keccak256\":\"0xf5faff881391d2c060029499a666cc5f0bea90a213150bb476fae8f02a5df268\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://76105fa22bb1b5f1fa99abf9c4fbc9577a02c7bc204f271754c407f0d75489f5\",\"dweb:/ipfs/QmVNGZSTniDuZus5DdbFubqJXCLtTaZit7YPm4ntjr5Lgr\"]},\"node_modules/@prb/math/src/ud60x18/Math.sol\":{\"keccak256\":\"0xafe12d658b5bb495226df1841cbfbcb25e9fc443c6d41a85b5ac6aa7ec79ea29\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://357d345f960581548f27fb43fb2320101033c053b949f5cb4d75390a058df205\",\"dweb:/ipfs/QmYjQwVdwCWZDNkxUD4T1nwieP38o4HWtYUYjAmfpFpg3y\"]},\"node_modules/@prb/math/src/ud60x18/ValueType.sol\":{\"keccak256\":\"0xdd873b5124180d9b71498b3a7fe93b1c08c368bec741f7d5f8e17f78a0b70f31\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7df6700f747dd01b2520a900a8d6b5a4d239b8063c31384f40921afe22295c29\",\"dweb:/ipfs/QmSPSPQJKNSzGJu2ri5EfWjcLfA2xDHfUehyBp4FpUu2qZ\"]},\"node_modules/@sablier/v2-core/src/SablierV2Comptroller.sol\":{\"keccak256\":\"0x014320b2960e05450a9da86a3740866b098d1061b3072679b85737db0338ca23\",\"license\":\"BUSL-1.1\",\"urls\":[\"bzz-raw://f6471271552db0617892d3178bbc1f2594ec8e3b0bf475f9c1173d1c26d86eb3\",\"dweb:/ipfs/QmTPJ415F7hChChWnsX3iH8EbjmEwaVVbAFKDtos9fZiHU\"]},\"node_modules/@sablier/v2-core/src/abstracts/Adminable.sol\":{\"keccak256\":\"0x09c8d04b0bc0a11c63cecf76623dc3dd514933ee532a5ded0043885b5b8f708e\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://dbd56beac58c35d06a1992434075795e0b2e1e730bb6e9de4e78d01d7035fc32\",\"dweb:/ipfs/QmfSaYVV6nxtoLKn7LsbkwiNn4zYATco2Ufb34mWoaFCpD\"]},\"node_modules/@sablier/v2-core/src/interfaces/IAdminable.sol\":{\"keccak256\":\"0xecc2d5f08b737e1acd5f641de59b262831c520adf8cd7290d02efe39e0ae443e\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://13c159aa3a2db6e2be6f2483c7e001dc84360220bdaf9a38247c213529a2d885\",\"dweb:/ipfs/QmZTfUR2FTfnC3Rohe8ntEvDwyW3K3RfruHZ98Phi48BGH\"]},\"node_modules/@sablier/v2-core/src/interfaces/ISablierV2Comptroller.sol\":{\"keccak256\":\"0xfe089975be90f0efeeafc9ac9dfa5c301ca1f5c178177ac5589a8483a0aa84a3\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://c6b87d383df9fab91a62629107ebd44122d16de55a01c3996cbb155a1373bde7\",\"dweb:/ipfs/QmTLfmcHJh8ZYbLai1oAkjBak9fpMnv3HDaGoMQd3wFcNF\"]},\"node_modules/@sablier/v2-core/src/libraries/Errors.sol\":{\"keccak256\":\"0x46b90321f002465b944f342ec86e462c133a617b64352aea23ccf07f2ad693b4\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://c98fd2bbd480ed12e7a28e356e48f130ba2e8db61c4d247553b56179211cb699\",\"dweb:/ipfs/Qme4SsnckayifvBeJ3Zhx9V9dcyBwXP7bsj8K1DCgBmDLA\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.20+commit.a1b79de6"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "initialAdmin",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "admin",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "caller",
+              "type": "address"
+            }
+          ],
+          "type": "error",
+          "name": "CallerNotAdmin"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "admin",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "UD60x18",
+              "name": "oldFlashFee",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "UD60x18",
+              "name": "newFlashFee",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "SetFlashFee",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "admin",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "contract IERC20",
+              "name": "asset",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "UD60x18",
+              "name": "oldProtocolFee",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "UD60x18",
+              "name": "newProtocolFee",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "SetProtocolFee",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "admin",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "contract IERC20",
+              "name": "asset",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "bool",
+              "name": "newFlag",
+              "type": "bool",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "ToggleFlashAsset",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "oldAdmin",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "newAdmin",
+              "type": "address",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "TransferAdmin",
+          "anonymous": false
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "admin",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "flashFee",
+          "outputs": [
+            {
+              "internalType": "UD60x18",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IERC20",
+              "name": "asset",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "isFlashAsset",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "supported",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IERC20",
+              "name": "asset",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "protocolFees",
+          "outputs": [
+            {
+              "internalType": "UD60x18",
+              "name": "fee",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "UD60x18",
+              "name": "newFlashFee",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setFlashFee"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IERC20",
+              "name": "asset",
+              "type": "address"
+            },
+            {
+              "internalType": "UD60x18",
+              "name": "newProtocolFee",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setProtocolFee"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IERC20",
+              "name": "asset",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "toggleFlashAsset"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "newAdmin",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "transferAdmin"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "constructor": {
+            "details": "Emits a {TransferAdmin} event.",
+            "params": {
+              "initialAdmin": "The address of the initial contract admin."
+            }
+          },
+          "setFlashFee(uint256)": {
+            "details": "Emits a {SetFlashFee} event. Notes: - Does not revert if the fee is the same. Requirements: - `msg.sender` must be the contract admin.",
+            "params": {
+              "newFlashFee": "The new flash fee to set, denoted as a fixed-point number where 1e18 is 100%."
+            }
+          },
+          "setProtocolFee(address,uint256)": {
+            "details": "Emits a {SetProtocolFee} event. Notes: - The fee is not denoted in units of the asset's decimals; it is a fixed-point number. Refer to the PRBMath documentation for more detail on the logic of UD60x18. - Does not revert if the fee is the same. Requirements: - `msg.sender` must be the contract admin.",
+            "params": {
+              "asset": "The contract address of the ERC-20 asset to update the fee for.",
+              "newProtocolFee": "The new protocol fee, denoted as a fixed-point number where 1e18 is 100%."
+            }
+          },
+          "toggleFlashAsset(address)": {
+            "details": "Emits a {ToggleFlashAsset} event. Requirements: - `msg.sender` must be the admin.",
+            "params": {
+              "asset": "The address of the ERC-20 asset to toggle."
+            }
+          },
+          "transferAdmin(address)": {
+            "details": "Notes: - Does not revert if the admin is the same. - This function can potentially leave the contract without an admin, thereby removing any functionality that is only available to the admin. Requirements: - `msg.sender` must be the contract admin.",
+            "params": {
+              "newAdmin": "The address of the new admin."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "admin()": {
+            "notice": "The address of the admin account or contract."
+          },
+          "flashFee()": {
+            "notice": "Retrieves the global flash fee, denoted as a fixed-point number where 1e18 is 100%."
+          },
+          "isFlashAsset(address)": {
+            "notice": "Retrieves a flag indicating whether the provided ERC-20 asset can be flash loaned."
+          },
+          "protocolFees(address)": {
+            "notice": "Retrieves the protocol fee for all streams created with the provided ERC-20 asset."
+          },
+          "setFlashFee(uint256)": {
+            "notice": "Updates the flash fee charged on all flash loans made with any ERC-20 asset."
+          },
+          "setProtocolFee(address,uint256)": {
+            "notice": "Sets a new protocol fee that will be charged on all streams created with the provided ERC-20 asset."
+          },
+          "toggleFlashAsset(address)": {
+            "notice": "Toggles the flash loanability of an ERC-20 asset."
+          },
+          "transferAdmin(address)": {
+            "notice": "Transfers the contract admin to a new address."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "@prb/=node_modules/@prb/",
+        "@sablier/=node_modules/@sablier/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 10000
+      },
+      "metadata": {
+        "bytecodeHash": "none",
+        "appendCBOR": false
+      },
+      "compilationTarget": {
+        "node_modules/@sablier/v2-core/src/SablierV2Comptroller.sol": "SablierV2Comptroller"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+        "keccak256": "0x287b55befed2961a7eabd7d7b1b2839cbca8a5b80ef8dcbb25ed3d4c2002c305",
+        "urls": [
+          "bzz-raw://bd39944e8fc06be6dbe2dd1d8449b5336e23c6a7ba3e8e9ae5ae0f37f35283f5",
+          "dweb:/ipfs/QmPV3FGYjVwvKSgAXKUN3r9T9GwniZz83CxBpM7vyj2G53"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+        "keccak256": "0x5bce51e11f7d194b79ea59fe00c9e8de9fa2c5530124960f29a24d4c740a3266",
+        "urls": [
+          "bzz-raw://7e66dfde185df46104c11bc89d08fa0760737aa59a2b8546a656473d810a8ea4",
+          "dweb:/ipfs/QmXvyqtXPaPss2PD7eqPoSao5Szm2n6UMoiG8TZZDjmChR"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
+        "keccak256": "0x75b829ff2f26c14355d1cba20e16fe7b29ca58eb5fef665ede48bc0f9c6c74b9",
+        "urls": [
+          "bzz-raw://a0a107160525724f9e1bbbab031defc2f298296dd9e331f16a6f7130cec32146",
+          "dweb:/ipfs/QmemujxSd7gX8A9M8UwmNbz4Ms3U9FG9QfudUgxwvTmPWf"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+        "keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+        "urls": [
+          "bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+          "dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/Common.sol": {
+        "keccak256": "0x70b3a76443312b2c6c500996306a18e3d91e5d56fed0d898d98ca0bfb6225053",
+        "urls": [
+          "bzz-raw://be75b034b8c27e96b375e862528afb52a2d11e75c4a25918e10d7db31cdec039",
+          "dweb:/ipfs/QmQ4L3tvpDx2ophHRAW7Sc52QhVZzn4e5PKTgLwqt32F1B"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/UD60x18.sol": {
+        "keccak256": "0xb98c6f74275914d279e8af6c502c2b1f50d5f6e1ed418d3b0153f5a193206c48",
+        "urls": [
+          "bzz-raw://a750edde2955f160806a51083a12185fb04e20efca0e3a7ebd127dc1acc049a9",
+          "dweb:/ipfs/QmeAre3mThopoQPB9mSXZq6jck59QZ7JbDFR83urd2SLvp"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd1x18/Casting.sol": {
+        "keccak256": "0x9e49e2b37c1bb845861740805edaaef3fe951a7b96eef16ce84fbf76e8278670",
+        "urls": [
+          "bzz-raw://d3f65f257f9f516f2b40ca30b1c999819777111bd59a92376df6c5823453165a",
+          "dweb:/ipfs/QmVQRKMS6ibv6x9qWXLJp2KZw9qs6Yz1sYZQWoSBQM8Pkz"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd1x18/Constants.sol": {
+        "keccak256": "0xb51aab4a2ea76f530dccbf3b7d4af24c8f3ceef67f3c574b58650466ea924a3f",
+        "urls": [
+          "bzz-raw://b9fccf58b2b69179a311f996f772d9bf255fd1d0de9ba69ab89b45ef81008770",
+          "dweb:/ipfs/QmTYE7xmFqUzQ2o8SmCpMu2GxkBJLjTtSWngoe7JXzsv2D"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd1x18/Errors.sol": {
+        "keccak256": "0x836cb42ba619ca369fd4765bc47fefc3c3621369c5861882af14660aca5057ee",
+        "urls": [
+          "bzz-raw://58873bcebf7398f63c6d3f234073fb6739fe4fae87428010cd0bc1aa68f53499",
+          "dweb:/ipfs/QmZSZ9z4ZQUGRc1TRiL2F9AL7ysnGRXwRtocMa2zhxHFDp"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd1x18/ValueType.sol": {
+        "keccak256": "0x2f86f1aa9fca42f40808b51a879b406ac51817647bdb9642f8a79dd8fdb754a7",
+        "urls": [
+          "bzz-raw://31559dfc012ebe40fcdb38c45e7edfa16406f11c6ea219e8676749f20dbbb5dd",
+          "dweb:/ipfs/QmXeYzF9hYQphVExJRp41Vkebrs51k7xgr3jXfKgdD87XC"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd59x18/Casting.sol": {
+        "keccak256": "0x3b21b60ec2998c3ae32f647412da51d3683b3f183a807198cc8d157499484f99",
+        "urls": [
+          "bzz-raw://08a49ba7ebf592a89e1a81e5987351e7810e371f4c3d2356d9b5a9b58462c809",
+          "dweb:/ipfs/QmcvyHaUzd74eYjcZWQgUDFJfYrU8kFohiB1H5cs8HgUDp"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd59x18/Constants.sol": {
+        "keccak256": "0xe0a1ca1a7b5b2d637cff83a8caa3d2e67a6a34f7ee9df58a9ca5d5fa268c474a",
+        "urls": [
+          "bzz-raw://3e9a6980e97a68f9148c350439bc0b3ca4126a4428752b151744097da3f650c8",
+          "dweb:/ipfs/QmVRJqG378u46dnvjgYkcLjnvHW8yNv5ijLoUWPMGQscuC"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd59x18/Errors.sol": {
+        "keccak256": "0x83ee24e41d235bc05cb641d2c5c16c67b17fa00e4593661a8d14350435d4df04",
+        "urls": [
+          "bzz-raw://40cedd66b7ba40126b2668c2fbe8ccd6ae88bd5853c205ac54f643e49acd31c1",
+          "dweb:/ipfs/QmWZz7bsQceUUzJiURQE5XtfzNW2Ammiz2WSNsZGxCYT7a"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd59x18/Helpers.sol": {
+        "keccak256": "0x208570f1657cf730cb6c3d81aa14030e0d45cf906cdedea5059369d7df4bb716",
+        "urls": [
+          "bzz-raw://4c78ca900edafa9338d4e3649a55ab0c84f76468d8a22fb945ba6d01e70f8fed",
+          "dweb:/ipfs/QmeP4hQYfNxcATd1FsasdD4ebyu2vrC9K1N68swxUJzzZD"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd59x18/Math.sol": {
+        "keccak256": "0xedd0635769176ab99878a91ce267cee2ca107b30e6b0db10736573ff4d102868",
+        "urls": [
+          "bzz-raw://51795a2077ea6f109656048530481bb10c7f2b29e868f9a02d7b134d1b30c787",
+          "dweb:/ipfs/Qmb9wBJ5vPtKNbiz9bbWz8Ufs6qLJWKanyg1zmRmSwUVze"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd59x18/ValueType.sol": {
+        "keccak256": "0xe03112d145dcd5863aff24e5f381debaae29d446acd5666f3d640e3d9af738d7",
+        "urls": [
+          "bzz-raw://abacb7cba4bd732c961cfe7d66c5eec924c7a9ffe0bf07fafc95b65a887071f6",
+          "dweb:/ipfs/QmSBefftoSJDMdmp5CFAVvJjPHJXHhd11x1FzkcHQxLjoT"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud2x18/Casting.sol": {
+        "keccak256": "0x07ec9a8adddfe6bf37f0d9ce7702c5620a6215340889701da0525ed190ccc099",
+        "urls": [
+          "bzz-raw://3500550c9ed259e5a876d14510d7e4a2226fac41e04535dddffaf9e3e6dc67e5",
+          "dweb:/ipfs/QmbA5y7zdqsFELeNPj1WgkP28GXBcnfYajj3E6nangJo2F"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud2x18/Constants.sol": {
+        "keccak256": "0xbd11da8ad79ffc8b7b8244c82632b0ca31970e190a8877ba1a69b4b8065dcea5",
+        "urls": [
+          "bzz-raw://f0d3d5cb4711d83e0fe654b8338b6685b6e9d9f234c645813533129ae48fa14b",
+          "dweb:/ipfs/QmZW47VmyizEwAxuv6tdeJmrMM58KvsiaRjidcBgqKg4CP"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud2x18/Errors.sol": {
+        "keccak256": "0xdf1e22f0b4c8032bcc8b7f63fe3984e1387f3dc7b2e9ab381822249f75376d33",
+        "urls": [
+          "bzz-raw://975f9beb25a1ebff9b29dd5555e1f4f14a4fbf178d15ebd3add5ed5f5985fdec",
+          "dweb:/ipfs/QmbvTvdtSrZi7J4sJuv6zUsymT5UctJnx4DkGezXW25r59"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud2x18/ValueType.sol": {
+        "keccak256": "0x2802edc9869db116a0b5c490cc5f8554742f747183fa30ac5e9c80bb967e61a1",
+        "urls": [
+          "bzz-raw://e9657724f5032559c953cba61db0fbca71f6b50f51edb53a08f840cb74a36c95",
+          "dweb:/ipfs/QmX2KF8v7ng13NaavyogM3SGR4jCMLUuqKkxFhtxvc7D7m"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud60x18/Casting.sol": {
+        "keccak256": "0x5bb532da36921cbdac64d1f16de5d366ef1f664502e3b7c07d0ad06917551f85",
+        "urls": [
+          "bzz-raw://f0819da49f6a86a1fc2ece8e8a4292f8d102dc1043a1d0a545c26d020d1f36fe",
+          "dweb:/ipfs/QmdzLoo99EBJv2GGiZZAAY8Bfr4ivFykzeSbpF48aJxFZ9"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud60x18/Constants.sol": {
+        "keccak256": "0x2b80d26153d3fdcfb3a9ca772d9309d31ed1275f5b8b54c3ffb54d3652b37d90",
+        "urls": [
+          "bzz-raw://7e3a6673a156f635db94dc176baaa7274db8f9bec4461cd1152596253550ee3b",
+          "dweb:/ipfs/Qmc9zT4kNSbMYaXcnbxNVqmb3P3m46ieaQxkwxqLwsvRA5"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud60x18/Conversions.sol": {
+        "keccak256": "0xaf7fc2523413822de3b66ba339fe2884fb3b8c6f6cf38ec90a2c3e3aae71df6b",
+        "urls": [
+          "bzz-raw://655c9fe2434ca039b67277d753a60d39f2938260c716a36d24b591acf8c4fb75",
+          "dweb:/ipfs/QmbygBAjCoFe9oUp9QkJ45jqctThk7VSmiSVLHV4Z3WHVe"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud60x18/Errors.sol": {
+        "keccak256": "0xa8c60d4066248df22c49c882873efbc017344107edabc48c52209abbc39cb1e3",
+        "urls": [
+          "bzz-raw://8fb7e1103309b4f99e95bb638850c0321272d57bd3e6b0a6331d699ff103cbaf",
+          "dweb:/ipfs/QmfLFHjVJv4ibEvMmh46qC5nCbeCYSfXgCTDWQqfW3jnyB"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud60x18/Helpers.sol": {
+        "keccak256": "0xf5faff881391d2c060029499a666cc5f0bea90a213150bb476fae8f02a5df268",
+        "urls": [
+          "bzz-raw://76105fa22bb1b5f1fa99abf9c4fbc9577a02c7bc204f271754c407f0d75489f5",
+          "dweb:/ipfs/QmVNGZSTniDuZus5DdbFubqJXCLtTaZit7YPm4ntjr5Lgr"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud60x18/Math.sol": {
+        "keccak256": "0xafe12d658b5bb495226df1841cbfbcb25e9fc443c6d41a85b5ac6aa7ec79ea29",
+        "urls": [
+          "bzz-raw://357d345f960581548f27fb43fb2320101033c053b949f5cb4d75390a058df205",
+          "dweb:/ipfs/QmYjQwVdwCWZDNkxUD4T1nwieP38o4HWtYUYjAmfpFpg3y"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud60x18/ValueType.sol": {
+        "keccak256": "0xdd873b5124180d9b71498b3a7fe93b1c08c368bec741f7d5f8e17f78a0b70f31",
+        "urls": [
+          "bzz-raw://7df6700f747dd01b2520a900a8d6b5a4d239b8063c31384f40921afe22295c29",
+          "dweb:/ipfs/QmSPSPQJKNSzGJu2ri5EfWjcLfA2xDHfUehyBp4FpUu2qZ"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@sablier/v2-core/src/SablierV2Comptroller.sol": {
+        "keccak256": "0x014320b2960e05450a9da86a3740866b098d1061b3072679b85737db0338ca23",
+        "urls": [
+          "bzz-raw://f6471271552db0617892d3178bbc1f2594ec8e3b0bf475f9c1173d1c26d86eb3",
+          "dweb:/ipfs/QmTPJ415F7hChChWnsX3iH8EbjmEwaVVbAFKDtos9fZiHU"
+        ],
+        "license": "BUSL-1.1"
+      },
+      "node_modules/@sablier/v2-core/src/abstracts/Adminable.sol": {
+        "keccak256": "0x09c8d04b0bc0a11c63cecf76623dc3dd514933ee532a5ded0043885b5b8f708e",
+        "urls": [
+          "bzz-raw://dbd56beac58c35d06a1992434075795e0b2e1e730bb6e9de4e78d01d7035fc32",
+          "dweb:/ipfs/QmfSaYVV6nxtoLKn7LsbkwiNn4zYATco2Ufb34mWoaFCpD"
+        ],
+        "license": "GPL-3.0-or-later"
+      },
+      "node_modules/@sablier/v2-core/src/interfaces/IAdminable.sol": {
+        "keccak256": "0xecc2d5f08b737e1acd5f641de59b262831c520adf8cd7290d02efe39e0ae443e",
+        "urls": [
+          "bzz-raw://13c159aa3a2db6e2be6f2483c7e001dc84360220bdaf9a38247c213529a2d885",
+          "dweb:/ipfs/QmZTfUR2FTfnC3Rohe8ntEvDwyW3K3RfruHZ98Phi48BGH"
+        ],
+        "license": "GPL-3.0-or-later"
+      },
+      "node_modules/@sablier/v2-core/src/interfaces/ISablierV2Comptroller.sol": {
+        "keccak256": "0xfe089975be90f0efeeafc9ac9dfa5c301ca1f5c178177ac5589a8483a0aa84a3",
+        "urls": [
+          "bzz-raw://c6b87d383df9fab91a62629107ebd44122d16de55a01c3996cbb155a1373bde7",
+          "dweb:/ipfs/QmTLfmcHJh8ZYbLai1oAkjBak9fpMnv3HDaGoMQd3wFcNF"
+        ],
+        "license": "GPL-3.0-or-later"
+      },
+      "node_modules/@sablier/v2-core/src/libraries/Errors.sol": {
+        "keccak256": "0x46b90321f002465b944f342ec86e462c133a617b64352aea23ccf07f2ad693b4",
+        "urls": [
+          "bzz-raw://c98fd2bbd480ed12e7a28e356e48f130ba2e8db61c4d247553b56179211cb699",
+          "dweb:/ipfs/Qme4SsnckayifvBeJ3Zhx9V9dcyBwXP7bsj8K1DCgBmDLA"
+        ],
+        "license": "GPL-3.0-or-later"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "node_modules/@sablier/v2-core/src/SablierV2Comptroller.sol",
+    "id": 55391,
+    "exportedSymbols": {
+      "Adminable": [
+        57843
+      ],
+      "IAdminable": [
+        58825
+      ],
+      "IERC20": [
+        45123
+      ],
+      "ISablierV2Comptroller": [
+        58994
+      ],
+      "SablierV2Comptroller": [
+        55390
+      ],
+      "UD60x18": [
+        55163
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "37:5775:78",
+    "nodes": [
+      {
+        "id": 55233,
+        "nodeType": "PragmaDirective",
+        "src": "37:25:78",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".19"
+        ]
+      },
+      {
+        "id": 55235,
+        "nodeType": "ImportDirective",
+        "src": "64:72:78",
+        "nodes": [],
+        "absolutePath": "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 55391,
+        "sourceUnit": 45124,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 55234,
+              "name": "IERC20",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 45123,
+              "src": "73:6:78",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 55237,
+        "nodeType": "ImportDirective",
+        "src": "137:52:78",
+        "nodes": [],
+        "absolutePath": "node_modules/@prb/math/src/UD60x18.sol",
+        "file": "@prb/math/src/UD60x18.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 55391,
+        "sourceUnit": 50036,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 55236,
+              "name": "UD60x18",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 55163,
+              "src": "146:7:78",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 55239,
+        "nodeType": "ImportDirective",
+        "src": "191:54:78",
+        "nodes": [],
+        "absolutePath": "node_modules/@sablier/v2-core/src/abstracts/Adminable.sol",
+        "file": "./abstracts/Adminable.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 55391,
+        "sourceUnit": 57844,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 55238,
+              "name": "Adminable",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 57843,
+              "src": "200:9:78",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 55241,
+        "nodeType": "ImportDirective",
+        "src": "246:57:78",
+        "nodes": [],
+        "absolutePath": "node_modules/@sablier/v2-core/src/interfaces/IAdminable.sol",
+        "file": "./interfaces/IAdminable.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 55391,
+        "sourceUnit": 58826,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 55240,
+              "name": "IAdminable",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 58825,
+              "src": "255:10:78",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 55243,
+        "nodeType": "ImportDirective",
+        "src": "304:79:78",
+        "nodes": [],
+        "absolutePath": "node_modules/@sablier/v2-core/src/interfaces/ISablierV2Comptroller.sol",
+        "file": "./interfaces/ISablierV2Comptroller.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 55391,
+        "sourceUnit": 58995,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 55242,
+              "name": "ISablierV2Comptroller",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 58994,
+              "src": "313:21:78",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 55390,
+        "nodeType": "ContractDefinition",
+        "src": "3060:2751:78",
+        "nodes": [
+          {
+            "id": 55253,
+            "nodeType": "VariableDeclaration",
+            "src": "3445:32:78",
+            "nodes": [],
+            "baseFunctions": [
+              58950
+            ],
+            "constant": false,
+            "documentation": {
+              "id": 55249,
+              "nodeType": "StructuredDocumentation",
+              "src": "3403:37:78",
+              "text": "@inheritdoc ISablierV2Comptroller"
+            },
+            "functionSelector": "e07df5b4",
+            "mutability": "mutable",
+            "name": "flashFee",
+            "nameLocation": "3469:8:78",
+            "overrides": {
+              "id": 55252,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "3460:8:78"
+            },
+            "scope": 55390,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+              "typeString": "UD60x18"
+            },
+            "typeName": {
+              "id": 55251,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 55250,
+                "name": "UD60x18",
+                "nameLocations": [
+                  "3445:7:78"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 55163,
+                "src": "3445:7:78"
+              },
+              "referencedDeclaration": 55163,
+              "src": "3445:7:78",
+              "typeDescriptions": {
+                "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+                "typeString": "UD60x18"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 55260,
+            "nodeType": "VariableDeclaration",
+            "src": "3526:68:78",
+            "nodes": [],
+            "baseFunctions": [
+              58959
+            ],
+            "constant": false,
+            "documentation": {
+              "id": 55254,
+              "nodeType": "StructuredDocumentation",
+              "src": "3484:37:78",
+              "text": "@inheritdoc ISablierV2Comptroller"
+            },
+            "functionSelector": "4d81e51d",
+            "mutability": "mutable",
+            "name": "isFlashAsset",
+            "nameLocation": "3582:12:78",
+            "overrides": {
+              "id": 55259,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "3573:8:78"
+            },
+            "scope": 55390,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_contract$_IERC20_$45123_$_t_bool_$",
+              "typeString": "mapping(contract IERC20 => bool)"
+            },
+            "typeName": {
+              "id": 55258,
+              "keyName": "asset",
+              "keyNameLocation": "3541:5:78",
+              "keyType": {
+                "id": 55256,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 55255,
+                  "name": "IERC20",
+                  "nameLocations": [
+                    "3534:6:78"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 45123,
+                  "src": "3534:6:78"
+                },
+                "referencedDeclaration": 45123,
+                "src": "3534:6:78",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_IERC20_$45123",
+                  "typeString": "contract IERC20"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "3526:39:78",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_contract$_IERC20_$45123_$_t_bool_$",
+                "typeString": "mapping(contract IERC20 => bool)"
+              },
+              "valueName": "supported",
+              "valueNameLocation": "3555:9:78",
+              "valueType": {
+                "id": 55257,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "3550:4:78",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 55268,
+            "nodeType": "VariableDeclaration",
+            "src": "3643:65:78",
+            "nodes": [],
+            "baseFunctions": [
+              58969
+            ],
+            "constant": false,
+            "documentation": {
+              "id": 55261,
+              "nodeType": "StructuredDocumentation",
+              "src": "3601:37:78",
+              "text": "@inheritdoc ISablierV2Comptroller"
+            },
+            "functionSelector": "dcf844a7",
+            "mutability": "mutable",
+            "name": "protocolFees",
+            "nameLocation": "3696:12:78",
+            "overrides": {
+              "id": 55267,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "3687:8:78"
+            },
+            "scope": 55390,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_contract$_IERC20_$45123_$_t_userDefinedValueType$_UD60x18_$55163_$",
+              "typeString": "mapping(contract IERC20 => UD60x18)"
+            },
+            "typeName": {
+              "id": 55266,
+              "keyName": "asset",
+              "keyNameLocation": "3658:5:78",
+              "keyType": {
+                "id": 55263,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 55262,
+                  "name": "IERC20",
+                  "nameLocations": [
+                    "3651:6:78"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 45123,
+                  "src": "3651:6:78"
+                },
+                "referencedDeclaration": 45123,
+                "src": "3651:6:78",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_IERC20_$45123",
+                  "typeString": "contract IERC20"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "3643:36:78",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_contract$_IERC20_$45123_$_t_userDefinedValueType$_UD60x18_$55163_$",
+                "typeString": "mapping(contract IERC20 => UD60x18)"
+              },
+              "valueName": "fee",
+              "valueNameLocation": "3675:3:78",
+              "valueType": {
+                "id": 55265,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 55264,
+                  "name": "UD60x18",
+                  "nameLocations": [
+                    "3667:7:78"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 55163,
+                  "src": "3667:7:78"
+                },
+                "referencedDeclaration": 55163,
+                "src": "3667:7:78",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+                  "typeString": "UD60x18"
+                }
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 55289,
+            "nodeType": "FunctionDefinition",
+            "src": "4042:160:78",
+            "nodes": [],
+            "body": {
+              "id": 55288,
+              "nodeType": "Block",
+              "src": "4076:126:78",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 55276,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 55274,
+                      "name": "admin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 57801,
+                      "src": "4086:5:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 55275,
+                      "name": "initialAdmin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 55271,
+                      "src": "4094:12:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "4086:20:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 55277,
+                  "nodeType": "ExpressionStatement",
+                  "src": "4086:20:78"
+                },
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "hexValue": "30",
+                            "id": 55283,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "4166:1:78",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_0_by_1",
+                              "typeString": "int_const 0"
+                            },
+                            "value": "0"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_rational_0_by_1",
+                              "typeString": "int_const 0"
+                            }
+                          ],
+                          "id": 55282,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "4158:7:78",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": {
+                            "id": 55281,
+                            "name": "address",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "4158:7:78",
+                            "typeDescriptions": {}
+                          }
+                        },
+                        "id": 55284,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "4158:10:78",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 55285,
+                        "name": "initialAdmin",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 55271,
+                        "src": "4180:12:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "id": 55278,
+                        "name": "IAdminable",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 58825,
+                        "src": "4121:10:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_IAdminable_$58825_$",
+                          "typeString": "type(contract IAdminable)"
+                        }
+                      },
+                      "id": 55280,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "4132:13:78",
+                      "memberName": "TransferAdmin",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 58812,
+                      "src": "4121:24:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$returns$__$",
+                        "typeString": "function (address,address)"
+                      }
+                    },
+                    "id": 55286,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [
+                      "4148:8:78",
+                      "4170:8:78"
+                    ],
+                    "names": [
+                      "oldAdmin",
+                      "newAdmin"
+                    ],
+                    "nodeType": "FunctionCall",
+                    "src": "4121:74:78",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 55287,
+                  "nodeType": "EmitStatement",
+                  "src": "4116:79:78"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 55269,
+              "nodeType": "StructuredDocumentation",
+              "src": "3927:110:78",
+              "text": "@dev Emits a {TransferAdmin} event.\n @param initialAdmin The address of the initial contract admin."
+            },
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "parameters": {
+              "id": 55272,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 55271,
+                  "mutability": "mutable",
+                  "name": "initialAdmin",
+                  "nameLocation": "4062:12:78",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 55289,
+                  "src": "4054:20:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 55270,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4054:7:78",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4053:22:78"
+            },
+            "returnParameters": {
+              "id": 55273,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4076:0:78"
+            },
+            "scope": 55390,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 55318,
+            "nodeType": "FunctionDefinition",
+            "src": "4473:360:78",
+            "nodes": [],
+            "body": {
+              "id": 55317,
+              "nodeType": "Block",
+              "src": "4543:290:78",
+              "nodes": [],
+              "statements": [
+                {
+                  "assignments": [
+                    55301
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 55301,
+                      "mutability": "mutable",
+                      "name": "oldFlashFee",
+                      "nameLocation": "4604:11:78",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 55317,
+                      "src": "4596:19:78",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+                        "typeString": "UD60x18"
+                      },
+                      "typeName": {
+                        "id": 55300,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 55299,
+                          "name": "UD60x18",
+                          "nameLocations": [
+                            "4596:7:78"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 55163,
+                          "src": "4596:7:78"
+                        },
+                        "referencedDeclaration": 55163,
+                        "src": "4596:7:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+                          "typeString": "UD60x18"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 55303,
+                  "initialValue": {
+                    "id": 55302,
+                    "name": "flashFee",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 55253,
+                    "src": "4618:8:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+                      "typeString": "UD60x18"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "4596:30:78"
+                },
+                {
+                  "expression": {
+                    "id": 55306,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 55304,
+                      "name": "flashFee",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 55253,
+                      "src": "4636:8:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+                        "typeString": "UD60x18"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 55305,
+                      "name": "newFlashFee",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 55293,
+                      "src": "4647:11:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+                        "typeString": "UD60x18"
+                      }
+                    },
+                    "src": "4636:22:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+                      "typeString": "UD60x18"
+                    }
+                  },
+                  "id": 55307,
+                  "nodeType": "ExpressionStatement",
+                  "src": "4636:22:78"
+                },
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "expression": {
+                          "id": 55311,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -15,
+                          "src": "4761:3:78",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 55312,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "4765:6:78",
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "src": "4761:10:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 55313,
+                        "name": "oldFlashFee",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 55301,
+                        "src": "4786:11:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+                          "typeString": "UD60x18"
+                        }
+                      },
+                      {
+                        "id": 55314,
+                        "name": "newFlashFee",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 55293,
+                        "src": "4812:11:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+                          "typeString": "UD60x18"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+                          "typeString": "UD60x18"
+                        },
+                        {
+                          "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+                          "typeString": "UD60x18"
+                        }
+                      ],
+                      "expression": {
+                        "id": 55308,
+                        "name": "ISablierV2Comptroller",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 58994,
+                        "src": "4718:21:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_ISablierV2Comptroller_$58994_$",
+                          "typeString": "type(contract ISablierV2Comptroller)"
+                        }
+                      },
+                      "id": 55310,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "4740:11:78",
+                      "memberName": "SetFlashFee",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 58919,
+                      "src": "4718:33:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_userDefinedValueType$_UD60x18_$55163_$_t_userDefinedValueType$_UD60x18_$55163_$returns$__$",
+                        "typeString": "function (address,UD60x18,UD60x18)"
+                      }
+                    },
+                    "id": 55315,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [
+                      "4754:5:78",
+                      "4773:11:78",
+                      "4799:11:78"
+                    ],
+                    "names": [
+                      "admin",
+                      "oldFlashFee",
+                      "newFlashFee"
+                    ],
+                    "nodeType": "FunctionCall",
+                    "src": "4718:108:78",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 55316,
+                  "nodeType": "EmitStatement",
+                  "src": "4713:113:78"
+                }
+              ]
+            },
+            "baseFunctions": [
+              58976
+            ],
+            "documentation": {
+              "id": 55290,
+              "nodeType": "StructuredDocumentation",
+              "src": "4431:37:78",
+              "text": "@inheritdoc ISablierV2Comptroller"
+            },
+            "functionSelector": "907a267b",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 55297,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 55296,
+                  "name": "onlyAdmin",
+                  "nameLocations": [
+                    "4533:9:78"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 57820,
+                  "src": "4533:9:78"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "4533:9:78"
+              }
+            ],
+            "name": "setFlashFee",
+            "nameLocation": "4482:11:78",
+            "overrides": {
+              "id": 55295,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "4524:8:78"
+            },
+            "parameters": {
+              "id": 55294,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 55293,
+                  "mutability": "mutable",
+                  "name": "newFlashFee",
+                  "nameLocation": "4502:11:78",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 55318,
+                  "src": "4494:19:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+                    "typeString": "UD60x18"
+                  },
+                  "typeName": {
+                    "id": 55292,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 55291,
+                      "name": "UD60x18",
+                      "nameLocations": [
+                        "4494:7:78"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 55163,
+                      "src": "4494:7:78"
+                    },
+                    "referencedDeclaration": 55163,
+                    "src": "4494:7:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+                      "typeString": "UD60x18"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4493:21:78"
+            },
+            "returnParameters": {
+              "id": 55298,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4543:0:78"
+            },
+            "scope": 55390,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 55355,
+            "nodeType": "FunctionDefinition",
+            "src": "4881:497:78",
+            "nodes": [],
+            "body": {
+              "id": 55354,
+              "nodeType": "Block",
+              "src": "4971:407:78",
+              "nodes": [],
+              "statements": [
+                {
+                  "assignments": [
+                    55333
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 55333,
+                      "mutability": "mutable",
+                      "name": "oldProtocolFee",
+                      "nameLocation": "5033:14:78",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 55354,
+                      "src": "5025:22:78",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+                        "typeString": "UD60x18"
+                      },
+                      "typeName": {
+                        "id": 55332,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 55331,
+                          "name": "UD60x18",
+                          "nameLocations": [
+                            "5025:7:78"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 55163,
+                          "src": "5025:7:78"
+                        },
+                        "referencedDeclaration": 55163,
+                        "src": "5025:7:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+                          "typeString": "UD60x18"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 55337,
+                  "initialValue": {
+                    "baseExpression": {
+                      "id": 55334,
+                      "name": "protocolFees",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 55268,
+                      "src": "5050:12:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_contract$_IERC20_$45123_$_t_userDefinedValueType$_UD60x18_$55163_$",
+                        "typeString": "mapping(contract IERC20 => UD60x18)"
+                      }
+                    },
+                    "id": 55336,
+                    "indexExpression": {
+                      "id": 55335,
+                      "name": "asset",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 55322,
+                      "src": "5063:5:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20_$45123",
+                        "typeString": "contract IERC20"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "5050:19:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+                      "typeString": "UD60x18"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "5025:44:78"
+                },
+                {
+                  "expression": {
+                    "id": 55342,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "id": 55338,
+                        "name": "protocolFees",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 55268,
+                        "src": "5079:12:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_contract$_IERC20_$45123_$_t_userDefinedValueType$_UD60x18_$55163_$",
+                          "typeString": "mapping(contract IERC20 => UD60x18)"
+                        }
+                      },
+                      "id": 55340,
+                      "indexExpression": {
+                        "id": 55339,
+                        "name": "asset",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 55322,
+                        "src": "5092:5:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IERC20_$45123",
+                          "typeString": "contract IERC20"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "5079:19:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+                        "typeString": "UD60x18"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 55341,
+                      "name": "newProtocolFee",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 55325,
+                      "src": "5101:14:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+                        "typeString": "UD60x18"
+                      }
+                    },
+                    "src": "5079:36:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+                      "typeString": "UD60x18"
+                    }
+                  },
+                  "id": 55343,
+                  "nodeType": "ExpressionStatement",
+                  "src": "5079:36:78"
+                },
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "expression": {
+                          "id": 55347,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -15,
+                          "src": "5236:3:78",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 55348,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "5240:6:78",
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "src": "5236:10:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 55349,
+                        "name": "asset",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 55322,
+                        "src": "5267:5:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IERC20_$45123",
+                          "typeString": "contract IERC20"
+                        }
+                      },
+                      {
+                        "id": 55350,
+                        "name": "oldProtocolFee",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 55333,
+                        "src": "5302:14:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+                          "typeString": "UD60x18"
+                        }
+                      },
+                      {
+                        "id": 55351,
+                        "name": "newProtocolFee",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 55325,
+                        "src": "5346:14:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+                          "typeString": "UD60x18"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_contract$_IERC20_$45123",
+                          "typeString": "contract IERC20"
+                        },
+                        {
+                          "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+                          "typeString": "UD60x18"
+                        },
+                        {
+                          "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+                          "typeString": "UD60x18"
+                        }
+                      ],
+                      "expression": {
+                        "id": 55344,
+                        "name": "ISablierV2Comptroller",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 58994,
+                        "src": "5178:21:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_ISablierV2Comptroller_$58994_$",
+                          "typeString": "type(contract ISablierV2Comptroller)"
+                        }
+                      },
+                      "id": 55346,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "5200:14:78",
+                      "memberName": "SetProtocolFee",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 58933,
+                      "src": "5178:36:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_contract$_IERC20_$45123_$_t_userDefinedValueType$_UD60x18_$55163_$_t_userDefinedValueType$_UD60x18_$55163_$returns$__$",
+                        "typeString": "function (address,contract IERC20,UD60x18,UD60x18)"
+                      }
+                    },
+                    "id": 55352,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [
+                      "5229:5:78",
+                      "5260:5:78",
+                      "5286:14:78",
+                      "5330:14:78"
+                    ],
+                    "names": [
+                      "admin",
+                      "asset",
+                      "oldProtocolFee",
+                      "newProtocolFee"
+                    ],
+                    "nodeType": "FunctionCall",
+                    "src": "5178:193:78",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 55353,
+                  "nodeType": "EmitStatement",
+                  "src": "5173:198:78"
+                }
+              ]
+            },
+            "baseFunctions": [
+              58986
+            ],
+            "documentation": {
+              "id": 55319,
+              "nodeType": "StructuredDocumentation",
+              "src": "4839:37:78",
+              "text": "@inheritdoc ISablierV2Comptroller"
+            },
+            "functionSelector": "b5b3ca2c",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 55329,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 55328,
+                  "name": "onlyAdmin",
+                  "nameLocations": [
+                    "4961:9:78"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 57820,
+                  "src": "4961:9:78"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "4961:9:78"
+              }
+            ],
+            "name": "setProtocolFee",
+            "nameLocation": "4890:14:78",
+            "overrides": {
+              "id": 55327,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "4952:8:78"
+            },
+            "parameters": {
+              "id": 55326,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 55322,
+                  "mutability": "mutable",
+                  "name": "asset",
+                  "nameLocation": "4912:5:78",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 55355,
+                  "src": "4905:12:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$45123",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "id": 55321,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 55320,
+                      "name": "IERC20",
+                      "nameLocations": [
+                        "4905:6:78"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 45123,
+                      "src": "4905:6:78"
+                    },
+                    "referencedDeclaration": 45123,
+                    "src": "4905:6:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$45123",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 55325,
+                  "mutability": "mutable",
+                  "name": "newProtocolFee",
+                  "nameLocation": "4927:14:78",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 55355,
+                  "src": "4919:22:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+                    "typeString": "UD60x18"
+                  },
+                  "typeName": {
+                    "id": 55324,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 55323,
+                      "name": "UD60x18",
+                      "nameLocations": [
+                        "4919:7:78"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 55163,
+                      "src": "4919:7:78"
+                    },
+                    "referencedDeclaration": 55163,
+                    "src": "4919:7:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+                      "typeString": "UD60x18"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4904:38:78"
+            },
+            "returnParameters": {
+              "id": 55330,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4971:0:78"
+            },
+            "scope": 55390,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 55389,
+            "nodeType": "FunctionDefinition",
+            "src": "5426:383:78",
+            "nodes": [],
+            "body": {
+              "id": 55388,
+              "nodeType": "Block",
+              "src": "5494:315:78",
+              "nodes": [],
+              "statements": [
+                {
+                  "assignments": [
+                    55366
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 55366,
+                      "mutability": "mutable",
+                      "name": "oldFlag",
+                      "nameLocation": "5572:7:78",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 55388,
+                      "src": "5567:12:78",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "typeName": {
+                        "id": 55365,
+                        "name": "bool",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "5567:4:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 55370,
+                  "initialValue": {
+                    "baseExpression": {
+                      "id": 55367,
+                      "name": "isFlashAsset",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 55260,
+                      "src": "5582:12:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_contract$_IERC20_$45123_$_t_bool_$",
+                        "typeString": "mapping(contract IERC20 => bool)"
+                      }
+                    },
+                    "id": 55369,
+                    "indexExpression": {
+                      "id": 55368,
+                      "name": "asset",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 55359,
+                      "src": "5595:5:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20_$45123",
+                        "typeString": "contract IERC20"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "5582:19:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "5567:34:78"
+                },
+                {
+                  "expression": {
+                    "id": 55376,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "id": 55371,
+                        "name": "isFlashAsset",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 55260,
+                        "src": "5611:12:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_contract$_IERC20_$45123_$_t_bool_$",
+                          "typeString": "mapping(contract IERC20 => bool)"
+                        }
+                      },
+                      "id": 55373,
+                      "indexExpression": {
+                        "id": 55372,
+                        "name": "asset",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 55359,
+                        "src": "5624:5:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IERC20_$45123",
+                          "typeString": "contract IERC20"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "5611:19:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 55375,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "!",
+                      "prefix": true,
+                      "src": "5633:8:78",
+                      "subExpression": {
+                        "id": 55374,
+                        "name": "oldFlag",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 55366,
+                        "src": "5634:7:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "5611:30:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 55377,
+                  "nodeType": "ExpressionStatement",
+                  "src": "5611:30:78"
+                },
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "expression": {
+                          "id": 55381,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -15,
+                          "src": "5756:3:78",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 55382,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "5760:6:78",
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "src": "5756:10:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 55383,
+                        "name": "asset",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 55359,
+                        "src": "5775:5:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IERC20_$45123",
+                          "typeString": "contract IERC20"
+                        }
+                      },
+                      {
+                        "id": 55385,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "UnaryOperation",
+                        "operator": "!",
+                        "prefix": true,
+                        "src": "5791:8:78",
+                        "subExpression": {
+                          "id": 55384,
+                          "name": "oldFlag",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 55366,
+                          "src": "5792:7:78",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_contract$_IERC20_$45123",
+                          "typeString": "contract IERC20"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "expression": {
+                        "id": 55378,
+                        "name": "ISablierV2Comptroller",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 58994,
+                        "src": "5708:21:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_ISablierV2Comptroller_$58994_$",
+                          "typeString": "type(contract ISablierV2Comptroller)"
+                        }
+                      },
+                      "id": 55380,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "5730:16:78",
+                      "memberName": "ToggleFlashAsset",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 58943,
+                      "src": "5708:38:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_contract$_IERC20_$45123_$_t_bool_$returns$__$",
+                        "typeString": "function (address,contract IERC20,bool)"
+                      }
+                    },
+                    "id": 55386,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [
+                      "5749:5:78",
+                      "5768:5:78",
+                      "5782:7:78"
+                    ],
+                    "names": [
+                      "admin",
+                      "asset",
+                      "newFlag"
+                    ],
+                    "nodeType": "FunctionCall",
+                    "src": "5708:94:78",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 55387,
+                  "nodeType": "EmitStatement",
+                  "src": "5703:99:78"
+                }
+              ]
+            },
+            "baseFunctions": [
+              58993
+            ],
+            "documentation": {
+              "id": 55356,
+              "nodeType": "StructuredDocumentation",
+              "src": "5384:37:78",
+              "text": "@inheritdoc ISablierV2Comptroller"
+            },
+            "functionSelector": "cb01e30e",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 55363,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 55362,
+                  "name": "onlyAdmin",
+                  "nameLocations": [
+                    "5484:9:78"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 57820,
+                  "src": "5484:9:78"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "5484:9:78"
+              }
+            ],
+            "name": "toggleFlashAsset",
+            "nameLocation": "5435:16:78",
+            "overrides": {
+              "id": 55361,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "5475:8:78"
+            },
+            "parameters": {
+              "id": 55360,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 55359,
+                  "mutability": "mutable",
+                  "name": "asset",
+                  "nameLocation": "5459:5:78",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 55389,
+                  "src": "5452:12:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$45123",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "id": 55358,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 55357,
+                      "name": "IERC20",
+                      "nameLocations": [
+                        "5452:6:78"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 45123,
+                      "src": "5452:6:78"
+                    },
+                    "referencedDeclaration": 45123,
+                    "src": "5452:6:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$45123",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5451:14:78"
+            },
+            "returnParameters": {
+              "id": 55364,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5494:0:78"
+            },
+            "scope": 55390,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 55245,
+              "name": "ISablierV2Comptroller",
+              "nameLocations": [
+                "3097:21:78"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 58994,
+              "src": "3097:21:78"
+            },
+            "id": 55246,
+            "nodeType": "InheritanceSpecifier",
+            "src": "3097:21:78"
+          },
+          {
+            "baseName": {
+              "id": 55247,
+              "name": "Adminable",
+              "nameLocations": [
+                "3149:9:78"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 57843,
+              "src": "3149:9:78"
+            },
+            "id": 55248,
+            "nodeType": "InheritanceSpecifier",
+            "src": "3149:9:78"
+          }
+        ],
+        "canonicalName": "SablierV2Comptroller",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 55244,
+          "nodeType": "StructuredDocumentation",
+          "src": "2966:94:78",
+          "text": "@title SablierV2Comptroller\n @notice See the documentation in {ISablierV2Comptroller}."
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          55390,
+          57843,
+          58994,
+          58825
+        ],
+        "name": "SablierV2Comptroller",
+        "nameLocation": "3069:20:78",
+        "scope": 55391,
+        "usedErrors": [
+          59444
+        ],
+        "usedEvents": [
+          58812,
+          58919,
+          58933,
+          58943
+        ]
+      }
+    ],
+    "license": "BUSL-1.1"
+  },
+  "id": 78
+}

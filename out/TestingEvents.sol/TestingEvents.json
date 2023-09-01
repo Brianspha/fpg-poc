@@ -1,0 +1,269 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "name": "InvalidConfiguration",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "name": "ValidConfiguration",
+      "type": "event"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"name\":\"InvalidConfiguration\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"name\":\"ValidConfiguration\",\"type\":\"event\"}],\"devdoc\":{\"details\":\"This contract provides event declarations to be used in the different Vault configurations. It defines two events: `InvalidConfiguration` and `ValidConfiguration`. These events can be emitted by the contracts that inherit from this contract to signal changes in configuration status during testing.\",\"kind\":\"dev\",\"methods\":{},\"title\":\"TestingEvents\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"test/utils/TestingEvents.sol\":\"TestingEvents\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"appendCBOR\":false,\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":10000},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":@prb/=node_modules/@prb/\",\":@sablier/=node_modules/@sablier/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\"]},\"sources\":{\"test/utils/TestingEvents.sol\":{\"keccak256\":\"0x23d6384f40e3ae9075db38e38293bd242bb2e013b7c42a2c6ebaf85454e1da6d\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://3f124fcae480d9cbe74e50fe9b1df6777247b2655ae2dfc2b842fd6002ee815b\",\"dweb:/ipfs/QmT6aMbia3HLwjQztcxSTmhUbCnYHKbnTY654czA3ppzkm\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.20+commit.a1b79de6"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "InvalidConfiguration",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "ValidConfiguration",
+          "anonymous": false
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "@prb/=node_modules/@prb/",
+        "@sablier/=node_modules/@sablier/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 10000
+      },
+      "metadata": {
+        "bytecodeHash": "none",
+        "appendCBOR": false
+      },
+      "compilationTarget": {
+        "test/utils/TestingEvents.sol": "TestingEvents"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "test/utils/TestingEvents.sol": {
+        "keccak256": "0x23d6384f40e3ae9075db38e38293bd242bb2e013b7c42a2c6ebaf85454e1da6d",
+        "urls": [
+          "bzz-raw://3f124fcae480d9cbe74e50fe9b1df6777247b2655ae2dfc2b842fd6002ee815b",
+          "dweb:/ipfs/QmT6aMbia3HLwjQztcxSTmhUbCnYHKbnTY654czA3ppzkm"
+        ],
+        "license": "UNLICENSED"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "test/utils/TestingEvents.sol",
+    "id": 64690,
+    "exportedSymbols": {
+      "TestingEvents": [
+        64689
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:488:117",
+    "nodes": [
+      {
+        "id": 64679,
+        "nodeType": "PragmaDirective",
+        "src": "39:24:117",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 64689,
+        "nodeType": "ContractDefinition",
+        "src": "413:113:117",
+        "nodes": [
+          {
+            "id": 64684,
+            "nodeType": "EventDefinition",
+            "src": "451:35:117",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "0fb7fdc8bca83406cd7f6ca42d4da786951d929672645e72fcfc22f3a8b79cbd",
+            "name": "InvalidConfiguration",
+            "nameLocation": "457:20:117",
+            "parameters": {
+              "id": 64683,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 64682,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 64684,
+                  "src": "478:6:117",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 64681,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "478:6:117",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "477:8:117"
+            }
+          },
+          {
+            "id": 64688,
+            "nodeType": "EventDefinition",
+            "src": "491:33:117",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "58b41b76bc344e350ab2d8745b9403653ba0751c5b032936e5390ee08f9326ef",
+            "name": "ValidConfiguration",
+            "nameLocation": "497:18:117",
+            "parameters": {
+              "id": 64687,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 64686,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 64688,
+                  "src": "516:6:117",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 64685,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "516:6:117",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "515:8:117"
+            }
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [],
+        "canonicalName": "TestingEvents",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 64680,
+          "nodeType": "StructuredDocumentation",
+          "src": "65:347:117",
+          "text": " @title TestingEvents\n @dev This contract provides event declarations to be used in the different Vault configurations.\n It defines two events: `InvalidConfiguration` and `ValidConfiguration`.\n These events can be emitted by the contracts that inherit from this contract to signal\n changes in configuration status during testing."
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          64689
+        ],
+        "name": "TestingEvents",
+        "nameLocation": "431:13:117",
+        "scope": 64690,
+        "usedErrors": [],
+        "usedEvents": [
+          64684,
+          64688
+        ]
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 117
+}

@@ -1,0 +1,162 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "node_modules/@prb/math/src/UD2x18.sol",
+    "id": 50027,
+    "exportedSymbols": {
+      "Casting": [
+        53357
+      ],
+      "Common": [
+        53063
+      ],
+      "E": [
+        53308
+      ],
+      "Errors": [
+        53064
+      ],
+      "MAX_UD2x18": [
+        53319
+      ],
+      "PI": [
+        53327
+      ],
+      "PRBMath_UD2x18_IntoSD1x18_Overflow": [
+        53348
+      ],
+      "PRBMath_UD2x18_IntoUint40_Overflow": [
+        53354
+      ],
+      "SD1x18": [
+        50431
+      ],
+      "SD59x18": [
+        52988
+      ],
+      "UD2x18": [
+        53359
+      ],
+      "UD60x18": [
+        55163
+      ],
+      "UNIT": [
+        53338
+      ],
+      "intoSD1x18": [
+        53118
+      ],
+      "intoSD59x18": [
+        53145
+      ],
+      "intoUD60x18": [
+        53166
+      ],
+      "intoUint128": [
+        53186
+      ],
+      "intoUint256": [
+        53206
+      ],
+      "intoUint40": [
+        53245
+      ],
+      "uMAX_SD1x18": [
+        50348
+      ],
+      "uMAX_UD2x18": [
+        53312
+      ],
+      "uUNIT": [
+        53331
+      ],
+      "ud2x18": [
+        53262
+      ],
+      "unwrap": [
+        53279
+      ],
+      "wrap": [
+        53296
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:1848:54",
+    "nodes": [
+      {
+        "id": 50022,
+        "nodeType": "PragmaDirective",
+        "src": "32:25:54",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".19"
+        ]
+      },
+      {
+        "id": 50023,
+        "nodeType": "ImportDirective",
+        "src": "1753:30:54",
+        "nodes": [],
+        "absolutePath": "node_modules/@prb/math/src/ud2x18/Casting.sol",
+        "file": "./ud2x18/Casting.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 50027,
+        "sourceUnit": 53297,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 50024,
+        "nodeType": "ImportDirective",
+        "src": "1784:32:54",
+        "nodes": [],
+        "absolutePath": "node_modules/@prb/math/src/ud2x18/Constants.sol",
+        "file": "./ud2x18/Constants.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 50027,
+        "sourceUnit": 53339,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 50025,
+        "nodeType": "ImportDirective",
+        "src": "1817:29:54",
+        "nodes": [],
+        "absolutePath": "node_modules/@prb/math/src/ud2x18/Errors.sol",
+        "file": "./ud2x18/Errors.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 50027,
+        "sourceUnit": 53355,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 50026,
+        "nodeType": "ImportDirective",
+        "src": "1847:32:54",
+        "nodes": [],
+        "absolutePath": "node_modules/@prb/math/src/ud2x18/ValueType.sol",
+        "file": "./ud2x18/ValueType.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 50027,
+        "sourceUnit": 53370,
+        "symbolAliases": [],
+        "unitAlias": ""
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 54
+}

@@ -1,0 +1,49 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.13;
+
+import "forge-std/Test.sol";
+import "forge-std/console.sol";
+import "../../../utils/TestingModifiers.sol";
+import {FPGTokenBaseTest} from "../../../base/FPGToken.t.sol";
+
+contract FPGTokenTest is FPGTokenBaseTest, TestingModifiers {
+    function setUp() public override {
+        FPGTokenBaseTest.setUp();
+    }
+
+    function test_TransferFrom_Spha_ToBob()
+        public
+        whenNotPaused
+        whenInitialised
+    {
+        vm.startPrank(spha);
+        token.transfer(bob, defaultTransferAmount);
+        assertEq(token.balanceOf(bob), defaultTransferAmount);
+        vm.stopPrank();
+    }
+
+    function test_BurnFrom_Admin() public whenNotPaused whenInitialised {
+        vm.startPrank(owner);
+        uint256 supplyBefore = token.totalSupply();
+        token.burn(defaultTransferAmount);
+        assertEq(token.totalSupply(), supplyBefore - defaultTransferAmount);
+        vm.stopPrank();
+    }
+
+    function test_TransferFrom_Bob_ToSpha()
+        public
+        whenNotPaused
+        whenInitialised
+    {
+        //create bob with token balance
+        bob = _createUserWithTokenBalance("bob");
+        vm.startPrank(bob);
+        uint256 sphasBalanceBefore = token.balanceOf(spha);
+        token.transfer(spha, defaultTransferAmount);
+        assertEq(
+            token.balanceOf(spha),
+            defaultTransferAmount + sphasBalanceBefore
+        );
+        vm.stopPrank();
+    }
+}

@@ -1,0 +1,188 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "node_modules/@prb/math/src/ud2x18/Errors.sol",
+    "id": 53355,
+    "exportedSymbols": {
+      "PRBMath_UD2x18_IntoSD1x18_Overflow": [
+        53348
+      ],
+      "PRBMath_UD2x18_IntoUint40_Overflow": [
+        53354
+      ],
+      "UD2x18": [
+        53359
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:341:69",
+    "nodes": [
+      {
+        "id": 53340,
+        "nodeType": "PragmaDirective",
+        "src": "32:25:69",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".19"
+        ]
+      },
+      {
+        "id": 53342,
+        "nodeType": "ImportDirective",
+        "src": "59:41:69",
+        "nodes": [],
+        "absolutePath": "node_modules/@prb/math/src/ud2x18/ValueType.sol",
+        "file": "./ValueType.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 53355,
+        "sourceUnit": 53370,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 53341,
+              "name": "UD2x18",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 53359,
+              "src": "68:6:69",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 53348,
+        "nodeType": "ErrorDefinition",
+        "src": "185:51:69",
+        "nodes": [],
+        "documentation": {
+          "id": 53343,
+          "nodeType": "StructuredDocumentation",
+          "src": "102:83:69",
+          "text": "@notice Thrown when trying to cast a UD2x18 number that doesn't fit in SD1x18."
+        },
+        "errorSelector": "939a3fc4",
+        "name": "PRBMath_UD2x18_IntoSD1x18_Overflow",
+        "nameLocation": "191:34:69",
+        "parameters": {
+          "id": 53347,
+          "nodeType": "ParameterList",
+          "parameters": [
+            {
+              "constant": false,
+              "id": 53346,
+              "mutability": "mutable",
+              "name": "x",
+              "nameLocation": "233:1:69",
+              "nodeType": "VariableDeclaration",
+              "scope": 53348,
+              "src": "226:8:69",
+              "stateVariable": false,
+              "storageLocation": "default",
+              "typeDescriptions": {
+                "typeIdentifier": "t_userDefinedValueType$_UD2x18_$53359",
+                "typeString": "UD2x18"
+              },
+              "typeName": {
+                "id": 53345,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 53344,
+                  "name": "UD2x18",
+                  "nameLocations": [
+                    "226:6:69"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 53359,
+                  "src": "226:6:69"
+                },
+                "referencedDeclaration": 53359,
+                "src": "226:6:69",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_userDefinedValueType$_UD2x18_$53359",
+                  "typeString": "UD2x18"
+                }
+              },
+              "visibility": "internal"
+            }
+          ],
+          "src": "225:10:69"
+        }
+      },
+      {
+        "id": 53354,
+        "nodeType": "ErrorDefinition",
+        "src": "321:51:69",
+        "nodes": [],
+        "documentation": {
+          "id": 53349,
+          "nodeType": "StructuredDocumentation",
+          "src": "238:83:69",
+          "text": "@notice Thrown when trying to cast a UD2x18 number that doesn't fit in uint40."
+        },
+        "errorSelector": "9b63ae94",
+        "name": "PRBMath_UD2x18_IntoUint40_Overflow",
+        "nameLocation": "327:34:69",
+        "parameters": {
+          "id": 53353,
+          "nodeType": "ParameterList",
+          "parameters": [
+            {
+              "constant": false,
+              "id": 53352,
+              "mutability": "mutable",
+              "name": "x",
+              "nameLocation": "369:1:69",
+              "nodeType": "VariableDeclaration",
+              "scope": 53354,
+              "src": "362:8:69",
+              "stateVariable": false,
+              "storageLocation": "default",
+              "typeDescriptions": {
+                "typeIdentifier": "t_userDefinedValueType$_UD2x18_$53359",
+                "typeString": "UD2x18"
+              },
+              "typeName": {
+                "id": 53351,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 53350,
+                  "name": "UD2x18",
+                  "nameLocations": [
+                    "362:6:69"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 53359,
+                  "src": "362:6:69"
+                },
+                "referencedDeclaration": 53359,
+                "src": "362:6:69",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_userDefinedValueType$_UD2x18_$53359",
+                  "typeString": "UD2x18"
+                }
+              },
+              "visibility": "internal"
+            }
+          ],
+          "src": "361:10:69"
+        }
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 69
+}

@@ -1,0 +1,339 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "streamId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "internalType": "uint128",
+          "name": "senderAmount",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint128",
+          "name": "recipientAmount",
+          "type": "uint128"
+        }
+      ],
+      "name": "onStreamCanceled",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "onStreamCanceled(uint256,address,uint128,uint128)": "72eba203"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"streamId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint128\",\"name\":\"senderAmount\",\"type\":\"uint128\"},{\"internalType\":\"uint128\",\"name\":\"recipientAmount\",\"type\":\"uint128\"}],\"name\":\"onStreamCanceled\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Implementation of this interface is optional. If a sender contract doesn't implement this interface, function execution will not revert.\",\"kind\":\"dev\",\"methods\":{\"onStreamCanceled(uint256,address,uint128,uint128)\":{\"details\":\"Notes: - This function may revert, but the Sablier contract will ignore the revert.\",\"params\":{\"recipient\":\"The stream's recipient, who canceled the stream.\",\"recipientAmount\":\"The amount of assets left for the stream's recipient to withdraw, denoted in units of the asset's decimals.\",\"senderAmount\":\"The amount of assets refunded to the stream's sender, denoted in units of the asset's decimals.\",\"streamId\":\"The id of the canceled stream.\"}}},\"title\":\"ISablierV2LockupSender\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"onStreamCanceled(uint256,address,uint128,uint128)\":{\"notice\":\"Responds to recipient-triggered cancellations.\"}},\"notice\":\"Interface for sender contracts capable of reacting to cancellations.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@sablier/v2-core/src/interfaces/hooks/ISablierV2LockupSender.sol\":\"ISablierV2LockupSender\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"appendCBOR\":false,\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":10000},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":@prb/=node_modules/@prb/\",\":@sablier/=node_modules/@sablier/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\"]},\"sources\":{\"node_modules/@sablier/v2-core/src/interfaces/hooks/ISablierV2LockupSender.sol\":{\"keccak256\":\"0x98f6307a2d5ad3ab77dadb62dd6faead10584232c556a23d5c69dd09e026f383\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://7aabdc8e3d4133a1b6bba67ad21f44cae5e9f1df1673e3217d055e5e407a684b\",\"dweb:/ipfs/QmdsFzWGUNDvKvhcBdanksNi8W7ENxzxYCjT8buJGn9mm8\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.20+commit.a1b79de6"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "streamId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "internalType": "uint128",
+              "name": "senderAmount",
+              "type": "uint128"
+            },
+            {
+              "internalType": "uint128",
+              "name": "recipientAmount",
+              "type": "uint128"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "onStreamCanceled"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "onStreamCanceled(uint256,address,uint128,uint128)": {
+            "details": "Notes: - This function may revert, but the Sablier contract will ignore the revert.",
+            "params": {
+              "recipient": "The stream's recipient, who canceled the stream.",
+              "recipientAmount": "The amount of assets left for the stream's recipient to withdraw, denoted in units of the asset's decimals.",
+              "senderAmount": "The amount of assets refunded to the stream's sender, denoted in units of the asset's decimals.",
+              "streamId": "The id of the canceled stream."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "onStreamCanceled(uint256,address,uint128,uint128)": {
+            "notice": "Responds to recipient-triggered cancellations."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "@prb/=node_modules/@prb/",
+        "@sablier/=node_modules/@sablier/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 10000
+      },
+      "metadata": {
+        "bytecodeHash": "none",
+        "appendCBOR": false
+      },
+      "compilationTarget": {
+        "node_modules/@sablier/v2-core/src/interfaces/hooks/ISablierV2LockupSender.sol": "ISablierV2LockupSender"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@sablier/v2-core/src/interfaces/hooks/ISablierV2LockupSender.sol": {
+        "keccak256": "0x98f6307a2d5ad3ab77dadb62dd6faead10584232c556a23d5c69dd09e026f383",
+        "urls": [
+          "bzz-raw://7aabdc8e3d4133a1b6bba67ad21f44cae5e9f1df1673e3217d055e5e407a684b",
+          "dweb:/ipfs/QmdsFzWGUNDvKvhcBdanksNi8W7ENxzxYCjT8buJGn9mm8"
+        ],
+        "license": "GPL-3.0-or-later"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "node_modules/@sablier/v2-core/src/interfaces/hooks/ISablierV2LockupSender.sol",
+    "id": 59429,
+    "exportedSymbols": {
+      "ISablierV2LockupSender": [
+        59428
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "45:1091:92",
+    "nodes": [
+      {
+        "id": 59414,
+        "nodeType": "PragmaDirective",
+        "src": "45:25:92",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".19"
+        ]
+      },
+      {
+        "id": 59428,
+        "nodeType": "ContractDefinition",
+        "src": "337:798:92",
+        "nodes": [
+          {
+            "id": 59427,
+            "nodeType": "FunctionDefinition",
+            "src": "968:165:92",
+            "nodes": [],
+            "documentation": {
+              "id": 59416,
+              "nodeType": "StructuredDocumentation",
+              "src": "376:587:92",
+              "text": "@notice Responds to recipient-triggered cancellations.\n @dev Notes:\n - This function may revert, but the Sablier contract will ignore the revert.\n @param streamId The id of the canceled stream.\n @param recipient The stream's recipient, who canceled the stream.\n @param senderAmount The amount of assets refunded to the stream's sender, denoted in units of the asset's\n decimals.\n @param recipientAmount The amount of assets left for the stream's recipient to withdraw, denoted in units of the\n asset's decimals."
+            },
+            "functionSelector": "72eba203",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "onStreamCanceled",
+            "nameLocation": "977:16:92",
+            "parameters": {
+              "id": 59425,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 59418,
+                  "mutability": "mutable",
+                  "name": "streamId",
+                  "nameLocation": "1011:8:92",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59427,
+                  "src": "1003:16:92",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 59417,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1003:7:92",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 59420,
+                  "mutability": "mutable",
+                  "name": "recipient",
+                  "nameLocation": "1037:9:92",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59427,
+                  "src": "1029:17:92",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 59419,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1029:7:92",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 59422,
+                  "mutability": "mutable",
+                  "name": "senderAmount",
+                  "nameLocation": "1064:12:92",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59427,
+                  "src": "1056:20:92",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 59421,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1056:7:92",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 59424,
+                  "mutability": "mutable",
+                  "name": "recipientAmount",
+                  "nameLocation": "1094:15:92",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59427,
+                  "src": "1086:23:92",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 59423,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1086:7:92",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "993:122:92"
+            },
+            "returnParameters": {
+              "id": 59426,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1132:0:92"
+            },
+            "scope": 59428,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ISablierV2LockupSender",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 59415,
+          "nodeType": "StructuredDocumentation",
+          "src": "72:265:92",
+          "text": "@title ISablierV2LockupSender\n @notice Interface for sender contracts capable of reacting to cancellations.\n @dev Implementation of this interface is optional. If a sender contract doesn't implement this interface,\n function execution will not revert."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          59428
+        ],
+        "name": "ISablierV2LockupSender",
+        "nameLocation": "347:22:92",
+        "scope": 59429,
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "license": "GPL-3.0-or-later"
+  },
+  "id": 92
+}

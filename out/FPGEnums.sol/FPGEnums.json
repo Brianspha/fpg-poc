@@ -1,0 +1,83 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "src/utils/FPGEnums.sol",
+    "id": 62873,
+    "exportedSymbols": {
+      "FeatureStatus": [
+        62872
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:370:105",
+    "nodes": [
+      {
+        "id": 62866,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:105",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 62872,
+        "nodeType": "EnumDefinition",
+        "src": "188:213:105",
+        "nodes": [],
+        "canonicalName": "FeatureStatus",
+        "documentation": {
+          "id": 62867,
+          "nodeType": "StructuredDocumentation",
+          "src": "58:129:105",
+          "text": " @title Enum for the status of a feature in a project.\n @dev Represents the possible states that a feature can be in."
+        },
+        "members": [
+          {
+            "id": 62868,
+            "name": "Completed",
+            "nameLocation": "213:9:105",
+            "nodeType": "EnumValue",
+            "src": "213:9:105"
+          },
+          {
+            "id": 62869,
+            "name": "InProgress",
+            "nameLocation": "265:10:105",
+            "nodeType": "EnumValue",
+            "src": "265:10:105"
+          },
+          {
+            "id": 62870,
+            "name": "FundingPhase",
+            "nameLocation": "324:12:105",
+            "nodeType": "EnumValue",
+            "src": "324:12:105"
+          },
+          {
+            "id": 62871,
+            "name": "MoreFundingNeeded",
+            "nameLocation": "382:17:105",
+            "nodeType": "EnumValue",
+            "src": "382:17:105"
+          }
+        ],
+        "name": "FeatureStatus",
+        "nameLocation": "193:13:105"
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 105
+}

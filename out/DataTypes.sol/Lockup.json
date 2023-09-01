@@ -1,0 +1,2920 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x60206037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fd",
+    "sourceMap": "1114:1847:97:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;1114:1847:97;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x73000000000000000000000000000000000000000030146080604052600080fd",
+    "sourceMap": "1114:1847:97:-:0;;;;;;;;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"Namespace for the structs used in both {SablierV2LockupLinear} and {SablierV2LockupDynamic}.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@sablier/v2-core/src/types/DataTypes.sol\":\"Lockup\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"appendCBOR\":false,\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":10000},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":@prb/=node_modules/@prb/\",\":@sablier/=node_modules/@sablier/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\"]},\"sources\":{\"node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x287b55befed2961a7eabd7d7b1b2839cbca8a5b80ef8dcbb25ed3d4c2002c305\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://bd39944e8fc06be6dbe2dd1d8449b5336e23c6a7ba3e8e9ae5ae0f37f35283f5\",\"dweb:/ipfs/QmPV3FGYjVwvKSgAXKUN3r9T9GwniZz83CxBpM7vyj2G53\"]},\"node_modules/@prb/math/src/Common.sol\":{\"keccak256\":\"0x70b3a76443312b2c6c500996306a18e3d91e5d56fed0d898d98ca0bfb6225053\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be75b034b8c27e96b375e862528afb52a2d11e75c4a25918e10d7db31cdec039\",\"dweb:/ipfs/QmQ4L3tvpDx2ophHRAW7Sc52QhVZzn4e5PKTgLwqt32F1B\"]},\"node_modules/@prb/math/src/UD2x18.sol\":{\"keccak256\":\"0xfb624e24cd8bb790fa08e7827819de85504a86e20e961fa4ad126c65b6d90641\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://dd795b8df250e7eedc68e2dba1afbb60357ce8f22f21bed212b5a9046d2057d2\",\"dweb:/ipfs/QmUHtrSr8Gb6bvSe2rCWPA5YrJq72UiJARYr1gZqFVRsYH\"]},\"node_modules/@prb/math/src/UD60x18.sol\":{\"keccak256\":\"0xb98c6f74275914d279e8af6c502c2b1f50d5f6e1ed418d3b0153f5a193206c48\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a750edde2955f160806a51083a12185fb04e20efca0e3a7ebd127dc1acc049a9\",\"dweb:/ipfs/QmeAre3mThopoQPB9mSXZq6jck59QZ7JbDFR83urd2SLvp\"]},\"node_modules/@prb/math/src/sd1x18/Casting.sol\":{\"keccak256\":\"0x9e49e2b37c1bb845861740805edaaef3fe951a7b96eef16ce84fbf76e8278670\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d3f65f257f9f516f2b40ca30b1c999819777111bd59a92376df6c5823453165a\",\"dweb:/ipfs/QmVQRKMS6ibv6x9qWXLJp2KZw9qs6Yz1sYZQWoSBQM8Pkz\"]},\"node_modules/@prb/math/src/sd1x18/Constants.sol\":{\"keccak256\":\"0xb51aab4a2ea76f530dccbf3b7d4af24c8f3ceef67f3c574b58650466ea924a3f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b9fccf58b2b69179a311f996f772d9bf255fd1d0de9ba69ab89b45ef81008770\",\"dweb:/ipfs/QmTYE7xmFqUzQ2o8SmCpMu2GxkBJLjTtSWngoe7JXzsv2D\"]},\"node_modules/@prb/math/src/sd1x18/Errors.sol\":{\"keccak256\":\"0x836cb42ba619ca369fd4765bc47fefc3c3621369c5861882af14660aca5057ee\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://58873bcebf7398f63c6d3f234073fb6739fe4fae87428010cd0bc1aa68f53499\",\"dweb:/ipfs/QmZSZ9z4ZQUGRc1TRiL2F9AL7ysnGRXwRtocMa2zhxHFDp\"]},\"node_modules/@prb/math/src/sd1x18/ValueType.sol\":{\"keccak256\":\"0x2f86f1aa9fca42f40808b51a879b406ac51817647bdb9642f8a79dd8fdb754a7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://31559dfc012ebe40fcdb38c45e7edfa16406f11c6ea219e8676749f20dbbb5dd\",\"dweb:/ipfs/QmXeYzF9hYQphVExJRp41Vkebrs51k7xgr3jXfKgdD87XC\"]},\"node_modules/@prb/math/src/sd59x18/Casting.sol\":{\"keccak256\":\"0x3b21b60ec2998c3ae32f647412da51d3683b3f183a807198cc8d157499484f99\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://08a49ba7ebf592a89e1a81e5987351e7810e371f4c3d2356d9b5a9b58462c809\",\"dweb:/ipfs/QmcvyHaUzd74eYjcZWQgUDFJfYrU8kFohiB1H5cs8HgUDp\"]},\"node_modules/@prb/math/src/sd59x18/Constants.sol\":{\"keccak256\":\"0xe0a1ca1a7b5b2d637cff83a8caa3d2e67a6a34f7ee9df58a9ca5d5fa268c474a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3e9a6980e97a68f9148c350439bc0b3ca4126a4428752b151744097da3f650c8\",\"dweb:/ipfs/QmVRJqG378u46dnvjgYkcLjnvHW8yNv5ijLoUWPMGQscuC\"]},\"node_modules/@prb/math/src/sd59x18/Errors.sol\":{\"keccak256\":\"0x83ee24e41d235bc05cb641d2c5c16c67b17fa00e4593661a8d14350435d4df04\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://40cedd66b7ba40126b2668c2fbe8ccd6ae88bd5853c205ac54f643e49acd31c1\",\"dweb:/ipfs/QmWZz7bsQceUUzJiURQE5XtfzNW2Ammiz2WSNsZGxCYT7a\"]},\"node_modules/@prb/math/src/sd59x18/Helpers.sol\":{\"keccak256\":\"0x208570f1657cf730cb6c3d81aa14030e0d45cf906cdedea5059369d7df4bb716\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4c78ca900edafa9338d4e3649a55ab0c84f76468d8a22fb945ba6d01e70f8fed\",\"dweb:/ipfs/QmeP4hQYfNxcATd1FsasdD4ebyu2vrC9K1N68swxUJzzZD\"]},\"node_modules/@prb/math/src/sd59x18/Math.sol\":{\"keccak256\":\"0xedd0635769176ab99878a91ce267cee2ca107b30e6b0db10736573ff4d102868\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://51795a2077ea6f109656048530481bb10c7f2b29e868f9a02d7b134d1b30c787\",\"dweb:/ipfs/Qmb9wBJ5vPtKNbiz9bbWz8Ufs6qLJWKanyg1zmRmSwUVze\"]},\"node_modules/@prb/math/src/sd59x18/ValueType.sol\":{\"keccak256\":\"0xe03112d145dcd5863aff24e5f381debaae29d446acd5666f3d640e3d9af738d7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://abacb7cba4bd732c961cfe7d66c5eec924c7a9ffe0bf07fafc95b65a887071f6\",\"dweb:/ipfs/QmSBefftoSJDMdmp5CFAVvJjPHJXHhd11x1FzkcHQxLjoT\"]},\"node_modules/@prb/math/src/ud2x18/Casting.sol\":{\"keccak256\":\"0x07ec9a8adddfe6bf37f0d9ce7702c5620a6215340889701da0525ed190ccc099\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3500550c9ed259e5a876d14510d7e4a2226fac41e04535dddffaf9e3e6dc67e5\",\"dweb:/ipfs/QmbA5y7zdqsFELeNPj1WgkP28GXBcnfYajj3E6nangJo2F\"]},\"node_modules/@prb/math/src/ud2x18/Constants.sol\":{\"keccak256\":\"0xbd11da8ad79ffc8b7b8244c82632b0ca31970e190a8877ba1a69b4b8065dcea5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f0d3d5cb4711d83e0fe654b8338b6685b6e9d9f234c645813533129ae48fa14b\",\"dweb:/ipfs/QmZW47VmyizEwAxuv6tdeJmrMM58KvsiaRjidcBgqKg4CP\"]},\"node_modules/@prb/math/src/ud2x18/Errors.sol\":{\"keccak256\":\"0xdf1e22f0b4c8032bcc8b7f63fe3984e1387f3dc7b2e9ab381822249f75376d33\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://975f9beb25a1ebff9b29dd5555e1f4f14a4fbf178d15ebd3add5ed5f5985fdec\",\"dweb:/ipfs/QmbvTvdtSrZi7J4sJuv6zUsymT5UctJnx4DkGezXW25r59\"]},\"node_modules/@prb/math/src/ud2x18/ValueType.sol\":{\"keccak256\":\"0x2802edc9869db116a0b5c490cc5f8554742f747183fa30ac5e9c80bb967e61a1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e9657724f5032559c953cba61db0fbca71f6b50f51edb53a08f840cb74a36c95\",\"dweb:/ipfs/QmX2KF8v7ng13NaavyogM3SGR4jCMLUuqKkxFhtxvc7D7m\"]},\"node_modules/@prb/math/src/ud60x18/Casting.sol\":{\"keccak256\":\"0x5bb532da36921cbdac64d1f16de5d366ef1f664502e3b7c07d0ad06917551f85\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f0819da49f6a86a1fc2ece8e8a4292f8d102dc1043a1d0a545c26d020d1f36fe\",\"dweb:/ipfs/QmdzLoo99EBJv2GGiZZAAY8Bfr4ivFykzeSbpF48aJxFZ9\"]},\"node_modules/@prb/math/src/ud60x18/Constants.sol\":{\"keccak256\":\"0x2b80d26153d3fdcfb3a9ca772d9309d31ed1275f5b8b54c3ffb54d3652b37d90\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7e3a6673a156f635db94dc176baaa7274db8f9bec4461cd1152596253550ee3b\",\"dweb:/ipfs/Qmc9zT4kNSbMYaXcnbxNVqmb3P3m46ieaQxkwxqLwsvRA5\"]},\"node_modules/@prb/math/src/ud60x18/Conversions.sol\":{\"keccak256\":\"0xaf7fc2523413822de3b66ba339fe2884fb3b8c6f6cf38ec90a2c3e3aae71df6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://655c9fe2434ca039b67277d753a60d39f2938260c716a36d24b591acf8c4fb75\",\"dweb:/ipfs/QmbygBAjCoFe9oUp9QkJ45jqctThk7VSmiSVLHV4Z3WHVe\"]},\"node_modules/@prb/math/src/ud60x18/Errors.sol\":{\"keccak256\":\"0xa8c60d4066248df22c49c882873efbc017344107edabc48c52209abbc39cb1e3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8fb7e1103309b4f99e95bb638850c0321272d57bd3e6b0a6331d699ff103cbaf\",\"dweb:/ipfs/QmfLFHjVJv4ibEvMmh46qC5nCbeCYSfXgCTDWQqfW3jnyB\"]},\"node_modules/@prb/math/src/ud60x18/Helpers.sol\":{\"keccak256\":\"0xf5faff881391d2c060029499a666cc5f0bea90a213150bb476fae8f02a5df268\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://76105fa22bb1b5f1fa99abf9c4fbc9577a02c7bc204f271754c407f0d75489f5\",\"dweb:/ipfs/QmVNGZSTniDuZus5DdbFubqJXCLtTaZit7YPm4ntjr5Lgr\"]},\"node_modules/@prb/math/src/ud60x18/Math.sol\":{\"keccak256\":\"0xafe12d658b5bb495226df1841cbfbcb25e9fc443c6d41a85b5ac6aa7ec79ea29\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://357d345f960581548f27fb43fb2320101033c053b949f5cb4d75390a058df205\",\"dweb:/ipfs/QmYjQwVdwCWZDNkxUD4T1nwieP38o4HWtYUYjAmfpFpg3y\"]},\"node_modules/@prb/math/src/ud60x18/ValueType.sol\":{\"keccak256\":\"0xdd873b5124180d9b71498b3a7fe93b1c08c368bec741f7d5f8e17f78a0b70f31\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7df6700f747dd01b2520a900a8d6b5a4d239b8063c31384f40921afe22295c29\",\"dweb:/ipfs/QmSPSPQJKNSzGJu2ri5EfWjcLfA2xDHfUehyBp4FpUu2qZ\"]},\"node_modules/@sablier/v2-core/src/types/DataTypes.sol\":{\"keccak256\":\"0x3b1d42a5fedf5e5de718aa289aec0f72ad7b1a0e2b16515460c24942a30e9694\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://555451f8704595a0973ade27d8d199c363366ff6346c5425d156d332ea7bfb3b\",\"dweb:/ipfs/QmYkAyestxNeonNgfPCKQkzKsproZV7U3UGhMX2TQumNr1\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.20+commit.a1b79de6"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "@prb/=node_modules/@prb/",
+        "@sablier/=node_modules/@sablier/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 10000
+      },
+      "metadata": {
+        "bytecodeHash": "none",
+        "appendCBOR": false
+      },
+      "compilationTarget": {
+        "node_modules/@sablier/v2-core/src/types/DataTypes.sol": "Lockup"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+        "keccak256": "0x287b55befed2961a7eabd7d7b1b2839cbca8a5b80ef8dcbb25ed3d4c2002c305",
+        "urls": [
+          "bzz-raw://bd39944e8fc06be6dbe2dd1d8449b5336e23c6a7ba3e8e9ae5ae0f37f35283f5",
+          "dweb:/ipfs/QmPV3FGYjVwvKSgAXKUN3r9T9GwniZz83CxBpM7vyj2G53"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/Common.sol": {
+        "keccak256": "0x70b3a76443312b2c6c500996306a18e3d91e5d56fed0d898d98ca0bfb6225053",
+        "urls": [
+          "bzz-raw://be75b034b8c27e96b375e862528afb52a2d11e75c4a25918e10d7db31cdec039",
+          "dweb:/ipfs/QmQ4L3tvpDx2ophHRAW7Sc52QhVZzn4e5PKTgLwqt32F1B"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/UD2x18.sol": {
+        "keccak256": "0xfb624e24cd8bb790fa08e7827819de85504a86e20e961fa4ad126c65b6d90641",
+        "urls": [
+          "bzz-raw://dd795b8df250e7eedc68e2dba1afbb60357ce8f22f21bed212b5a9046d2057d2",
+          "dweb:/ipfs/QmUHtrSr8Gb6bvSe2rCWPA5YrJq72UiJARYr1gZqFVRsYH"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/UD60x18.sol": {
+        "keccak256": "0xb98c6f74275914d279e8af6c502c2b1f50d5f6e1ed418d3b0153f5a193206c48",
+        "urls": [
+          "bzz-raw://a750edde2955f160806a51083a12185fb04e20efca0e3a7ebd127dc1acc049a9",
+          "dweb:/ipfs/QmeAre3mThopoQPB9mSXZq6jck59QZ7JbDFR83urd2SLvp"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd1x18/Casting.sol": {
+        "keccak256": "0x9e49e2b37c1bb845861740805edaaef3fe951a7b96eef16ce84fbf76e8278670",
+        "urls": [
+          "bzz-raw://d3f65f257f9f516f2b40ca30b1c999819777111bd59a92376df6c5823453165a",
+          "dweb:/ipfs/QmVQRKMS6ibv6x9qWXLJp2KZw9qs6Yz1sYZQWoSBQM8Pkz"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd1x18/Constants.sol": {
+        "keccak256": "0xb51aab4a2ea76f530dccbf3b7d4af24c8f3ceef67f3c574b58650466ea924a3f",
+        "urls": [
+          "bzz-raw://b9fccf58b2b69179a311f996f772d9bf255fd1d0de9ba69ab89b45ef81008770",
+          "dweb:/ipfs/QmTYE7xmFqUzQ2o8SmCpMu2GxkBJLjTtSWngoe7JXzsv2D"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd1x18/Errors.sol": {
+        "keccak256": "0x836cb42ba619ca369fd4765bc47fefc3c3621369c5861882af14660aca5057ee",
+        "urls": [
+          "bzz-raw://58873bcebf7398f63c6d3f234073fb6739fe4fae87428010cd0bc1aa68f53499",
+          "dweb:/ipfs/QmZSZ9z4ZQUGRc1TRiL2F9AL7ysnGRXwRtocMa2zhxHFDp"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd1x18/ValueType.sol": {
+        "keccak256": "0x2f86f1aa9fca42f40808b51a879b406ac51817647bdb9642f8a79dd8fdb754a7",
+        "urls": [
+          "bzz-raw://31559dfc012ebe40fcdb38c45e7edfa16406f11c6ea219e8676749f20dbbb5dd",
+          "dweb:/ipfs/QmXeYzF9hYQphVExJRp41Vkebrs51k7xgr3jXfKgdD87XC"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd59x18/Casting.sol": {
+        "keccak256": "0x3b21b60ec2998c3ae32f647412da51d3683b3f183a807198cc8d157499484f99",
+        "urls": [
+          "bzz-raw://08a49ba7ebf592a89e1a81e5987351e7810e371f4c3d2356d9b5a9b58462c809",
+          "dweb:/ipfs/QmcvyHaUzd74eYjcZWQgUDFJfYrU8kFohiB1H5cs8HgUDp"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd59x18/Constants.sol": {
+        "keccak256": "0xe0a1ca1a7b5b2d637cff83a8caa3d2e67a6a34f7ee9df58a9ca5d5fa268c474a",
+        "urls": [
+          "bzz-raw://3e9a6980e97a68f9148c350439bc0b3ca4126a4428752b151744097da3f650c8",
+          "dweb:/ipfs/QmVRJqG378u46dnvjgYkcLjnvHW8yNv5ijLoUWPMGQscuC"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd59x18/Errors.sol": {
+        "keccak256": "0x83ee24e41d235bc05cb641d2c5c16c67b17fa00e4593661a8d14350435d4df04",
+        "urls": [
+          "bzz-raw://40cedd66b7ba40126b2668c2fbe8ccd6ae88bd5853c205ac54f643e49acd31c1",
+          "dweb:/ipfs/QmWZz7bsQceUUzJiURQE5XtfzNW2Ammiz2WSNsZGxCYT7a"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd59x18/Helpers.sol": {
+        "keccak256": "0x208570f1657cf730cb6c3d81aa14030e0d45cf906cdedea5059369d7df4bb716",
+        "urls": [
+          "bzz-raw://4c78ca900edafa9338d4e3649a55ab0c84f76468d8a22fb945ba6d01e70f8fed",
+          "dweb:/ipfs/QmeP4hQYfNxcATd1FsasdD4ebyu2vrC9K1N68swxUJzzZD"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd59x18/Math.sol": {
+        "keccak256": "0xedd0635769176ab99878a91ce267cee2ca107b30e6b0db10736573ff4d102868",
+        "urls": [
+          "bzz-raw://51795a2077ea6f109656048530481bb10c7f2b29e868f9a02d7b134d1b30c787",
+          "dweb:/ipfs/Qmb9wBJ5vPtKNbiz9bbWz8Ufs6qLJWKanyg1zmRmSwUVze"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd59x18/ValueType.sol": {
+        "keccak256": "0xe03112d145dcd5863aff24e5f381debaae29d446acd5666f3d640e3d9af738d7",
+        "urls": [
+          "bzz-raw://abacb7cba4bd732c961cfe7d66c5eec924c7a9ffe0bf07fafc95b65a887071f6",
+          "dweb:/ipfs/QmSBefftoSJDMdmp5CFAVvJjPHJXHhd11x1FzkcHQxLjoT"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud2x18/Casting.sol": {
+        "keccak256": "0x07ec9a8adddfe6bf37f0d9ce7702c5620a6215340889701da0525ed190ccc099",
+        "urls": [
+          "bzz-raw://3500550c9ed259e5a876d14510d7e4a2226fac41e04535dddffaf9e3e6dc67e5",
+          "dweb:/ipfs/QmbA5y7zdqsFELeNPj1WgkP28GXBcnfYajj3E6nangJo2F"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud2x18/Constants.sol": {
+        "keccak256": "0xbd11da8ad79ffc8b7b8244c82632b0ca31970e190a8877ba1a69b4b8065dcea5",
+        "urls": [
+          "bzz-raw://f0d3d5cb4711d83e0fe654b8338b6685b6e9d9f234c645813533129ae48fa14b",
+          "dweb:/ipfs/QmZW47VmyizEwAxuv6tdeJmrMM58KvsiaRjidcBgqKg4CP"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud2x18/Errors.sol": {
+        "keccak256": "0xdf1e22f0b4c8032bcc8b7f63fe3984e1387f3dc7b2e9ab381822249f75376d33",
+        "urls": [
+          "bzz-raw://975f9beb25a1ebff9b29dd5555e1f4f14a4fbf178d15ebd3add5ed5f5985fdec",
+          "dweb:/ipfs/QmbvTvdtSrZi7J4sJuv6zUsymT5UctJnx4DkGezXW25r59"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud2x18/ValueType.sol": {
+        "keccak256": "0x2802edc9869db116a0b5c490cc5f8554742f747183fa30ac5e9c80bb967e61a1",
+        "urls": [
+          "bzz-raw://e9657724f5032559c953cba61db0fbca71f6b50f51edb53a08f840cb74a36c95",
+          "dweb:/ipfs/QmX2KF8v7ng13NaavyogM3SGR4jCMLUuqKkxFhtxvc7D7m"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud60x18/Casting.sol": {
+        "keccak256": "0x5bb532da36921cbdac64d1f16de5d366ef1f664502e3b7c07d0ad06917551f85",
+        "urls": [
+          "bzz-raw://f0819da49f6a86a1fc2ece8e8a4292f8d102dc1043a1d0a545c26d020d1f36fe",
+          "dweb:/ipfs/QmdzLoo99EBJv2GGiZZAAY8Bfr4ivFykzeSbpF48aJxFZ9"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud60x18/Constants.sol": {
+        "keccak256": "0x2b80d26153d3fdcfb3a9ca772d9309d31ed1275f5b8b54c3ffb54d3652b37d90",
+        "urls": [
+          "bzz-raw://7e3a6673a156f635db94dc176baaa7274db8f9bec4461cd1152596253550ee3b",
+          "dweb:/ipfs/Qmc9zT4kNSbMYaXcnbxNVqmb3P3m46ieaQxkwxqLwsvRA5"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud60x18/Conversions.sol": {
+        "keccak256": "0xaf7fc2523413822de3b66ba339fe2884fb3b8c6f6cf38ec90a2c3e3aae71df6b",
+        "urls": [
+          "bzz-raw://655c9fe2434ca039b67277d753a60d39f2938260c716a36d24b591acf8c4fb75",
+          "dweb:/ipfs/QmbygBAjCoFe9oUp9QkJ45jqctThk7VSmiSVLHV4Z3WHVe"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud60x18/Errors.sol": {
+        "keccak256": "0xa8c60d4066248df22c49c882873efbc017344107edabc48c52209abbc39cb1e3",
+        "urls": [
+          "bzz-raw://8fb7e1103309b4f99e95bb638850c0321272d57bd3e6b0a6331d699ff103cbaf",
+          "dweb:/ipfs/QmfLFHjVJv4ibEvMmh46qC5nCbeCYSfXgCTDWQqfW3jnyB"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud60x18/Helpers.sol": {
+        "keccak256": "0xf5faff881391d2c060029499a666cc5f0bea90a213150bb476fae8f02a5df268",
+        "urls": [
+          "bzz-raw://76105fa22bb1b5f1fa99abf9c4fbc9577a02c7bc204f271754c407f0d75489f5",
+          "dweb:/ipfs/QmVNGZSTniDuZus5DdbFubqJXCLtTaZit7YPm4ntjr5Lgr"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud60x18/Math.sol": {
+        "keccak256": "0xafe12d658b5bb495226df1841cbfbcb25e9fc443c6d41a85b5ac6aa7ec79ea29",
+        "urls": [
+          "bzz-raw://357d345f960581548f27fb43fb2320101033c053b949f5cb4d75390a058df205",
+          "dweb:/ipfs/QmYjQwVdwCWZDNkxUD4T1nwieP38o4HWtYUYjAmfpFpg3y"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud60x18/ValueType.sol": {
+        "keccak256": "0xdd873b5124180d9b71498b3a7fe93b1c08c368bec741f7d5f8e17f78a0b70f31",
+        "urls": [
+          "bzz-raw://7df6700f747dd01b2520a900a8d6b5a4d239b8063c31384f40921afe22295c29",
+          "dweb:/ipfs/QmSPSPQJKNSzGJu2ri5EfWjcLfA2xDHfUehyBp4FpUu2qZ"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@sablier/v2-core/src/types/DataTypes.sol": {
+        "keccak256": "0x3b1d42a5fedf5e5de718aa289aec0f72ad7b1a0e2b16515460c24942a30e9694",
+        "urls": [
+          "bzz-raw://555451f8704595a0973ade27d8d199c363366ff6346c5425d156d332ea7bfb3b",
+          "dweb:/ipfs/QmYkAyestxNeonNgfPCKQkzKsproZV7U3UGhMX2TQumNr1"
+        ],
+        "license": "GPL-3.0-or-later"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "node_modules/@sablier/v2-core/src/types/DataTypes.sol",
+    "id": 61187,
+    "exportedSymbols": {
+      "Broker": [
+        60989
+      ],
+      "IERC20": [
+        45123
+      ],
+      "Lockup": [
+        61014
+      ],
+      "LockupDynamic": [
+        61108
+      ],
+      "LockupLinear": [
+        61186
+      ],
+      "UD2x18": [
+        53359
+      ],
+      "UD60x18": [
+        55163
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "45:12627:97",
+    "nodes": [
+      {
+        "id": 60976,
+        "nodeType": "PragmaDirective",
+        "src": "45:25:97",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".19"
+        ]
+      },
+      {
+        "id": 60978,
+        "nodeType": "ImportDirective",
+        "src": "72:72:97",
+        "nodes": [],
+        "absolutePath": "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 61187,
+        "sourceUnit": 45124,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 60977,
+              "name": "IERC20",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 45123,
+              "src": "81:6:97",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 60980,
+        "nodeType": "ImportDirective",
+        "src": "145:50:97",
+        "nodes": [],
+        "absolutePath": "node_modules/@prb/math/src/UD2x18.sol",
+        "file": "@prb/math/src/UD2x18.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 61187,
+        "sourceUnit": 50027,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 60979,
+              "name": "UD2x18",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 53359,
+              "src": "154:6:97",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 60982,
+        "nodeType": "ImportDirective",
+        "src": "196:52:97",
+        "nodes": [],
+        "absolutePath": "node_modules/@prb/math/src/UD60x18.sol",
+        "file": "@prb/math/src/UD60x18.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 61187,
+        "sourceUnit": 50036,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 60981,
+              "name": "UD60x18",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 55163,
+              "src": "205:7:97",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 60989,
+        "nodeType": "StructDefinition",
+        "src": "952:55:97",
+        "nodes": [],
+        "canonicalName": "Broker",
+        "documentation": {
+          "id": 60983,
+          "nodeType": "StructuredDocumentation",
+          "src": "663:289:97",
+          "text": "@notice Struct encapsulating the broker parameters passed to the create functions. Both can be set to zero.\n @param account The address receiving the broker's fee.\n @param fee The broker's percentage fee from the total amount, denoted as a fixed-point number where 1e18 is 100%."
+        },
+        "members": [
+          {
+            "constant": false,
+            "id": 60985,
+            "mutability": "mutable",
+            "name": "account",
+            "nameLocation": "980:7:97",
+            "nodeType": "VariableDeclaration",
+            "scope": 60989,
+            "src": "972:15:97",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 60984,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "972:7:97",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 60988,
+            "mutability": "mutable",
+            "name": "fee",
+            "nameLocation": "1001:3:97",
+            "nodeType": "VariableDeclaration",
+            "scope": 60989,
+            "src": "993:11:97",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+              "typeString": "UD60x18"
+            },
+            "typeName": {
+              "id": 60987,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 60986,
+                "name": "UD60x18",
+                "nameLocations": [
+                  "993:7:97"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 55163,
+                "src": "993:7:97"
+              },
+              "referencedDeclaration": 55163,
+              "src": "993:7:97",
+              "typeDescriptions": {
+                "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+                "typeString": "UD60x18"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "Broker",
+        "nameLocation": "959:6:97",
+        "scope": 61187,
+        "visibility": "public"
+      },
+      {
+        "id": 61014,
+        "nodeType": "ContractDefinition",
+        "src": "1114:1847:97",
+        "nodes": [
+          {
+            "id": 60998,
+            "nodeType": "StructDefinition",
+            "src": "1676:138:97",
+            "nodes": [],
+            "canonicalName": "Lockup.Amounts",
+            "documentation": {
+              "id": 60991,
+              "nodeType": "StructuredDocumentation",
+              "src": "1135:536:97",
+              "text": "@notice Struct encapsulating the deposit, withdrawn, and refunded amounts, all denoted in units\n of the asset's decimals.\n @dev Because the deposited and the withdrawn amount are often read together, declaring them in\n the same slot saves gas.\n @param deposited The initial amount deposited in the stream, net of fees.\n @param withdrawn The cumulative amount withdrawn from the stream.\n @param refunded The amount refunded to the sender. Unless the stream was canceled, this is always zero."
+            },
+            "members": [
+              {
+                "constant": false,
+                "id": 60993,
+                "mutability": "mutable",
+                "name": "deposited",
+                "nameLocation": "1727:9:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 60998,
+                "src": "1719:17:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint128",
+                  "typeString": "uint128"
+                },
+                "typeName": {
+                  "id": 60992,
+                  "name": "uint128",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1719:7:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 60995,
+                "mutability": "mutable",
+                "name": "withdrawn",
+                "nameLocation": "1754:9:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 60998,
+                "src": "1746:17:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint128",
+                  "typeString": "uint128"
+                },
+                "typeName": {
+                  "id": 60994,
+                  "name": "uint128",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1746:7:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 60997,
+                "mutability": "mutable",
+                "name": "refunded",
+                "nameLocation": "1799:8:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 60998,
+                "src": "1791:16:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint128",
+                  "typeString": "uint128"
+                },
+                "typeName": {
+                  "id": 60996,
+                  "name": "uint128",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1791:7:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Amounts",
+            "nameLocation": "1683:7:97",
+            "scope": 61014,
+            "visibility": "public"
+          },
+          {
+            "id": 61006,
+            "nodeType": "StructDefinition",
+            "src": "2143:109:97",
+            "nodes": [],
+            "canonicalName": "Lockup.CreateAmounts",
+            "documentation": {
+              "id": 60999,
+              "nodeType": "StructuredDocumentation",
+              "src": "1820:318:97",
+              "text": "@notice Struct encapsulating the deposit amount, the protocol fee amount, and the broker fee amount,\n all denoted in units of the asset's decimals.\n @param deposit The amount to deposit in the stream.\n @param protocolFee The protocol fee amount.\n @param brokerFee The broker fee amount."
+            },
+            "members": [
+              {
+                "constant": false,
+                "id": 61001,
+                "mutability": "mutable",
+                "name": "deposit",
+                "nameLocation": "2182:7:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61006,
+                "src": "2174:15:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint128",
+                  "typeString": "uint128"
+                },
+                "typeName": {
+                  "id": 61000,
+                  "name": "uint128",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2174:7:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61003,
+                "mutability": "mutable",
+                "name": "protocolFee",
+                "nameLocation": "2207:11:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61006,
+                "src": "2199:19:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint128",
+                  "typeString": "uint128"
+                },
+                "typeName": {
+                  "id": 61002,
+                  "name": "uint128",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2199:7:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61005,
+                "mutability": "mutable",
+                "name": "brokerFee",
+                "nameLocation": "2236:9:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61006,
+                "src": "2228:17:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint128",
+                  "typeString": "uint128"
+                },
+                "typeName": {
+                  "id": 61004,
+                  "name": "uint128",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2228:7:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "CreateAmounts",
+            "nameLocation": "2150:13:97",
+            "scope": 61014,
+            "visibility": "public"
+          },
+          {
+            "id": 61013,
+            "nodeType": "EnumDefinition",
+            "src": "2797:162:97",
+            "nodes": [],
+            "canonicalName": "Lockup.Status",
+            "documentation": {
+              "id": 61007,
+              "nodeType": "StructuredDocumentation",
+              "src": "2258:534:97",
+              "text": "@notice Enum representing the different statuses of a stream.\n @custom:value PENDING Stream created but not started; assets are in a pending state.\n @custom:value STREAMING Active stream where assets are currently being streamed.\n @custom:value SETTLED All assets have been streamed; recipient is due to withdraw them.\n @custom:value CANCELED Canceled stream; remaining assets await recipient's withdrawal.\n @custom:value DEPLETED Depleted stream; all assets have been withdrawn and/or refunded."
+            },
+            "members": [
+              {
+                "id": 61008,
+                "name": "PENDING",
+                "nameLocation": "2819:7:97",
+                "nodeType": "EnumValue",
+                "src": "2819:7:97"
+              },
+              {
+                "id": 61009,
+                "name": "STREAMING",
+                "nameLocation": "2847:9:97",
+                "nodeType": "EnumValue",
+                "src": "2847:9:97"
+              },
+              {
+                "id": 61010,
+                "name": "SETTLED",
+                "nameLocation": "2877:7:97",
+                "nodeType": "EnumValue",
+                "src": "2877:7:97"
+              },
+              {
+                "id": 61011,
+                "name": "CANCELED",
+                "nameLocation": "2905:8:97",
+                "nodeType": "EnumValue",
+                "src": "2905:8:97"
+              },
+              {
+                "id": 61012,
+                "name": "DEPLETED",
+                "nameLocation": "2934:8:97",
+                "nodeType": "EnumValue",
+                "src": "2934:8:97"
+              }
+            ],
+            "name": "Status",
+            "nameLocation": "2802:6:97"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Lockup",
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": {
+          "id": 60990,
+          "nodeType": "StructuredDocumentation",
+          "src": "1009:105:97",
+          "text": "@notice Namespace for the structs used in both {SablierV2LockupLinear} and {SablierV2LockupDynamic}."
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          61014
+        ],
+        "name": "Lockup",
+        "nameLocation": "1122:6:97",
+        "scope": 61187,
+        "usedErrors": [],
+        "usedEvents": []
+      },
+      {
+        "id": 61108,
+        "nodeType": "ContractDefinition",
+        "src": "3035:5190:97",
+        "nodes": [
+          {
+            "id": 61035,
+            "nodeType": "StructDefinition",
+            "src": "4156:218:97",
+            "nodes": [],
+            "canonicalName": "LockupDynamic.CreateWithDeltas",
+            "documentation": {
+              "id": 61016,
+              "nodeType": "StructuredDocumentation",
+              "src": "3063:1088:97",
+              "text": "@notice Struct encapsulating the parameters for the {SablierV2LockupDynamic.createWithDeltas} function.\n @param sender The address streaming the assets, with the ability to cancel the stream. It doesn't have to be the\n same as `msg.sender`.\n @param recipient The address receiving the assets.\n @param totalAmount The total amount of ERC-20 assets to be paid, including the stream deposit and any potential\n fees, all denoted in units of the asset's decimals.\n @param asset The contract address of the ERC-20 asset used for streaming.\n @param cancelable Indicates if the stream is cancelable.\n @param broker Struct containing (i) the address of the broker assisting in creating the stream, and (ii) the\n percentage fee paid to the broker from `totalAmount`, denoted as a fixed-point number. Both can be set to zero.\n @param segments Segments with deltas used to compose the custom streaming curve. Milestones are calculated by\n starting from `block.timestamp` and adding each delta to the previous milestone."
+            },
+            "members": [
+              {
+                "constant": false,
+                "id": 61018,
+                "mutability": "mutable",
+                "name": "sender",
+                "nameLocation": "4198:6:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61035,
+                "src": "4190:14:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 61017,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "4190:7:97",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61020,
+                "mutability": "mutable",
+                "name": "cancelable",
+                "nameLocation": "4219:10:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61035,
+                "src": "4214:15:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 61019,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "4214:4:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61022,
+                "mutability": "mutable",
+                "name": "recipient",
+                "nameLocation": "4247:9:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61035,
+                "src": "4239:17:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 61021,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "4239:7:97",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61024,
+                "mutability": "mutable",
+                "name": "totalAmount",
+                "nameLocation": "4274:11:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61035,
+                "src": "4266:19:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint128",
+                  "typeString": "uint128"
+                },
+                "typeName": {
+                  "id": 61023,
+                  "name": "uint128",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "4266:7:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61027,
+                "mutability": "mutable",
+                "name": "asset",
+                "nameLocation": "4302:5:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61035,
+                "src": "4295:12:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_IERC20_$45123",
+                  "typeString": "contract IERC20"
+                },
+                "typeName": {
+                  "id": 61026,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 61025,
+                    "name": "IERC20",
+                    "nameLocations": [
+                      "4295:6:97"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 45123,
+                    "src": "4295:6:97"
+                  },
+                  "referencedDeclaration": 45123,
+                  "src": "4295:6:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$45123",
+                    "typeString": "contract IERC20"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61030,
+                "mutability": "mutable",
+                "name": "broker",
+                "nameLocation": "4324:6:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61035,
+                "src": "4317:13:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Broker_$60989_storage_ptr",
+                  "typeString": "struct Broker"
+                },
+                "typeName": {
+                  "id": 61029,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 61028,
+                    "name": "Broker",
+                    "nameLocations": [
+                      "4317:6:97"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 60989,
+                    "src": "4317:6:97"
+                  },
+                  "referencedDeclaration": 60989,
+                  "src": "4317:6:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Broker_$60989_storage_ptr",
+                    "typeString": "struct Broker"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61034,
+                "mutability": "mutable",
+                "name": "segments",
+                "nameLocation": "4359:8:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61035,
+                "src": "4340:27:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_SegmentWithDelta_$61081_storage_$dyn_storage_ptr",
+                  "typeString": "struct LockupDynamic.SegmentWithDelta[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 61032,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 61031,
+                      "name": "SegmentWithDelta",
+                      "nameLocations": [
+                        "4340:16:97"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 61081,
+                      "src": "4340:16:97"
+                    },
+                    "referencedDeclaration": 61081,
+                    "src": "4340:16:97",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_SegmentWithDelta_$61081_storage_ptr",
+                      "typeString": "struct LockupDynamic.SegmentWithDelta"
+                    }
+                  },
+                  "id": 61033,
+                  "nodeType": "ArrayTypeName",
+                  "src": "4340:18:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_SegmentWithDelta_$61081_storage_$dyn_storage_ptr",
+                    "typeString": "struct LockupDynamic.SegmentWithDelta[]"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "CreateWithDeltas",
+            "nameLocation": "4163:16:97",
+            "scope": 61108,
+            "visibility": "public"
+          },
+          {
+            "id": 61057,
+            "nodeType": "StructDefinition",
+            "src": "5430:239:97",
+            "nodes": [],
+            "canonicalName": "LockupDynamic.CreateWithMilestones",
+            "documentation": {
+              "id": 61036,
+              "nodeType": "StructuredDocumentation",
+              "src": "4380:1045:97",
+              "text": "@notice Struct encapsulating the parameters for the {SablierV2LockupDynamic.createWithMilestones}\n function.\n @param sender The address streaming the assets, with the ability to cancel the stream. It doesn't have to be the\n same as `msg.sender`.\n @param startTime The Unix timestamp indicating the stream's start.\n @param cancelable Indicates if the stream is cancelable.\n @param recipient The address receiving the assets.\n @param totalAmount The total amount of ERC-20 assets to be paid, including the stream deposit and any potential\n fees, all denoted in units of the asset's decimals.\n @param asset The contract address of the ERC-20 asset used for streaming.\n @param broker Struct containing (i) the address of the broker assisting in creating the stream, and (ii) the\n percentage fee paid to the broker from `totalAmount`, denoted as a fixed-point number. Both can be set to zero.\n @param segments Segments used to compose the custom streaming curve."
+            },
+            "members": [
+              {
+                "constant": false,
+                "id": 61038,
+                "mutability": "mutable",
+                "name": "sender",
+                "nameLocation": "5476:6:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61057,
+                "src": "5468:14:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 61037,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "5468:7:97",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61040,
+                "mutability": "mutable",
+                "name": "startTime",
+                "nameLocation": "5499:9:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61057,
+                "src": "5492:16:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint40",
+                  "typeString": "uint40"
+                },
+                "typeName": {
+                  "id": 61039,
+                  "name": "uint40",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "5492:6:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61042,
+                "mutability": "mutable",
+                "name": "cancelable",
+                "nameLocation": "5523:10:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61057,
+                "src": "5518:15:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 61041,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "5518:4:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61044,
+                "mutability": "mutable",
+                "name": "recipient",
+                "nameLocation": "5551:9:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61057,
+                "src": "5543:17:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 61043,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "5543:7:97",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61046,
+                "mutability": "mutable",
+                "name": "totalAmount",
+                "nameLocation": "5578:11:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61057,
+                "src": "5570:19:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint128",
+                  "typeString": "uint128"
+                },
+                "typeName": {
+                  "id": 61045,
+                  "name": "uint128",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "5570:7:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61049,
+                "mutability": "mutable",
+                "name": "asset",
+                "nameLocation": "5606:5:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61057,
+                "src": "5599:12:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_IERC20_$45123",
+                  "typeString": "contract IERC20"
+                },
+                "typeName": {
+                  "id": 61048,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 61047,
+                    "name": "IERC20",
+                    "nameLocations": [
+                      "5599:6:97"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 45123,
+                    "src": "5599:6:97"
+                  },
+                  "referencedDeclaration": 45123,
+                  "src": "5599:6:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$45123",
+                    "typeString": "contract IERC20"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61052,
+                "mutability": "mutable",
+                "name": "broker",
+                "nameLocation": "5628:6:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61057,
+                "src": "5621:13:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Broker_$60989_storage_ptr",
+                  "typeString": "struct Broker"
+                },
+                "typeName": {
+                  "id": 61051,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 61050,
+                    "name": "Broker",
+                    "nameLocations": [
+                      "5621:6:97"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 60989,
+                    "src": "5621:6:97"
+                  },
+                  "referencedDeclaration": 60989,
+                  "src": "5621:6:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Broker_$60989_storage_ptr",
+                    "typeString": "struct Broker"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61056,
+                "mutability": "mutable",
+                "name": "segments",
+                "nameLocation": "5654:8:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61057,
+                "src": "5644:18:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_Segment_$61072_storage_$dyn_storage_ptr",
+                  "typeString": "struct LockupDynamic.Segment[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 61054,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 61053,
+                      "name": "Segment",
+                      "nameLocations": [
+                        "5644:7:97"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 61072,
+                      "src": "5644:7:97"
+                    },
+                    "referencedDeclaration": 61072,
+                    "src": "5644:7:97",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Segment_$61072_storage_ptr",
+                      "typeString": "struct LockupDynamic.Segment"
+                    }
+                  },
+                  "id": 61055,
+                  "nodeType": "ArrayTypeName",
+                  "src": "5644:9:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Segment_$61072_storage_$dyn_storage_ptr",
+                    "typeString": "struct LockupDynamic.Segment[]"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "CreateWithMilestones",
+            "nameLocation": "5437:20:97",
+            "scope": 61108,
+            "visibility": "public"
+          },
+          {
+            "id": 61063,
+            "nodeType": "StructDefinition",
+            "src": "5866:62:97",
+            "nodes": [],
+            "canonicalName": "LockupDynamic.Range",
+            "documentation": {
+              "id": 61058,
+              "nodeType": "StructuredDocumentation",
+              "src": "5675:186:97",
+              "text": "@notice Struct encapsulating the time range.\n @param start The Unix timestamp indicating the stream's start.\n @param end The Unix timestamp indicating the stream's end."
+            },
+            "members": [
+              {
+                "constant": false,
+                "id": 61060,
+                "mutability": "mutable",
+                "name": "start",
+                "nameLocation": "5896:5:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61063,
+                "src": "5889:12:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint40",
+                  "typeString": "uint40"
+                },
+                "typeName": {
+                  "id": 61059,
+                  "name": "uint40",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "5889:6:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61062,
+                "mutability": "mutable",
+                "name": "end",
+                "nameLocation": "5918:3:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61063,
+                "src": "5911:10:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint40",
+                  "typeString": "uint40"
+                },
+                "typeName": {
+                  "id": 61061,
+                  "name": "uint40",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "5911:6:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Range",
+            "nameLocation": "5873:5:97",
+            "scope": 61108,
+            "visibility": "public"
+          },
+          {
+            "id": 61072,
+            "nodeType": "StructDefinition",
+            "src": "6279:115:97",
+            "nodes": [],
+            "canonicalName": "LockupDynamic.Segment",
+            "documentation": {
+              "id": 61064,
+              "nodeType": "StructuredDocumentation",
+              "src": "5934:340:97",
+              "text": "@notice Segment struct used in the Lockup Dynamic stream.\n @param amount The amount of assets to be streamed in this segment, denoted in units of the asset's decimals.\n @param exponent The exponent of this segment, denoted as a fixed-point number.\n @param milestone The Unix timestamp indicating this segment's end."
+            },
+            "members": [
+              {
+                "constant": false,
+                "id": 61066,
+                "mutability": "mutable",
+                "name": "amount",
+                "nameLocation": "6330:6:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61072,
+                "src": "6322:14:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint128",
+                  "typeString": "uint128"
+                },
+                "typeName": {
+                  "id": 61065,
+                  "name": "uint128",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "6322:7:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61069,
+                "mutability": "mutable",
+                "name": "exponent",
+                "nameLocation": "6353:8:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61072,
+                "src": "6346:15:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_userDefinedValueType$_UD2x18_$53359",
+                  "typeString": "UD2x18"
+                },
+                "typeName": {
+                  "id": 61068,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 61067,
+                    "name": "UD2x18",
+                    "nameLocations": [
+                      "6346:6:97"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 53359,
+                    "src": "6346:6:97"
+                  },
+                  "referencedDeclaration": 53359,
+                  "src": "6346:6:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_UD2x18_$53359",
+                    "typeString": "UD2x18"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61071,
+                "mutability": "mutable",
+                "name": "milestone",
+                "nameLocation": "6378:9:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61072,
+                "src": "6371:16:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint40",
+                  "typeString": "uint40"
+                },
+                "typeName": {
+                  "id": 61070,
+                  "name": "uint40",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "6371:6:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Segment",
+            "nameLocation": "6286:7:97",
+            "scope": 61108,
+            "visibility": "public"
+          },
+          {
+            "id": 61081,
+            "nodeType": "StructDefinition",
+            "src": "6792:102:97",
+            "nodes": [],
+            "canonicalName": "LockupDynamic.SegmentWithDelta",
+            "documentation": {
+              "id": 61073,
+              "nodeType": "StructuredDocumentation",
+              "src": "6400:387:97",
+              "text": "@notice Segment struct used at runtime in {SablierV2LockupDynamic.createWithDeltas}.\n @param amount The amount of assets to be streamed in this segment, denoted in units of the asset's decimals.\n @param exponent The exponent of this segment, denoted as a fixed-point number.\n @param delta The time difference in seconds between this segment and the previous one."
+            },
+            "members": [
+              {
+                "constant": false,
+                "id": 61075,
+                "mutability": "mutable",
+                "name": "amount",
+                "nameLocation": "6834:6:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61081,
+                "src": "6826:14:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint128",
+                  "typeString": "uint128"
+                },
+                "typeName": {
+                  "id": 61074,
+                  "name": "uint128",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "6826:7:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61078,
+                "mutability": "mutable",
+                "name": "exponent",
+                "nameLocation": "6857:8:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61081,
+                "src": "6850:15:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_userDefinedValueType$_UD2x18_$53359",
+                  "typeString": "UD2x18"
+                },
+                "typeName": {
+                  "id": 61077,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 61076,
+                    "name": "UD2x18",
+                    "nameLocations": [
+                      "6850:6:97"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 53359,
+                    "src": "6850:6:97"
+                  },
+                  "referencedDeclaration": 53359,
+                  "src": "6850:6:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_UD2x18_$53359",
+                    "typeString": "UD2x18"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61080,
+                "mutability": "mutable",
+                "name": "delta",
+                "nameLocation": "6882:5:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61081,
+                "src": "6875:12:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint40",
+                  "typeString": "uint40"
+                },
+                "typeName": {
+                  "id": 61079,
+                  "name": "uint40",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "6875:6:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "SegmentWithDelta",
+            "nameLocation": "6799:16:97",
+            "scope": 61108,
+            "visibility": "public"
+          },
+          {
+            "id": 61107,
+            "nodeType": "StructDefinition",
+            "src": "7861:362:97",
+            "nodes": [],
+            "canonicalName": "LockupDynamic.Stream",
+            "documentation": {
+              "id": 61082,
+              "nodeType": "StructuredDocumentation",
+              "src": "6900:956:97",
+              "text": "@notice Lockup Dynamic stream.\n @dev The fields are arranged like this to save gas via tight variable packing.\n @param sender The address streaming the assets, with the ability to cancel the stream.\n @param startTime The Unix timestamp indicating the stream's start.\n @param endTime The Unix timestamp indicating the stream's end.\n @param isCancelable Boolean indicating if the stream is cancelable.\n @param wasCanceled Boolean indicating if the stream was canceled.\n @param asset The contract address of the ERC-20 asset used for streaming.\n @param isDepleted Boolean indicating if the stream is depleted.\n @param isStream Boolean indicating if the struct entity exists.\n @param amounts Struct containing the deposit, withdrawn, and refunded amounts, all denoted in units of the\n asset's decimals.\n @param segments Segments used to compose the custom streaming curve."
+            },
+            "members": [
+              {
+                "constant": false,
+                "id": 61084,
+                "mutability": "mutable",
+                "name": "sender",
+                "nameLocation": "7911:6:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61107,
+                "src": "7903:14:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 61083,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "7903:7:97",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61086,
+                "mutability": "mutable",
+                "name": "startTime",
+                "nameLocation": "7934:9:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61107,
+                "src": "7927:16:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint40",
+                  "typeString": "uint40"
+                },
+                "typeName": {
+                  "id": 61085,
+                  "name": "uint40",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "7927:6:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61088,
+                "mutability": "mutable",
+                "name": "endTime",
+                "nameLocation": "7960:7:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61107,
+                "src": "7953:14:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint40",
+                  "typeString": "uint40"
+                },
+                "typeName": {
+                  "id": 61087,
+                  "name": "uint40",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "7953:6:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61090,
+                "mutability": "mutable",
+                "name": "isCancelable",
+                "nameLocation": "7982:12:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61107,
+                "src": "7977:17:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 61089,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "7977:4:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61092,
+                "mutability": "mutable",
+                "name": "wasCanceled",
+                "nameLocation": "8009:11:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61107,
+                "src": "8004:16:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 61091,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "8004:4:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61095,
+                "mutability": "mutable",
+                "name": "asset",
+                "nameLocation": "8055:5:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61107,
+                "src": "8048:12:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_IERC20_$45123",
+                  "typeString": "contract IERC20"
+                },
+                "typeName": {
+                  "id": 61094,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 61093,
+                    "name": "IERC20",
+                    "nameLocations": [
+                      "8048:6:97"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 45123,
+                    "src": "8048:6:97"
+                  },
+                  "referencedDeclaration": 45123,
+                  "src": "8048:6:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$45123",
+                    "typeString": "contract IERC20"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61097,
+                "mutability": "mutable",
+                "name": "isDepleted",
+                "nameLocation": "8075:10:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61107,
+                "src": "8070:15:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 61096,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "8070:4:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61099,
+                "mutability": "mutable",
+                "name": "isStream",
+                "nameLocation": "8100:8:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61107,
+                "src": "8095:13:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 61098,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "8095:4:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61102,
+                "mutability": "mutable",
+                "name": "amounts",
+                "nameLocation": "8157:7:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61107,
+                "src": "8142:22:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Amounts_$60998_storage_ptr",
+                  "typeString": "struct Lockup.Amounts"
+                },
+                "typeName": {
+                  "id": 61101,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 61100,
+                    "name": "Lockup.Amounts",
+                    "nameLocations": [
+                      "8142:6:97",
+                      "8149:7:97"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 60998,
+                    "src": "8142:14:97"
+                  },
+                  "referencedDeclaration": 60998,
+                  "src": "8142:14:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Amounts_$60998_storage_ptr",
+                    "typeString": "struct Lockup.Amounts"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61106,
+                "mutability": "mutable",
+                "name": "segments",
+                "nameLocation": "8208:8:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61107,
+                "src": "8198:18:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_Segment_$61072_storage_$dyn_storage_ptr",
+                  "typeString": "struct LockupDynamic.Segment[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 61104,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 61103,
+                      "name": "Segment",
+                      "nameLocations": [
+                        "8198:7:97"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 61072,
+                      "src": "8198:7:97"
+                    },
+                    "referencedDeclaration": 61072,
+                    "src": "8198:7:97",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Segment_$61072_storage_ptr",
+                      "typeString": "struct LockupDynamic.Segment"
+                    }
+                  },
+                  "id": 61105,
+                  "nodeType": "ArrayTypeName",
+                  "src": "8198:9:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Segment_$61072_storage_$dyn_storage_ptr",
+                    "typeString": "struct LockupDynamic.Segment[]"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Stream",
+            "nameLocation": "7868:6:97",
+            "scope": 61108,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "LockupDynamic",
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": {
+          "id": 61015,
+          "nodeType": "StructuredDocumentation",
+          "src": "2963:72:97",
+          "text": "@notice Namespace for the structs used in {SablierV2LockupDynamic}."
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          61108
+        ],
+        "name": "LockupDynamic",
+        "nameLocation": "3043:13:97",
+        "scope": 61187,
+        "usedErrors": [],
+        "usedEvents": []
+      },
+      {
+        "id": 61186,
+        "nodeType": "ContractDefinition",
+        "src": "8298:4373:97",
+        "nodes": [
+          {
+            "id": 61128,
+            "nodeType": "StructDefinition",
+            "src": "9331:213:97",
+            "nodes": [],
+            "canonicalName": "LockupLinear.CreateWithDurations",
+            "documentation": {
+              "id": 61110,
+              "nodeType": "StructuredDocumentation",
+              "src": "8325:1001:97",
+              "text": "@notice Struct encapsulating the parameters for the {SablierV2LockupLinear.createWithDurations} function.\n @param sender The address streaming the assets, with the ability to cancel the stream. It doesn't have to be the\n same as `msg.sender`.\n @param recipient The address receiving the assets.\n @param totalAmount The total amount of ERC-20 assets to be paid, including the stream deposit and any potential\n fees, all denoted in units of the asset's decimals.\n @param asset The contract address of the ERC-20 asset used for streaming.\n @param cancelable Indicates if the stream is cancelable.\n @param durations Struct containing (i) cliff period duration and (ii) total stream duration, both in seconds.\n @param broker Struct containing (i) the address of the broker assisting in creating the stream, and (ii) the\n percentage fee paid to the broker from `totalAmount`, denoted as a fixed-point number. Both can be set to zero."
+            },
+            "members": [
+              {
+                "constant": false,
+                "id": 61112,
+                "mutability": "mutable",
+                "name": "sender",
+                "nameLocation": "9376:6:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61128,
+                "src": "9368:14:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 61111,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "9368:7:97",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61114,
+                "mutability": "mutable",
+                "name": "recipient",
+                "nameLocation": "9400:9:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61128,
+                "src": "9392:17:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 61113,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "9392:7:97",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61116,
+                "mutability": "mutable",
+                "name": "totalAmount",
+                "nameLocation": "9427:11:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61128,
+                "src": "9419:19:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint128",
+                  "typeString": "uint128"
+                },
+                "typeName": {
+                  "id": 61115,
+                  "name": "uint128",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "9419:7:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61119,
+                "mutability": "mutable",
+                "name": "asset",
+                "nameLocation": "9455:5:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61128,
+                "src": "9448:12:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_IERC20_$45123",
+                  "typeString": "contract IERC20"
+                },
+                "typeName": {
+                  "id": 61118,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 61117,
+                    "name": "IERC20",
+                    "nameLocations": [
+                      "9448:6:97"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 45123,
+                    "src": "9448:6:97"
+                  },
+                  "referencedDeclaration": 45123,
+                  "src": "9448:6:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$45123",
+                    "typeString": "contract IERC20"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61121,
+                "mutability": "mutable",
+                "name": "cancelable",
+                "nameLocation": "9475:10:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61128,
+                "src": "9470:15:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 61120,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "9470:4:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61124,
+                "mutability": "mutable",
+                "name": "durations",
+                "nameLocation": "9505:9:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61128,
+                "src": "9495:19:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Durations_$61153_storage_ptr",
+                  "typeString": "struct LockupLinear.Durations"
+                },
+                "typeName": {
+                  "id": 61123,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 61122,
+                    "name": "Durations",
+                    "nameLocations": [
+                      "9495:9:97"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 61153,
+                    "src": "9495:9:97"
+                  },
+                  "referencedDeclaration": 61153,
+                  "src": "9495:9:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Durations_$61153_storage_ptr",
+                    "typeString": "struct LockupLinear.Durations"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61127,
+                "mutability": "mutable",
+                "name": "broker",
+                "nameLocation": "9531:6:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61128,
+                "src": "9524:13:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Broker_$60989_storage_ptr",
+                  "typeString": "struct Broker"
+                },
+                "typeName": {
+                  "id": 61126,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 61125,
+                    "name": "Broker",
+                    "nameLocations": [
+                      "9524:6:97"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 60989,
+                    "src": "9524:6:97"
+                  },
+                  "referencedDeclaration": 60989,
+                  "src": "9524:6:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Broker_$60989_storage_ptr",
+                    "typeString": "struct Broker"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "CreateWithDurations",
+            "nameLocation": "9338:19:97",
+            "scope": 61186,
+            "visibility": "public"
+          },
+          {
+            "id": 61147,
+            "nodeType": "StructDefinition",
+            "src": "10571:201:97",
+            "nodes": [],
+            "canonicalName": "LockupLinear.CreateWithRange",
+            "documentation": {
+              "id": 61129,
+              "nodeType": "StructuredDocumentation",
+              "src": "9550:1016:97",
+              "text": "@notice Struct encapsulating the parameters for the {SablierV2LockupLinear.createWithRange} function.\n @param sender The address streaming the assets, with the ability to cancel the stream. It doesn't have to be the\n same as `msg.sender`.\n @param recipient The address receiving the assets.\n @param totalAmount The total amount of ERC-20 assets to be paid, including the stream deposit and any potential\n fees, all denoted in units of the asset's decimals.\n @param asset The contract address of the ERC-20 asset used for streaming.\n @param cancelable Indicates if the stream is cancelable.\n @param range Struct containing (i) the stream's start time, (ii) cliff time, and (iii) end time, all as Unix\n timestamps.\n @param broker Struct containing (i) the address of the broker assisting in creating the stream, and (ii) the\n percentage fee paid to the broker from `totalAmount`, denoted as a fixed-point number. Both can be set to zero."
+            },
+            "members": [
+              {
+                "constant": false,
+                "id": 61131,
+                "mutability": "mutable",
+                "name": "sender",
+                "nameLocation": "10612:6:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61147,
+                "src": "10604:14:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 61130,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "10604:7:97",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61133,
+                "mutability": "mutable",
+                "name": "recipient",
+                "nameLocation": "10636:9:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61147,
+                "src": "10628:17:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 61132,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "10628:7:97",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61135,
+                "mutability": "mutable",
+                "name": "totalAmount",
+                "nameLocation": "10663:11:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61147,
+                "src": "10655:19:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint128",
+                  "typeString": "uint128"
+                },
+                "typeName": {
+                  "id": 61134,
+                  "name": "uint128",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "10655:7:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61138,
+                "mutability": "mutable",
+                "name": "asset",
+                "nameLocation": "10691:5:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61147,
+                "src": "10684:12:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_IERC20_$45123",
+                  "typeString": "contract IERC20"
+                },
+                "typeName": {
+                  "id": 61137,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 61136,
+                    "name": "IERC20",
+                    "nameLocations": [
+                      "10684:6:97"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 45123,
+                    "src": "10684:6:97"
+                  },
+                  "referencedDeclaration": 45123,
+                  "src": "10684:6:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$45123",
+                    "typeString": "contract IERC20"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61140,
+                "mutability": "mutable",
+                "name": "cancelable",
+                "nameLocation": "10711:10:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61147,
+                "src": "10706:15:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 61139,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "10706:4:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61143,
+                "mutability": "mutable",
+                "name": "range",
+                "nameLocation": "10737:5:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61147,
+                "src": "10731:11:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Range_$61161_storage_ptr",
+                  "typeString": "struct LockupLinear.Range"
+                },
+                "typeName": {
+                  "id": 61142,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 61141,
+                    "name": "Range",
+                    "nameLocations": [
+                      "10731:5:97"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 61161,
+                    "src": "10731:5:97"
+                  },
+                  "referencedDeclaration": 61161,
+                  "src": "10731:5:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Range_$61161_storage_ptr",
+                    "typeString": "struct LockupLinear.Range"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61146,
+                "mutability": "mutable",
+                "name": "broker",
+                "nameLocation": "10759:6:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61147,
+                "src": "10752:13:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Broker_$60989_storage_ptr",
+                  "typeString": "struct Broker"
+                },
+                "typeName": {
+                  "id": 61145,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 61144,
+                    "name": "Broker",
+                    "nameLocations": [
+                      "10752:6:97"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 60989,
+                    "src": "10752:6:97"
+                  },
+                  "referencedDeclaration": 60989,
+                  "src": "10752:6:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Broker_$60989_storage_ptr",
+                    "typeString": "struct Broker"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "CreateWithRange",
+            "nameLocation": "10578:15:97",
+            "scope": 61186,
+            "visibility": "public"
+          },
+          {
+            "id": 61153,
+            "nodeType": "StructDefinition",
+            "src": "10962:68:97",
+            "nodes": [],
+            "canonicalName": "LockupLinear.Durations",
+            "documentation": {
+              "id": 61148,
+              "nodeType": "StructuredDocumentation",
+              "src": "10778:179:97",
+              "text": "@notice Struct encapsulating the cliff duration and the total duration.\n @param cliff The cliff duration in seconds.\n @param total The total duration in seconds."
+            },
+            "members": [
+              {
+                "constant": false,
+                "id": 61150,
+                "mutability": "mutable",
+                "name": "cliff",
+                "nameLocation": "10996:5:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61153,
+                "src": "10989:12:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint40",
+                  "typeString": "uint40"
+                },
+                "typeName": {
+                  "id": 61149,
+                  "name": "uint40",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "10989:6:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61152,
+                "mutability": "mutable",
+                "name": "total",
+                "nameLocation": "11018:5:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61153,
+                "src": "11011:12:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint40",
+                  "typeString": "uint40"
+                },
+                "typeName": {
+                  "id": 61151,
+                  "name": "uint40",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "11011:6:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Durations",
+            "nameLocation": "10969:9:97",
+            "scope": 61186,
+            "visibility": "public"
+          },
+          {
+            "id": 61161,
+            "nodeType": "StructDefinition",
+            "src": "11281:84:97",
+            "nodes": [],
+            "canonicalName": "LockupLinear.Range",
+            "documentation": {
+              "id": 61154,
+              "nodeType": "StructuredDocumentation",
+              "src": "11036:240:97",
+              "text": "@notice Struct encapsulating the time range.\n @param start The Unix timestamp for the stream's start.\n @param cliff The Unix timestamp for the cliff period's end.\n @param end The Unix timestamp for the stream's end."
+            },
+            "members": [
+              {
+                "constant": false,
+                "id": 61156,
+                "mutability": "mutable",
+                "name": "start",
+                "nameLocation": "11311:5:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61161,
+                "src": "11304:12:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint40",
+                  "typeString": "uint40"
+                },
+                "typeName": {
+                  "id": 61155,
+                  "name": "uint40",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "11304:6:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61158,
+                "mutability": "mutable",
+                "name": "cliff",
+                "nameLocation": "11333:5:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61161,
+                "src": "11326:12:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint40",
+                  "typeString": "uint40"
+                },
+                "typeName": {
+                  "id": 61157,
+                  "name": "uint40",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "11326:6:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61160,
+                "mutability": "mutable",
+                "name": "end",
+                "nameLocation": "11355:3:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61161,
+                "src": "11348:10:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint40",
+                  "typeString": "uint40"
+                },
+                "typeName": {
+                  "id": 61159,
+                  "name": "uint40",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "11348:6:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Range",
+            "nameLocation": "11288:5:97",
+            "scope": 61186,
+            "visibility": "public"
+          },
+          {
+            "id": 61185,
+            "nodeType": "StructDefinition",
+            "src": "12333:336:97",
+            "nodes": [],
+            "canonicalName": "LockupLinear.Stream",
+            "documentation": {
+              "id": 61162,
+              "nodeType": "StructuredDocumentation",
+              "src": "11371:957:97",
+              "text": "@notice Lockup Linear stream.\n @dev The fields are arranged like this to save gas via tight variable packing.\n @param sender The address streaming the assets, with the ability to cancel the stream.\n @param startTime The Unix timestamp indicating the stream's start.\n @param cliffTime The Unix timestamp indicating the cliff period's end.\n @param isCancelable Boolean indicating if the stream is cancelable.\n @param wasCanceled Boolean indicating if the stream was canceled.\n @param asset The contract address of the ERC-20 asset used for streaming.\n @param endTime The Unix timestamp indicating the stream's end.\n @param isDepleted Boolean indicating if the stream is depleted.\n @param isStream Boolean indicating if the struct entity exists.\n @param amounts Struct containing the deposit, withdrawn, and refunded amounts, all denoted in units of the\n asset's decimals."
+            },
+            "members": [
+              {
+                "constant": false,
+                "id": 61164,
+                "mutability": "mutable",
+                "name": "sender",
+                "nameLocation": "12383:6:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61185,
+                "src": "12375:14:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 61163,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "12375:7:97",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61166,
+                "mutability": "mutable",
+                "name": "startTime",
+                "nameLocation": "12406:9:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61185,
+                "src": "12399:16:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint40",
+                  "typeString": "uint40"
+                },
+                "typeName": {
+                  "id": 61165,
+                  "name": "uint40",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "12399:6:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61168,
+                "mutability": "mutable",
+                "name": "cliffTime",
+                "nameLocation": "12432:9:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61185,
+                "src": "12425:16:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint40",
+                  "typeString": "uint40"
+                },
+                "typeName": {
+                  "id": 61167,
+                  "name": "uint40",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "12425:6:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61170,
+                "mutability": "mutable",
+                "name": "isCancelable",
+                "nameLocation": "12456:12:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61185,
+                "src": "12451:17:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 61169,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "12451:4:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61172,
+                "mutability": "mutable",
+                "name": "wasCanceled",
+                "nameLocation": "12483:11:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61185,
+                "src": "12478:16:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 61171,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "12478:4:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61175,
+                "mutability": "mutable",
+                "name": "asset",
+                "nameLocation": "12529:5:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61185,
+                "src": "12522:12:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_IERC20_$45123",
+                  "typeString": "contract IERC20"
+                },
+                "typeName": {
+                  "id": 61174,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 61173,
+                    "name": "IERC20",
+                    "nameLocations": [
+                      "12522:6:97"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 45123,
+                    "src": "12522:6:97"
+                  },
+                  "referencedDeclaration": 45123,
+                  "src": "12522:6:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$45123",
+                    "typeString": "contract IERC20"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61177,
+                "mutability": "mutable",
+                "name": "endTime",
+                "nameLocation": "12551:7:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61185,
+                "src": "12544:14:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint40",
+                  "typeString": "uint40"
+                },
+                "typeName": {
+                  "id": 61176,
+                  "name": "uint40",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "12544:6:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61179,
+                "mutability": "mutable",
+                "name": "isDepleted",
+                "nameLocation": "12573:10:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61185,
+                "src": "12568:15:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 61178,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "12568:4:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61181,
+                "mutability": "mutable",
+                "name": "isStream",
+                "nameLocation": "12598:8:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61185,
+                "src": "12593:13:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 61180,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "12593:4:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61184,
+                "mutability": "mutable",
+                "name": "amounts",
+                "nameLocation": "12655:7:97",
+                "nodeType": "VariableDeclaration",
+                "scope": 61185,
+                "src": "12640:22:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Amounts_$60998_storage_ptr",
+                  "typeString": "struct Lockup.Amounts"
+                },
+                "typeName": {
+                  "id": 61183,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 61182,
+                    "name": "Lockup.Amounts",
+                    "nameLocations": [
+                      "12640:6:97",
+                      "12647:7:97"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 60998,
+                    "src": "12640:14:97"
+                  },
+                  "referencedDeclaration": 60998,
+                  "src": "12640:14:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Amounts_$60998_storage_ptr",
+                    "typeString": "struct Lockup.Amounts"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Stream",
+            "nameLocation": "12340:6:97",
+            "scope": 61186,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "LockupLinear",
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": {
+          "id": 61109,
+          "nodeType": "StructuredDocumentation",
+          "src": "8227:71:97",
+          "text": "@notice Namespace for the structs used in {SablierV2LockupLinear}."
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          61186
+        ],
+        "name": "LockupLinear",
+        "nameLocation": "8306:12:97",
+        "scope": 61187,
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "license": "GPL-3.0-or-later"
+  },
+  "id": 97
+}

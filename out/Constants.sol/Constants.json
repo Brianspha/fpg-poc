@@ -1,0 +1,1793 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "node_modules/@prb/math/src/ud60x18/Constants.sol",
+    "id": 53803,
+    "exportedSymbols": {
+      "E": [
+        53685
+      ],
+      "EXP2_MAX_INPUT": [
+        53709
+      ],
+      "EXP_MAX_INPUT": [
+        53696
+      ],
+      "HALF_UNIT": [
+        53720
+      ],
+      "LOG2_10": [
+        53731
+      ],
+      "LOG2_E": [
+        53742
+      ],
+      "MAX_UD60x18": [
+        53753
+      ],
+      "MAX_WHOLE_UD60x18": [
+        53764
+      ],
+      "PI": [
+        53772
+      ],
+      "UD60x18": [
+        55163
+      ],
+      "UNIT": [
+        53783
+      ],
+      "UNIT_SQUARED": [
+        53794
+      ],
+      "ZERO": [
+        53802
+      ],
+      "uEXP2_MAX_INPUT": [
+        53702
+      ],
+      "uEXP_MAX_INPUT": [
+        53689
+      ],
+      "uHALF_UNIT": [
+        53713
+      ],
+      "uLOG2_10": [
+        53724
+      ],
+      "uLOG2_E": [
+        53735
+      ],
+      "uMAX_UD60x18": [
+        53746
+      ],
+      "uMAX_WHOLE_UD60x18": [
+        53757
+      ],
+      "uUNIT": [
+        53776
+      ],
+      "uUNIT_SQUARED": [
+        53787
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:1894:72",
+    "nodes": [
+      {
+        "id": 53675,
+        "nodeType": "PragmaDirective",
+        "src": "32:25:72",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".19"
+        ]
+      },
+      {
+        "id": 53677,
+        "nodeType": "ImportDirective",
+        "src": "59:42:72",
+        "nodes": [],
+        "absolutePath": "node_modules/@prb/math/src/ud60x18/ValueType.sol",
+        "file": "./ValueType.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 53803,
+        "sourceUnit": 55232,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 53676,
+              "name": "UD60x18",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 55163,
+              "src": "68:7:72",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 53685,
+        "nodeType": "VariableDeclaration",
+        "src": "199:55:72",
+        "nodes": [],
+        "constant": true,
+        "mutability": "constant",
+        "name": "E",
+        "nameLocation": "216:1:72",
+        "scope": 53803,
+        "stateVariable": false,
+        "storageLocation": "default",
+        "typeDescriptions": {
+          "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+          "typeString": "UD60x18"
+        },
+        "typeName": {
+          "id": 53680,
+          "nodeType": "UserDefinedTypeName",
+          "pathNode": {
+            "id": 53679,
+            "name": "UD60x18",
+            "nameLocations": [
+              "199:7:72"
+            ],
+            "nodeType": "IdentifierPath",
+            "referencedDeclaration": 55163,
+            "src": "199:7:72"
+          },
+          "referencedDeclaration": 55163,
+          "src": "199:7:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+            "typeString": "UD60x18"
+          }
+        },
+        "value": {
+          "arguments": [
+            {
+              "hexValue": "325f373138323831383238343539303435323335",
+              "id": 53683,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "233:20:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_2718281828459045235_by_1",
+                "typeString": "int_const 2718281828459045235"
+              },
+              "value": "2_718281828459045235"
+            }
+          ],
+          "expression": {
+            "argumentTypes": [
+              {
+                "typeIdentifier": "t_rational_2718281828459045235_by_1",
+                "typeString": "int_const 2718281828459045235"
+              }
+            ],
+            "expression": {
+              "id": 53681,
+              "name": "UD60x18",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 55163,
+              "src": "220:7:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_type$_t_userDefinedValueType$_UD60x18_$55163_$",
+                "typeString": "type(UD60x18)"
+              }
+            },
+            "id": 53682,
+            "isConstant": false,
+            "isLValue": false,
+            "isPure": true,
+            "lValueRequested": false,
+            "memberLocation": "228:4:72",
+            "memberName": "wrap",
+            "nodeType": "MemberAccess",
+            "src": "220:12:72",
+            "typeDescriptions": {
+              "typeIdentifier": "t_function_wrap_pure$_t_uint256_$returns$_t_userDefinedValueType$_UD60x18_$55163_$",
+              "typeString": "function (uint256) pure returns (UD60x18)"
+            }
+          },
+          "id": 53684,
+          "isConstant": false,
+          "isLValue": false,
+          "isPure": true,
+          "kind": "functionCall",
+          "lValueRequested": false,
+          "nameLocations": [],
+          "names": [],
+          "nodeType": "FunctionCall",
+          "src": "220:34:72",
+          "tryCall": false,
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+            "typeString": "UD60x18"
+          }
+        },
+        "visibility": "internal"
+      },
+      {
+        "id": 53689,
+        "nodeType": "VariableDeclaration",
+        "src": "304:56:72",
+        "nodes": [],
+        "constant": true,
+        "mutability": "constant",
+        "name": "uEXP_MAX_INPUT",
+        "nameLocation": "321:14:72",
+        "scope": 53803,
+        "stateVariable": false,
+        "storageLocation": "default",
+        "typeDescriptions": {
+          "typeIdentifier": "t_uint256",
+          "typeString": "uint256"
+        },
+        "typeName": {
+          "id": 53687,
+          "name": "uint256",
+          "nodeType": "ElementaryTypeName",
+          "src": "304:7:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_uint256",
+            "typeString": "uint256"
+          }
+        },
+        "value": {
+          "hexValue": "3133335f303834323538363637353039343939343430",
+          "id": 53688,
+          "isConstant": false,
+          "isLValue": false,
+          "isPure": true,
+          "kind": "number",
+          "lValueRequested": false,
+          "nodeType": "Literal",
+          "src": "338:22:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_rational_133084258667509499440_by_1",
+            "typeString": "int_const 133084258667509499440"
+          },
+          "value": "133_084258667509499440"
+        },
+        "visibility": "internal"
+      },
+      {
+        "id": 53696,
+        "nodeType": "VariableDeclaration",
+        "src": "362:61:72",
+        "nodes": [],
+        "constant": true,
+        "mutability": "constant",
+        "name": "EXP_MAX_INPUT",
+        "nameLocation": "379:13:72",
+        "scope": 53803,
+        "stateVariable": false,
+        "storageLocation": "default",
+        "typeDescriptions": {
+          "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+          "typeString": "UD60x18"
+        },
+        "typeName": {
+          "id": 53691,
+          "nodeType": "UserDefinedTypeName",
+          "pathNode": {
+            "id": 53690,
+            "name": "UD60x18",
+            "nameLocations": [
+              "362:7:72"
+            ],
+            "nodeType": "IdentifierPath",
+            "referencedDeclaration": 55163,
+            "src": "362:7:72"
+          },
+          "referencedDeclaration": 55163,
+          "src": "362:7:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+            "typeString": "UD60x18"
+          }
+        },
+        "value": {
+          "arguments": [
+            {
+              "id": 53694,
+              "name": "uEXP_MAX_INPUT",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 53689,
+              "src": "408:14:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          ],
+          "expression": {
+            "argumentTypes": [
+              {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            ],
+            "expression": {
+              "id": 53692,
+              "name": "UD60x18",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 55163,
+              "src": "395:7:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_type$_t_userDefinedValueType$_UD60x18_$55163_$",
+                "typeString": "type(UD60x18)"
+              }
+            },
+            "id": 53693,
+            "isConstant": false,
+            "isLValue": false,
+            "isPure": true,
+            "lValueRequested": false,
+            "memberLocation": "403:4:72",
+            "memberName": "wrap",
+            "nodeType": "MemberAccess",
+            "src": "395:12:72",
+            "typeDescriptions": {
+              "typeIdentifier": "t_function_wrap_pure$_t_uint256_$returns$_t_userDefinedValueType$_UD60x18_$55163_$",
+              "typeString": "function (uint256) pure returns (UD60x18)"
+            }
+          },
+          "id": 53695,
+          "isConstant": false,
+          "isLValue": false,
+          "isPure": true,
+          "kind": "functionCall",
+          "lValueRequested": false,
+          "nameLocations": [],
+          "names": [],
+          "nodeType": "FunctionCall",
+          "src": "395:28:72",
+          "tryCall": false,
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+            "typeString": "UD60x18"
+          }
+        },
+        "visibility": "internal"
+      },
+      {
+        "id": 53702,
+        "nodeType": "VariableDeclaration",
+        "src": "474:45:72",
+        "nodes": [],
+        "constant": true,
+        "mutability": "constant",
+        "name": "uEXP2_MAX_INPUT",
+        "nameLocation": "491:15:72",
+        "scope": 53803,
+        "stateVariable": false,
+        "storageLocation": "default",
+        "typeDescriptions": {
+          "typeIdentifier": "t_uint256",
+          "typeString": "uint256"
+        },
+        "typeName": {
+          "id": 53698,
+          "name": "uint256",
+          "nodeType": "ElementaryTypeName",
+          "src": "474:7:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_uint256",
+            "typeString": "uint256"
+          }
+        },
+        "value": {
+          "commonType": {
+            "typeIdentifier": "t_rational_191999999999999999999_by_1",
+            "typeString": "int_const 191999999999999999999"
+          },
+          "id": 53701,
+          "isConstant": false,
+          "isLValue": false,
+          "isPure": true,
+          "lValueRequested": false,
+          "leftExpression": {
+            "hexValue": "313932653138",
+            "id": 53699,
+            "isConstant": false,
+            "isLValue": false,
+            "isPure": true,
+            "kind": "number",
+            "lValueRequested": false,
+            "nodeType": "Literal",
+            "src": "509:6:72",
+            "typeDescriptions": {
+              "typeIdentifier": "t_rational_192000000000000000000_by_1",
+              "typeString": "int_const 192000000000000000000"
+            },
+            "value": "192e18"
+          },
+          "nodeType": "BinaryOperation",
+          "operator": "-",
+          "rightExpression": {
+            "hexValue": "31",
+            "id": 53700,
+            "isConstant": false,
+            "isLValue": false,
+            "isPure": true,
+            "kind": "number",
+            "lValueRequested": false,
+            "nodeType": "Literal",
+            "src": "518:1:72",
+            "typeDescriptions": {
+              "typeIdentifier": "t_rational_1_by_1",
+              "typeString": "int_const 1"
+            },
+            "value": "1"
+          },
+          "src": "509:10:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_rational_191999999999999999999_by_1",
+            "typeString": "int_const 191999999999999999999"
+          }
+        },
+        "visibility": "internal"
+      },
+      {
+        "id": 53709,
+        "nodeType": "VariableDeclaration",
+        "src": "521:63:72",
+        "nodes": [],
+        "constant": true,
+        "mutability": "constant",
+        "name": "EXP2_MAX_INPUT",
+        "nameLocation": "538:14:72",
+        "scope": 53803,
+        "stateVariable": false,
+        "storageLocation": "default",
+        "typeDescriptions": {
+          "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+          "typeString": "UD60x18"
+        },
+        "typeName": {
+          "id": 53704,
+          "nodeType": "UserDefinedTypeName",
+          "pathNode": {
+            "id": 53703,
+            "name": "UD60x18",
+            "nameLocations": [
+              "521:7:72"
+            ],
+            "nodeType": "IdentifierPath",
+            "referencedDeclaration": 55163,
+            "src": "521:7:72"
+          },
+          "referencedDeclaration": 55163,
+          "src": "521:7:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+            "typeString": "UD60x18"
+          }
+        },
+        "value": {
+          "arguments": [
+            {
+              "id": 53707,
+              "name": "uEXP2_MAX_INPUT",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 53702,
+              "src": "568:15:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          ],
+          "expression": {
+            "argumentTypes": [
+              {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            ],
+            "expression": {
+              "id": 53705,
+              "name": "UD60x18",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 55163,
+              "src": "555:7:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_type$_t_userDefinedValueType$_UD60x18_$55163_$",
+                "typeString": "type(UD60x18)"
+              }
+            },
+            "id": 53706,
+            "isConstant": false,
+            "isLValue": false,
+            "isPure": true,
+            "lValueRequested": false,
+            "memberLocation": "563:4:72",
+            "memberName": "wrap",
+            "nodeType": "MemberAccess",
+            "src": "555:12:72",
+            "typeDescriptions": {
+              "typeIdentifier": "t_function_wrap_pure$_t_uint256_$returns$_t_userDefinedValueType$_UD60x18_$55163_$",
+              "typeString": "function (uint256) pure returns (UD60x18)"
+            }
+          },
+          "id": 53708,
+          "isConstant": false,
+          "isLValue": false,
+          "isPure": true,
+          "kind": "functionCall",
+          "lValueRequested": false,
+          "nameLocations": [],
+          "names": [],
+          "nodeType": "FunctionCall",
+          "src": "555:29:72",
+          "tryCall": false,
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+            "typeString": "UD60x18"
+          }
+        },
+        "visibility": "internal"
+      },
+      {
+        "id": 53713,
+        "nodeType": "VariableDeclaration",
+        "src": "618:36:72",
+        "nodes": [],
+        "constant": true,
+        "mutability": "constant",
+        "name": "uHALF_UNIT",
+        "nameLocation": "635:10:72",
+        "scope": 53803,
+        "stateVariable": false,
+        "storageLocation": "default",
+        "typeDescriptions": {
+          "typeIdentifier": "t_uint256",
+          "typeString": "uint256"
+        },
+        "typeName": {
+          "id": 53711,
+          "name": "uint256",
+          "nodeType": "ElementaryTypeName",
+          "src": "618:7:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_uint256",
+            "typeString": "uint256"
+          }
+        },
+        "value": {
+          "hexValue": "302e35653138",
+          "id": 53712,
+          "isConstant": false,
+          "isLValue": false,
+          "isPure": true,
+          "kind": "number",
+          "lValueRequested": false,
+          "nodeType": "Literal",
+          "src": "648:6:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_rational_500000000000000000_by_1",
+            "typeString": "int_const 500000000000000000"
+          },
+          "value": "0.5e18"
+        },
+        "visibility": "internal"
+      },
+      {
+        "id": 53720,
+        "nodeType": "VariableDeclaration",
+        "src": "656:53:72",
+        "nodes": [],
+        "constant": true,
+        "mutability": "constant",
+        "name": "HALF_UNIT",
+        "nameLocation": "673:9:72",
+        "scope": 53803,
+        "stateVariable": false,
+        "storageLocation": "default",
+        "typeDescriptions": {
+          "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+          "typeString": "UD60x18"
+        },
+        "typeName": {
+          "id": 53715,
+          "nodeType": "UserDefinedTypeName",
+          "pathNode": {
+            "id": 53714,
+            "name": "UD60x18",
+            "nameLocations": [
+              "656:7:72"
+            ],
+            "nodeType": "IdentifierPath",
+            "referencedDeclaration": 55163,
+            "src": "656:7:72"
+          },
+          "referencedDeclaration": 55163,
+          "src": "656:7:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+            "typeString": "UD60x18"
+          }
+        },
+        "value": {
+          "arguments": [
+            {
+              "id": 53718,
+              "name": "uHALF_UNIT",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 53713,
+              "src": "698:10:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          ],
+          "expression": {
+            "argumentTypes": [
+              {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            ],
+            "expression": {
+              "id": 53716,
+              "name": "UD60x18",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 55163,
+              "src": "685:7:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_type$_t_userDefinedValueType$_UD60x18_$55163_$",
+                "typeString": "type(UD60x18)"
+              }
+            },
+            "id": 53717,
+            "isConstant": false,
+            "isLValue": false,
+            "isPure": true,
+            "lValueRequested": false,
+            "memberLocation": "693:4:72",
+            "memberName": "wrap",
+            "nodeType": "MemberAccess",
+            "src": "685:12:72",
+            "typeDescriptions": {
+              "typeIdentifier": "t_function_wrap_pure$_t_uint256_$returns$_t_userDefinedValueType$_UD60x18_$55163_$",
+              "typeString": "function (uint256) pure returns (UD60x18)"
+            }
+          },
+          "id": 53719,
+          "isConstant": false,
+          "isLValue": false,
+          "isPure": true,
+          "kind": "functionCall",
+          "lValueRequested": false,
+          "nameLocations": [],
+          "names": [],
+          "nodeType": "FunctionCall",
+          "src": "685:24:72",
+          "tryCall": false,
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+            "typeString": "UD60x18"
+          }
+        },
+        "visibility": "internal"
+      },
+      {
+        "id": 53724,
+        "nodeType": "VariableDeclaration",
+        "src": "754:48:72",
+        "nodes": [],
+        "constant": true,
+        "mutability": "constant",
+        "name": "uLOG2_10",
+        "nameLocation": "771:8:72",
+        "scope": 53803,
+        "stateVariable": false,
+        "storageLocation": "default",
+        "typeDescriptions": {
+          "typeIdentifier": "t_uint256",
+          "typeString": "uint256"
+        },
+        "typeName": {
+          "id": 53722,
+          "name": "uint256",
+          "nodeType": "ElementaryTypeName",
+          "src": "754:7:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_uint256",
+            "typeString": "uint256"
+          }
+        },
+        "value": {
+          "hexValue": "335f333231393238303934383837333632333437",
+          "id": 53723,
+          "isConstant": false,
+          "isLValue": false,
+          "isPure": true,
+          "kind": "number",
+          "lValueRequested": false,
+          "nodeType": "Literal",
+          "src": "782:20:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_rational_3321928094887362347_by_1",
+            "typeString": "int_const 3321928094887362347"
+          },
+          "value": "3_321928094887362347"
+        },
+        "visibility": "internal"
+      },
+      {
+        "id": 53731,
+        "nodeType": "VariableDeclaration",
+        "src": "804:49:72",
+        "nodes": [],
+        "constant": true,
+        "mutability": "constant",
+        "name": "LOG2_10",
+        "nameLocation": "821:7:72",
+        "scope": 53803,
+        "stateVariable": false,
+        "storageLocation": "default",
+        "typeDescriptions": {
+          "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+          "typeString": "UD60x18"
+        },
+        "typeName": {
+          "id": 53726,
+          "nodeType": "UserDefinedTypeName",
+          "pathNode": {
+            "id": 53725,
+            "name": "UD60x18",
+            "nameLocations": [
+              "804:7:72"
+            ],
+            "nodeType": "IdentifierPath",
+            "referencedDeclaration": 55163,
+            "src": "804:7:72"
+          },
+          "referencedDeclaration": 55163,
+          "src": "804:7:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+            "typeString": "UD60x18"
+          }
+        },
+        "value": {
+          "arguments": [
+            {
+              "id": 53729,
+              "name": "uLOG2_10",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 53724,
+              "src": "844:8:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          ],
+          "expression": {
+            "argumentTypes": [
+              {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            ],
+            "expression": {
+              "id": 53727,
+              "name": "UD60x18",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 55163,
+              "src": "831:7:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_type$_t_userDefinedValueType$_UD60x18_$55163_$",
+                "typeString": "type(UD60x18)"
+              }
+            },
+            "id": 53728,
+            "isConstant": false,
+            "isLValue": false,
+            "isPure": true,
+            "lValueRequested": false,
+            "memberLocation": "839:4:72",
+            "memberName": "wrap",
+            "nodeType": "MemberAccess",
+            "src": "831:12:72",
+            "typeDescriptions": {
+              "typeIdentifier": "t_function_wrap_pure$_t_uint256_$returns$_t_userDefinedValueType$_UD60x18_$55163_$",
+              "typeString": "function (uint256) pure returns (UD60x18)"
+            }
+          },
+          "id": 53730,
+          "isConstant": false,
+          "isLValue": false,
+          "isPure": true,
+          "kind": "functionCall",
+          "lValueRequested": false,
+          "nameLocations": [],
+          "names": [],
+          "nodeType": "FunctionCall",
+          "src": "831:22:72",
+          "tryCall": false,
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+            "typeString": "UD60x18"
+          }
+        },
+        "visibility": "internal"
+      },
+      {
+        "id": 53735,
+        "nodeType": "VariableDeclaration",
+        "src": "897:47:72",
+        "nodes": [],
+        "constant": true,
+        "mutability": "constant",
+        "name": "uLOG2_E",
+        "nameLocation": "914:7:72",
+        "scope": 53803,
+        "stateVariable": false,
+        "storageLocation": "default",
+        "typeDescriptions": {
+          "typeIdentifier": "t_uint256",
+          "typeString": "uint256"
+        },
+        "typeName": {
+          "id": 53733,
+          "name": "uint256",
+          "nodeType": "ElementaryTypeName",
+          "src": "897:7:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_uint256",
+            "typeString": "uint256"
+          }
+        },
+        "value": {
+          "hexValue": "315f343432363935303430383838393633343037",
+          "id": 53734,
+          "isConstant": false,
+          "isLValue": false,
+          "isPure": true,
+          "kind": "number",
+          "lValueRequested": false,
+          "nodeType": "Literal",
+          "src": "924:20:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_rational_1442695040888963407_by_1",
+            "typeString": "int_const 1442695040888963407"
+          },
+          "value": "1_442695040888963407"
+        },
+        "visibility": "internal"
+      },
+      {
+        "id": 53742,
+        "nodeType": "VariableDeclaration",
+        "src": "946:47:72",
+        "nodes": [],
+        "constant": true,
+        "mutability": "constant",
+        "name": "LOG2_E",
+        "nameLocation": "963:6:72",
+        "scope": 53803,
+        "stateVariable": false,
+        "storageLocation": "default",
+        "typeDescriptions": {
+          "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+          "typeString": "UD60x18"
+        },
+        "typeName": {
+          "id": 53737,
+          "nodeType": "UserDefinedTypeName",
+          "pathNode": {
+            "id": 53736,
+            "name": "UD60x18",
+            "nameLocations": [
+              "946:7:72"
+            ],
+            "nodeType": "IdentifierPath",
+            "referencedDeclaration": 55163,
+            "src": "946:7:72"
+          },
+          "referencedDeclaration": 55163,
+          "src": "946:7:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+            "typeString": "UD60x18"
+          }
+        },
+        "value": {
+          "arguments": [
+            {
+              "id": 53740,
+              "name": "uLOG2_E",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 53735,
+              "src": "985:7:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          ],
+          "expression": {
+            "argumentTypes": [
+              {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            ],
+            "expression": {
+              "id": 53738,
+              "name": "UD60x18",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 55163,
+              "src": "972:7:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_type$_t_userDefinedValueType$_UD60x18_$55163_$",
+                "typeString": "type(UD60x18)"
+              }
+            },
+            "id": 53739,
+            "isConstant": false,
+            "isLValue": false,
+            "isPure": true,
+            "lValueRequested": false,
+            "memberLocation": "980:4:72",
+            "memberName": "wrap",
+            "nodeType": "MemberAccess",
+            "src": "972:12:72",
+            "typeDescriptions": {
+              "typeIdentifier": "t_function_wrap_pure$_t_uint256_$returns$_t_userDefinedValueType$_UD60x18_$55163_$",
+              "typeString": "function (uint256) pure returns (UD60x18)"
+            }
+          },
+          "id": 53741,
+          "isConstant": false,
+          "isLValue": false,
+          "isPure": true,
+          "kind": "functionCall",
+          "lValueRequested": false,
+          "nameLocations": [],
+          "names": [],
+          "nodeType": "FunctionCall",
+          "src": "972:21:72",
+          "tryCall": false,
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+            "typeString": "UD60x18"
+          }
+        },
+        "visibility": "internal"
+      },
+      {
+        "id": 53746,
+        "nodeType": "VariableDeclaration",
+        "src": "1050:111:72",
+        "nodes": [],
+        "constant": true,
+        "mutability": "constant",
+        "name": "uMAX_UD60x18",
+        "nameLocation": "1067:12:72",
+        "scope": 53803,
+        "stateVariable": false,
+        "storageLocation": "default",
+        "typeDescriptions": {
+          "typeIdentifier": "t_uint256",
+          "typeString": "uint256"
+        },
+        "typeName": {
+          "id": 53744,
+          "name": "uint256",
+          "nodeType": "ElementaryTypeName",
+          "src": "1050:7:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_uint256",
+            "typeString": "uint256"
+          }
+        },
+        "value": {
+          "hexValue": "3131353739323038393233373331363139353432333537303938353030383638373930373835333236393938343636353634303536343033393435375f353834303037393133313239363339393335",
+          "id": 53745,
+          "isConstant": false,
+          "isLValue": false,
+          "isPure": true,
+          "kind": "number",
+          "lValueRequested": false,
+          "nodeType": "Literal",
+          "src": "1082:79:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_rational_115792089237316195423570985008687907853269984665640564039457584007913129639935_by_1",
+            "typeString": "int_const 1157...(70 digits omitted)...9935"
+          },
+          "value": "115792089237316195423570985008687907853269984665640564039457_584007913129639935"
+        },
+        "visibility": "internal"
+      },
+      {
+        "id": 53753,
+        "nodeType": "VariableDeclaration",
+        "src": "1163:57:72",
+        "nodes": [],
+        "constant": true,
+        "mutability": "constant",
+        "name": "MAX_UD60x18",
+        "nameLocation": "1180:11:72",
+        "scope": 53803,
+        "stateVariable": false,
+        "storageLocation": "default",
+        "typeDescriptions": {
+          "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+          "typeString": "UD60x18"
+        },
+        "typeName": {
+          "id": 53748,
+          "nodeType": "UserDefinedTypeName",
+          "pathNode": {
+            "id": 53747,
+            "name": "UD60x18",
+            "nameLocations": [
+              "1163:7:72"
+            ],
+            "nodeType": "IdentifierPath",
+            "referencedDeclaration": 55163,
+            "src": "1163:7:72"
+          },
+          "referencedDeclaration": 55163,
+          "src": "1163:7:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+            "typeString": "UD60x18"
+          }
+        },
+        "value": {
+          "arguments": [
+            {
+              "id": 53751,
+              "name": "uMAX_UD60x18",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 53746,
+              "src": "1207:12:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          ],
+          "expression": {
+            "argumentTypes": [
+              {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            ],
+            "expression": {
+              "id": 53749,
+              "name": "UD60x18",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 55163,
+              "src": "1194:7:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_type$_t_userDefinedValueType$_UD60x18_$55163_$",
+                "typeString": "type(UD60x18)"
+              }
+            },
+            "id": 53750,
+            "isConstant": false,
+            "isLValue": false,
+            "isPure": true,
+            "lValueRequested": false,
+            "memberLocation": "1202:4:72",
+            "memberName": "wrap",
+            "nodeType": "MemberAccess",
+            "src": "1194:12:72",
+            "typeDescriptions": {
+              "typeIdentifier": "t_function_wrap_pure$_t_uint256_$returns$_t_userDefinedValueType$_UD60x18_$55163_$",
+              "typeString": "function (uint256) pure returns (UD60x18)"
+            }
+          },
+          "id": 53752,
+          "isConstant": false,
+          "isLValue": false,
+          "isPure": true,
+          "kind": "functionCall",
+          "lValueRequested": false,
+          "nameLocations": [],
+          "names": [],
+          "nodeType": "FunctionCall",
+          "src": "1194:26:72",
+          "tryCall": false,
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+            "typeString": "UD60x18"
+          }
+        },
+        "visibility": "internal"
+      },
+      {
+        "id": 53757,
+        "nodeType": "VariableDeclaration",
+        "src": "1283:117:72",
+        "nodes": [],
+        "constant": true,
+        "mutability": "constant",
+        "name": "uMAX_WHOLE_UD60x18",
+        "nameLocation": "1300:18:72",
+        "scope": 53803,
+        "stateVariable": false,
+        "storageLocation": "default",
+        "typeDescriptions": {
+          "typeIdentifier": "t_uint256",
+          "typeString": "uint256"
+        },
+        "typeName": {
+          "id": 53755,
+          "name": "uint256",
+          "nodeType": "ElementaryTypeName",
+          "src": "1283:7:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_uint256",
+            "typeString": "uint256"
+          }
+        },
+        "value": {
+          "hexValue": "3131353739323038393233373331363139353432333537303938353030383638373930373835333236393938343636353634303536343033393435375f303030303030303030303030303030303030",
+          "id": 53756,
+          "isConstant": false,
+          "isLValue": false,
+          "isPure": true,
+          "kind": "number",
+          "lValueRequested": false,
+          "nodeType": "Literal",
+          "src": "1321:79:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_rational_115792089237316195423570985008687907853269984665640564039457000000000000000000_by_1",
+            "typeString": "int_const 1157...(70 digits omitted)...0000"
+          },
+          "value": "115792089237316195423570985008687907853269984665640564039457_000000000000000000"
+        },
+        "visibility": "internal"
+      },
+      {
+        "id": 53764,
+        "nodeType": "VariableDeclaration",
+        "src": "1402:69:72",
+        "nodes": [],
+        "constant": true,
+        "mutability": "constant",
+        "name": "MAX_WHOLE_UD60x18",
+        "nameLocation": "1419:17:72",
+        "scope": 53803,
+        "stateVariable": false,
+        "storageLocation": "default",
+        "typeDescriptions": {
+          "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+          "typeString": "UD60x18"
+        },
+        "typeName": {
+          "id": 53759,
+          "nodeType": "UserDefinedTypeName",
+          "pathNode": {
+            "id": 53758,
+            "name": "UD60x18",
+            "nameLocations": [
+              "1402:7:72"
+            ],
+            "nodeType": "IdentifierPath",
+            "referencedDeclaration": 55163,
+            "src": "1402:7:72"
+          },
+          "referencedDeclaration": 55163,
+          "src": "1402:7:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+            "typeString": "UD60x18"
+          }
+        },
+        "value": {
+          "arguments": [
+            {
+              "id": 53762,
+              "name": "uMAX_WHOLE_UD60x18",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 53757,
+              "src": "1452:18:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          ],
+          "expression": {
+            "argumentTypes": [
+              {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            ],
+            "expression": {
+              "id": 53760,
+              "name": "UD60x18",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 55163,
+              "src": "1439:7:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_type$_t_userDefinedValueType$_UD60x18_$55163_$",
+                "typeString": "type(UD60x18)"
+              }
+            },
+            "id": 53761,
+            "isConstant": false,
+            "isLValue": false,
+            "isPure": true,
+            "lValueRequested": false,
+            "memberLocation": "1447:4:72",
+            "memberName": "wrap",
+            "nodeType": "MemberAccess",
+            "src": "1439:12:72",
+            "typeDescriptions": {
+              "typeIdentifier": "t_function_wrap_pure$_t_uint256_$returns$_t_userDefinedValueType$_UD60x18_$55163_$",
+              "typeString": "function (uint256) pure returns (UD60x18)"
+            }
+          },
+          "id": 53763,
+          "isConstant": false,
+          "isLValue": false,
+          "isPure": true,
+          "kind": "functionCall",
+          "lValueRequested": false,
+          "nameLocations": [],
+          "names": [],
+          "nodeType": "FunctionCall",
+          "src": "1439:32:72",
+          "tryCall": false,
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+            "typeString": "UD60x18"
+          }
+        },
+        "visibility": "internal"
+      },
+      {
+        "id": 53772,
+        "nodeType": "VariableDeclaration",
+        "src": "1507:56:72",
+        "nodes": [],
+        "constant": true,
+        "mutability": "constant",
+        "name": "PI",
+        "nameLocation": "1524:2:72",
+        "scope": 53803,
+        "stateVariable": false,
+        "storageLocation": "default",
+        "typeDescriptions": {
+          "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+          "typeString": "UD60x18"
+        },
+        "typeName": {
+          "id": 53767,
+          "nodeType": "UserDefinedTypeName",
+          "pathNode": {
+            "id": 53766,
+            "name": "UD60x18",
+            "nameLocations": [
+              "1507:7:72"
+            ],
+            "nodeType": "IdentifierPath",
+            "referencedDeclaration": 55163,
+            "src": "1507:7:72"
+          },
+          "referencedDeclaration": 55163,
+          "src": "1507:7:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+            "typeString": "UD60x18"
+          }
+        },
+        "value": {
+          "arguments": [
+            {
+              "hexValue": "335f313431353932363533353839373933323338",
+              "id": 53770,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1542:20:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_3141592653589793238_by_1",
+                "typeString": "int_const 3141592653589793238"
+              },
+              "value": "3_141592653589793238"
+            }
+          ],
+          "expression": {
+            "argumentTypes": [
+              {
+                "typeIdentifier": "t_rational_3141592653589793238_by_1",
+                "typeString": "int_const 3141592653589793238"
+              }
+            ],
+            "expression": {
+              "id": 53768,
+              "name": "UD60x18",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 55163,
+              "src": "1529:7:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_type$_t_userDefinedValueType$_UD60x18_$55163_$",
+                "typeString": "type(UD60x18)"
+              }
+            },
+            "id": 53769,
+            "isConstant": false,
+            "isLValue": false,
+            "isPure": true,
+            "lValueRequested": false,
+            "memberLocation": "1537:4:72",
+            "memberName": "wrap",
+            "nodeType": "MemberAccess",
+            "src": "1529:12:72",
+            "typeDescriptions": {
+              "typeIdentifier": "t_function_wrap_pure$_t_uint256_$returns$_t_userDefinedValueType$_UD60x18_$55163_$",
+              "typeString": "function (uint256) pure returns (UD60x18)"
+            }
+          },
+          "id": 53771,
+          "isConstant": false,
+          "isLValue": false,
+          "isPure": true,
+          "kind": "functionCall",
+          "lValueRequested": false,
+          "nameLocations": [],
+          "names": [],
+          "nodeType": "FunctionCall",
+          "src": "1529:34:72",
+          "tryCall": false,
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+            "typeString": "UD60x18"
+          }
+        },
+        "visibility": "internal"
+      },
+      {
+        "id": 53776,
+        "nodeType": "VariableDeclaration",
+        "src": "1638:29:72",
+        "nodes": [],
+        "constant": true,
+        "mutability": "constant",
+        "name": "uUNIT",
+        "nameLocation": "1655:5:72",
+        "scope": 53803,
+        "stateVariable": false,
+        "storageLocation": "default",
+        "typeDescriptions": {
+          "typeIdentifier": "t_uint256",
+          "typeString": "uint256"
+        },
+        "typeName": {
+          "id": 53774,
+          "name": "uint256",
+          "nodeType": "ElementaryTypeName",
+          "src": "1638:7:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_uint256",
+            "typeString": "uint256"
+          }
+        },
+        "value": {
+          "hexValue": "31653138",
+          "id": 53775,
+          "isConstant": false,
+          "isLValue": false,
+          "isPure": true,
+          "kind": "number",
+          "lValueRequested": false,
+          "nodeType": "Literal",
+          "src": "1663:4:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_rational_1000000000000000000_by_1",
+            "typeString": "int_const 1000000000000000000"
+          },
+          "value": "1e18"
+        },
+        "visibility": "internal"
+      },
+      {
+        "id": 53783,
+        "nodeType": "VariableDeclaration",
+        "src": "1669:43:72",
+        "nodes": [],
+        "constant": true,
+        "mutability": "constant",
+        "name": "UNIT",
+        "nameLocation": "1686:4:72",
+        "scope": 53803,
+        "stateVariable": false,
+        "storageLocation": "default",
+        "typeDescriptions": {
+          "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+          "typeString": "UD60x18"
+        },
+        "typeName": {
+          "id": 53778,
+          "nodeType": "UserDefinedTypeName",
+          "pathNode": {
+            "id": 53777,
+            "name": "UD60x18",
+            "nameLocations": [
+              "1669:7:72"
+            ],
+            "nodeType": "IdentifierPath",
+            "referencedDeclaration": 55163,
+            "src": "1669:7:72"
+          },
+          "referencedDeclaration": 55163,
+          "src": "1669:7:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+            "typeString": "UD60x18"
+          }
+        },
+        "value": {
+          "arguments": [
+            {
+              "id": 53781,
+              "name": "uUNIT",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 53776,
+              "src": "1706:5:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          ],
+          "expression": {
+            "argumentTypes": [
+              {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            ],
+            "expression": {
+              "id": 53779,
+              "name": "UD60x18",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 55163,
+              "src": "1693:7:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_type$_t_userDefinedValueType$_UD60x18_$55163_$",
+                "typeString": "type(UD60x18)"
+              }
+            },
+            "id": 53780,
+            "isConstant": false,
+            "isLValue": false,
+            "isPure": true,
+            "lValueRequested": false,
+            "memberLocation": "1701:4:72",
+            "memberName": "wrap",
+            "nodeType": "MemberAccess",
+            "src": "1693:12:72",
+            "typeDescriptions": {
+              "typeIdentifier": "t_function_wrap_pure$_t_uint256_$returns$_t_userDefinedValueType$_UD60x18_$55163_$",
+              "typeString": "function (uint256) pure returns (UD60x18)"
+            }
+          },
+          "id": 53782,
+          "isConstant": false,
+          "isLValue": false,
+          "isPure": true,
+          "kind": "functionCall",
+          "lValueRequested": false,
+          "nameLocations": [],
+          "names": [],
+          "nodeType": "FunctionCall",
+          "src": "1693:19:72",
+          "tryCall": false,
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+            "typeString": "UD60x18"
+          }
+        },
+        "visibility": "internal"
+      },
+      {
+        "id": 53787,
+        "nodeType": "VariableDeclaration",
+        "src": "1749:37:72",
+        "nodes": [],
+        "constant": true,
+        "mutability": "constant",
+        "name": "uUNIT_SQUARED",
+        "nameLocation": "1766:13:72",
+        "scope": 53803,
+        "stateVariable": false,
+        "storageLocation": "default",
+        "typeDescriptions": {
+          "typeIdentifier": "t_uint256",
+          "typeString": "uint256"
+        },
+        "typeName": {
+          "id": 53785,
+          "name": "uint256",
+          "nodeType": "ElementaryTypeName",
+          "src": "1749:7:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_uint256",
+            "typeString": "uint256"
+          }
+        },
+        "value": {
+          "hexValue": "31653336",
+          "id": 53786,
+          "isConstant": false,
+          "isLValue": false,
+          "isPure": true,
+          "kind": "number",
+          "lValueRequested": false,
+          "nodeType": "Literal",
+          "src": "1782:4:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_rational_1000000000000000000000000000000000000_by_1",
+            "typeString": "int_const 1000...(29 digits omitted)...0000"
+          },
+          "value": "1e36"
+        },
+        "visibility": "internal"
+      },
+      {
+        "id": 53794,
+        "nodeType": "VariableDeclaration",
+        "src": "1788:59:72",
+        "nodes": [],
+        "constant": true,
+        "mutability": "constant",
+        "name": "UNIT_SQUARED",
+        "nameLocation": "1805:12:72",
+        "scope": 53803,
+        "stateVariable": false,
+        "storageLocation": "default",
+        "typeDescriptions": {
+          "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+          "typeString": "UD60x18"
+        },
+        "typeName": {
+          "id": 53789,
+          "nodeType": "UserDefinedTypeName",
+          "pathNode": {
+            "id": 53788,
+            "name": "UD60x18",
+            "nameLocations": [
+              "1788:7:72"
+            ],
+            "nodeType": "IdentifierPath",
+            "referencedDeclaration": 55163,
+            "src": "1788:7:72"
+          },
+          "referencedDeclaration": 55163,
+          "src": "1788:7:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+            "typeString": "UD60x18"
+          }
+        },
+        "value": {
+          "arguments": [
+            {
+              "id": 53792,
+              "name": "uUNIT_SQUARED",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 53787,
+              "src": "1833:13:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          ],
+          "expression": {
+            "argumentTypes": [
+              {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            ],
+            "expression": {
+              "id": 53790,
+              "name": "UD60x18",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 55163,
+              "src": "1820:7:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_type$_t_userDefinedValueType$_UD60x18_$55163_$",
+                "typeString": "type(UD60x18)"
+              }
+            },
+            "id": 53791,
+            "isConstant": false,
+            "isLValue": false,
+            "isPure": true,
+            "lValueRequested": false,
+            "memberLocation": "1828:4:72",
+            "memberName": "wrap",
+            "nodeType": "MemberAccess",
+            "src": "1820:12:72",
+            "typeDescriptions": {
+              "typeIdentifier": "t_function_wrap_pure$_t_uint256_$returns$_t_userDefinedValueType$_UD60x18_$55163_$",
+              "typeString": "function (uint256) pure returns (UD60x18)"
+            }
+          },
+          "id": 53793,
+          "isConstant": false,
+          "isLValue": false,
+          "isPure": true,
+          "kind": "functionCall",
+          "lValueRequested": false,
+          "nameLocations": [],
+          "names": [],
+          "nodeType": "FunctionCall",
+          "src": "1820:27:72",
+          "tryCall": false,
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+            "typeString": "UD60x18"
+          }
+        },
+        "visibility": "internal"
+      },
+      {
+        "id": 53802,
+        "nodeType": "VariableDeclaration",
+        "src": "1885:39:72",
+        "nodes": [],
+        "constant": true,
+        "mutability": "constant",
+        "name": "ZERO",
+        "nameLocation": "1902:4:72",
+        "scope": 53803,
+        "stateVariable": false,
+        "storageLocation": "default",
+        "typeDescriptions": {
+          "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+          "typeString": "UD60x18"
+        },
+        "typeName": {
+          "id": 53797,
+          "nodeType": "UserDefinedTypeName",
+          "pathNode": {
+            "id": 53796,
+            "name": "UD60x18",
+            "nameLocations": [
+              "1885:7:72"
+            ],
+            "nodeType": "IdentifierPath",
+            "referencedDeclaration": 55163,
+            "src": "1885:7:72"
+          },
+          "referencedDeclaration": 55163,
+          "src": "1885:7:72",
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+            "typeString": "UD60x18"
+          }
+        },
+        "value": {
+          "arguments": [
+            {
+              "hexValue": "30",
+              "id": 53800,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1922:1:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            }
+          ],
+          "expression": {
+            "argumentTypes": [
+              {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              }
+            ],
+            "expression": {
+              "id": 53798,
+              "name": "UD60x18",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 55163,
+              "src": "1909:7:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_type$_t_userDefinedValueType$_UD60x18_$55163_$",
+                "typeString": "type(UD60x18)"
+              }
+            },
+            "id": 53799,
+            "isConstant": false,
+            "isLValue": false,
+            "isPure": true,
+            "lValueRequested": false,
+            "memberLocation": "1917:4:72",
+            "memberName": "wrap",
+            "nodeType": "MemberAccess",
+            "src": "1909:12:72",
+            "typeDescriptions": {
+              "typeIdentifier": "t_function_wrap_pure$_t_uint256_$returns$_t_userDefinedValueType$_UD60x18_$55163_$",
+              "typeString": "function (uint256) pure returns (UD60x18)"
+            }
+          },
+          "id": 53801,
+          "isConstant": false,
+          "isLValue": false,
+          "isPure": true,
+          "kind": "functionCall",
+          "lValueRequested": false,
+          "nameLocations": [],
+          "names": [],
+          "nodeType": "FunctionCall",
+          "src": "1909:15:72",
+          "tryCall": false,
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_UD60x18_$55163",
+            "typeString": "UD60x18"
+          }
+        },
+        "visibility": "internal"
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 72
+}

@@ -1,0 +1,755 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "name": "InvalidConfiguration",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "name": "ValidConfiguration",
+      "type": "event"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"name\":\"InvalidConfiguration\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"name\":\"ValidConfiguration\",\"type\":\"event\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"test/utils/TestingModifiers.sol\":\"TestingModifiers\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"appendCBOR\":false,\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":10000},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":@prb/=node_modules/@prb/\",\":@sablier/=node_modules/@sablier/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\"]},\"sources\":{\"lib/forge-std/src/console.sol\":{\"keccak256\":\"0x91d5413c2434ca58fd278b6e1e79fd98d10c83931cc2596a6038eee4daeb34ba\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://91ccea707361e48b9b7a161fe81f496b9932bc471e9c4e4e1e9c283f2453cc70\",\"dweb:/ipfs/QmcB66sZhQ6Kz7MUHcLE78YXRUZxoZnnxZjN6yATsbB2ec\"]},\"test/utils/TestingEvents.sol\":{\"keccak256\":\"0x23d6384f40e3ae9075db38e38293bd242bb2e013b7c42a2c6ebaf85454e1da6d\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://3f124fcae480d9cbe74e50fe9b1df6777247b2655ae2dfc2b842fd6002ee815b\",\"dweb:/ipfs/QmT6aMbia3HLwjQztcxSTmhUbCnYHKbnTY654czA3ppzkm\"]},\"test/utils/TestingModifiers.sol\":{\"keccak256\":\"0xa96e2c93b4b1eb8306a3b11239744eea9974ecf9e3115d1a327ea3867d00d079\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://87eb6e4750e0e0f075ab30030d45735d00d4a227e8a7949b0c7cc48209daa6d4\",\"dweb:/ipfs/QmYv4x1Evqz26xsFtiJMmGa1qL2nJ2XbRBpALwgZ5WY9Y1\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.20+commit.a1b79de6"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "InvalidConfiguration",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "ValidConfiguration",
+          "anonymous": false
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "@prb/=node_modules/@prb/",
+        "@sablier/=node_modules/@sablier/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 10000
+      },
+      "metadata": {
+        "bytecodeHash": "none",
+        "appendCBOR": false
+      },
+      "compilationTarget": {
+        "test/utils/TestingModifiers.sol": "TestingModifiers"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/forge-std/src/console.sol": {
+        "keccak256": "0x91d5413c2434ca58fd278b6e1e79fd98d10c83931cc2596a6038eee4daeb34ba",
+        "urls": [
+          "bzz-raw://91ccea707361e48b9b7a161fe81f496b9932bc471e9c4e4e1e9c283f2453cc70",
+          "dweb:/ipfs/QmcB66sZhQ6Kz7MUHcLE78YXRUZxoZnnxZjN6yATsbB2ec"
+        ],
+        "license": "MIT"
+      },
+      "test/utils/TestingEvents.sol": {
+        "keccak256": "0x23d6384f40e3ae9075db38e38293bd242bb2e013b7c42a2c6ebaf85454e1da6d",
+        "urls": [
+          "bzz-raw://3f124fcae480d9cbe74e50fe9b1df6777247b2655ae2dfc2b842fd6002ee815b",
+          "dweb:/ipfs/QmT6aMbia3HLwjQztcxSTmhUbCnYHKbnTY654czA3ppzkm"
+        ],
+        "license": "UNLICENSED"
+      },
+      "test/utils/TestingModifiers.sol": {
+        "keccak256": "0xa96e2c93b4b1eb8306a3b11239744eea9974ecf9e3115d1a327ea3867d00d079",
+        "urls": [
+          "bzz-raw://87eb6e4750e0e0f075ab30030d45735d00d4a227e8a7949b0c7cc48209daa6d4",
+          "dweb:/ipfs/QmYv4x1Evqz26xsFtiJMmGa1qL2nJ2XbRBpALwgZ5WY9Y1"
+        ],
+        "license": "UNLICENSED"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "test/utils/TestingModifiers.sol",
+    "id": 64763,
+    "exportedSymbols": {
+      "TestingEvents": [
+        64689
+      ],
+      "TestingModifiers": [
+        64762
+      ],
+      "console": [
+        21528
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:1511:118",
+    "nodes": [
+      {
+        "id": 64691,
+        "nodeType": "PragmaDirective",
+        "src": "39:24:118",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 64692,
+        "nodeType": "ImportDirective",
+        "src": "524:29:118",
+        "nodes": [],
+        "absolutePath": "test/utils/TestingEvents.sol",
+        "file": "./TestingEvents.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 64763,
+        "sourceUnit": 64690,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 64693,
+        "nodeType": "ImportDirective",
+        "src": "554:31:118",
+        "nodes": [],
+        "absolutePath": "lib/forge-std/src/console.sol",
+        "file": "forge-std/console.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 64763,
+        "sourceUnit": 21529,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 64762,
+        "nodeType": "ContractDefinition",
+        "src": "587:962:118",
+        "nodes": [
+          {
+            "id": 64705,
+            "nodeType": "ModifierDefinition",
+            "src": "645:117:118",
+            "nodes": [],
+            "body": {
+              "id": 64704,
+              "nodeType": "Block",
+              "src": "701:61:118",
+              "nodes": [],
+              "statements": [
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "id": 64700,
+                        "name": "reason",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 64697,
+                        "src": "737:6:118",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 64699,
+                      "name": "InvalidConfiguration",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 64684,
+                      "src": "716:20:118",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory)"
+                      }
+                    },
+                    "id": 64701,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "716:28:118",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 64702,
+                  "nodeType": "EmitStatement",
+                  "src": "711:33:118"
+                },
+                {
+                  "id": 64703,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "754:1:118"
+                }
+              ]
+            },
+            "name": "whenInvalidConfiguration",
+            "nameLocation": "654:24:118",
+            "parameters": {
+              "id": 64698,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 64697,
+                  "mutability": "mutable",
+                  "name": "reason",
+                  "nameLocation": "693:6:118",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 64705,
+                  "src": "679:20:118",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 64696,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "679:6:118",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "678:22:118"
+            },
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 64709,
+            "nodeType": "ModifierDefinition",
+            "src": "767:51:118",
+            "nodes": [],
+            "body": {
+              "id": 64708,
+              "nodeType": "Block",
+              "src": "800:18:118",
+              "nodes": [],
+              "statements": [
+                {
+                  "id": 64707,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "810:1:118"
+                }
+              ]
+            },
+            "name": "whenDynamicIsDisabled",
+            "nameLocation": "776:21:118",
+            "parameters": {
+              "id": 64706,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "797:2:118"
+            },
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 64713,
+            "nodeType": "ModifierDefinition",
+            "src": "823:50:118",
+            "nodes": [],
+            "body": {
+              "id": 64712,
+              "nodeType": "Block",
+              "src": "855:18:118",
+              "nodes": [],
+              "statements": [
+                {
+                  "id": 64711,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "865:1:118"
+                }
+              ]
+            },
+            "name": "whenDynamicIsEnabled",
+            "nameLocation": "832:20:118",
+            "parameters": {
+              "id": 64710,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "852:2:118"
+            },
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 64717,
+            "nodeType": "ModifierDefinition",
+            "src": "878:56:118",
+            "nodes": [],
+            "body": {
+              "id": 64716,
+              "nodeType": "Block",
+              "src": "916:18:118",
+              "nodes": [],
+              "statements": [
+                {
+                  "id": 64715,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "926:1:118"
+                }
+              ]
+            },
+            "name": "whenAutoCompoundIsDisabled",
+            "nameLocation": "887:26:118",
+            "parameters": {
+              "id": 64714,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "913:2:118"
+            },
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 64721,
+            "nodeType": "ModifierDefinition",
+            "src": "939:55:118",
+            "nodes": [],
+            "body": {
+              "id": 64720,
+              "nodeType": "Block",
+              "src": "976:18:118",
+              "nodes": [],
+              "statements": [
+                {
+                  "id": 64719,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "986:1:118"
+                }
+              ]
+            },
+            "name": "whenAutoCompoundIsEnabled",
+            "nameLocation": "948:25:118",
+            "parameters": {
+              "id": 64718,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "973:2:118"
+            },
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 64725,
+            "nodeType": "ModifierDefinition",
+            "src": "999:53:118",
+            "nodes": [],
+            "body": {
+              "id": 64724,
+              "nodeType": "Block",
+              "src": "1034:18:118",
+              "nodes": [],
+              "statements": [
+                {
+                  "id": 64723,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "1044:1:118"
+                }
+              ]
+            },
+            "name": "whenRewardRateIsNotZero",
+            "nameLocation": "1008:23:118",
+            "parameters": {
+              "id": 64722,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1031:2:118"
+            },
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 64729,
+            "nodeType": "ModifierDefinition",
+            "src": "1057:50:118",
+            "nodes": [],
+            "body": {
+              "id": 64728,
+              "nodeType": "Block",
+              "src": "1089:18:118",
+              "nodes": [],
+              "statements": [
+                {
+                  "id": 64727,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "1099:1:118"
+                }
+              ]
+            },
+            "name": "whenRewardRateIsZero",
+            "nameLocation": "1066:20:118",
+            "parameters": {
+              "id": 64726,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1086:2:118"
+            },
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 64733,
+            "nodeType": "ModifierDefinition",
+            "src": "1112:57:118",
+            "nodes": [],
+            "body": {
+              "id": 64732,
+              "nodeType": "Block",
+              "src": "1151:18:118",
+              "nodes": [],
+              "statements": [
+                {
+                  "id": 64731,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "1161:1:118"
+                }
+              ]
+            },
+            "name": "whenMaxStakeLengthIsNotZero",
+            "nameLocation": "1121:27:118",
+            "parameters": {
+              "id": 64730,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1148:2:118"
+            },
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 64737,
+            "nodeType": "ModifierDefinition",
+            "src": "1175:54:118",
+            "nodes": [],
+            "body": {
+              "id": 64736,
+              "nodeType": "Block",
+              "src": "1211:18:118",
+              "nodes": [],
+              "statements": [
+                {
+                  "id": 64735,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "1221:1:118"
+                }
+              ]
+            },
+            "name": "whenMaxStakeLengthIsZero",
+            "nameLocation": "1184:24:118",
+            "parameters": {
+              "id": 64734,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1208:2:118"
+            },
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 64741,
+            "nodeType": "ModifierDefinition",
+            "src": "1235:53:118",
+            "nodes": [],
+            "body": {
+              "id": 64740,
+              "nodeType": "Block",
+              "src": "1270:18:118",
+              "nodes": [],
+              "statements": [
+                {
+                  "id": 64739,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "1280:1:118"
+                }
+              ]
+            },
+            "name": "whenContractInitialised",
+            "nameLocation": "1244:23:118",
+            "parameters": {
+              "id": 64738,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1267:2:118"
+            },
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 64745,
+            "nodeType": "ModifierDefinition",
+            "src": "1294:56:118",
+            "nodes": [],
+            "body": {
+              "id": 64744,
+              "nodeType": "Block",
+              "src": "1332:18:118",
+              "nodes": [],
+              "statements": [
+                {
+                  "id": 64743,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "1342:1:118"
+                }
+              ]
+            },
+            "name": "whenContractNotInitialised",
+            "nameLocation": "1303:26:118",
+            "parameters": {
+              "id": 64742,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1329:2:118"
+            },
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 64749,
+            "nodeType": "ModifierDefinition",
+            "src": "1356:43:118",
+            "nodes": [],
+            "body": {
+              "id": 64748,
+              "nodeType": "Block",
+              "src": "1381:18:118",
+              "nodes": [],
+              "statements": [
+                {
+                  "id": 64747,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "1391:1:118"
+                }
+              ]
+            },
+            "name": "whenNotPaused",
+            "nameLocation": "1365:13:118",
+            "parameters": {
+              "id": 64746,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1378:2:118"
+            },
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 64753,
+            "nodeType": "ModifierDefinition",
+            "src": "1404:40:118",
+            "nodes": [],
+            "body": {
+              "id": 64752,
+              "nodeType": "Block",
+              "src": "1426:18:118",
+              "nodes": [],
+              "statements": [
+                {
+                  "id": 64751,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "1436:1:118"
+                }
+              ]
+            },
+            "name": "whenPaused",
+            "nameLocation": "1413:10:118",
+            "parameters": {
+              "id": 64750,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1423:2:118"
+            },
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 64757,
+            "nodeType": "ModifierDefinition",
+            "src": "1449:48:118",
+            "nodes": [],
+            "body": {
+              "id": 64756,
+              "nodeType": "Block",
+              "src": "1479:18:118",
+              "nodes": [],
+              "statements": [
+                {
+                  "id": 64755,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "1489:1:118"
+                }
+              ]
+            },
+            "name": "whenNotInitialised",
+            "nameLocation": "1458:18:118",
+            "parameters": {
+              "id": 64754,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1476:2:118"
+            },
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 64761,
+            "nodeType": "ModifierDefinition",
+            "src": "1502:45:118",
+            "nodes": [],
+            "body": {
+              "id": 64760,
+              "nodeType": "Block",
+              "src": "1529:18:118",
+              "nodes": [],
+              "statements": [
+                {
+                  "id": 64759,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "1539:1:118"
+                }
+              ]
+            },
+            "name": "whenInitialised",
+            "nameLocation": "1511:15:118",
+            "parameters": {
+              "id": 64758,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1526:2:118"
+            },
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 64694,
+              "name": "TestingEvents",
+              "nameLocations": [
+                "625:13:118"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 64689,
+              "src": "625:13:118"
+            },
+            "id": 64695,
+            "nodeType": "InheritanceSpecifier",
+            "src": "625:13:118"
+          }
+        ],
+        "canonicalName": "TestingModifiers",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          64762,
+          64689
+        ],
+        "name": "TestingModifiers",
+        "nameLocation": "605:16:118",
+        "scope": 64763,
+        "usedErrors": [],
+        "usedEvents": [
+          64684,
+          64688
+        ]
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 118
+}

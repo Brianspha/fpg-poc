@@ -1,0 +1,251 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "src/utils/FPGErrors.sol",
+    "id": 62808,
+    "exportedSymbols": {
+      "CallerBanned": [
+        62785
+      ],
+      "FeatureCompleted": [
+        62801
+      ],
+      "InvalidBranchName": [
+        62793
+      ],
+      "InvalidFeatureName": [
+        62795
+      ],
+      "NonRefundable": [
+        62805
+      ],
+      "NotProjectOwner": [
+        62803
+      ],
+      "NotRefundAvailable": [
+        62799
+      ],
+      "ProjectAlreadyActive": [
+        62789
+      ],
+      "ProjectConculded": [
+        62797
+      ],
+      "ProjectNotActive": [
+        62791
+      ],
+      "StartDateNotReached": [
+        62807
+      ],
+      "ZeroAddress": [
+        62787
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:336:106",
+    "nodes": [
+      {
+        "id": 62783,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:106",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 62785,
+        "nodeType": "ErrorDefinition",
+        "src": "58:21:106",
+        "nodes": [],
+        "errorSelector": "37b42ede",
+        "name": "CallerBanned",
+        "nameLocation": "64:12:106",
+        "parameters": {
+          "id": 62784,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "76:2:106"
+        }
+      },
+      {
+        "id": 62787,
+        "nodeType": "ErrorDefinition",
+        "src": "80:20:106",
+        "nodes": [],
+        "errorSelector": "d92e233d",
+        "name": "ZeroAddress",
+        "nameLocation": "86:11:106",
+        "parameters": {
+          "id": 62786,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "97:2:106"
+        }
+      },
+      {
+        "id": 62789,
+        "nodeType": "ErrorDefinition",
+        "src": "101:29:106",
+        "nodes": [],
+        "errorSelector": "b44e2a22",
+        "name": "ProjectAlreadyActive",
+        "nameLocation": "107:20:106",
+        "parameters": {
+          "id": 62788,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "127:2:106"
+        }
+      },
+      {
+        "id": 62791,
+        "nodeType": "ErrorDefinition",
+        "src": "131:25:106",
+        "nodes": [],
+        "errorSelector": "77019677",
+        "name": "ProjectNotActive",
+        "nameLocation": "137:16:106",
+        "parameters": {
+          "id": 62790,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "153:2:106"
+        }
+      },
+      {
+        "id": 62793,
+        "nodeType": "ErrorDefinition",
+        "src": "157:26:106",
+        "nodes": [],
+        "errorSelector": "a67e88b1",
+        "name": "InvalidBranchName",
+        "nameLocation": "163:17:106",
+        "parameters": {
+          "id": 62792,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "180:2:106"
+        }
+      },
+      {
+        "id": 62795,
+        "nodeType": "ErrorDefinition",
+        "src": "184:27:106",
+        "nodes": [],
+        "errorSelector": "336f4c4d",
+        "name": "InvalidFeatureName",
+        "nameLocation": "190:18:106",
+        "parameters": {
+          "id": 62794,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "208:2:106"
+        }
+      },
+      {
+        "id": 62797,
+        "nodeType": "ErrorDefinition",
+        "src": "212:25:106",
+        "nodes": [],
+        "errorSelector": "4d8cf5dc",
+        "name": "ProjectConculded",
+        "nameLocation": "218:16:106",
+        "parameters": {
+          "id": 62796,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "234:2:106"
+        }
+      },
+      {
+        "id": 62799,
+        "nodeType": "ErrorDefinition",
+        "src": "238:27:106",
+        "nodes": [],
+        "errorSelector": "9590a286",
+        "name": "NotRefundAvailable",
+        "nameLocation": "244:18:106",
+        "parameters": {
+          "id": 62798,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "262:2:106"
+        }
+      },
+      {
+        "id": 62801,
+        "nodeType": "ErrorDefinition",
+        "src": "266:25:106",
+        "nodes": [],
+        "errorSelector": "373ff1f7",
+        "name": "FeatureCompleted",
+        "nameLocation": "272:16:106",
+        "parameters": {
+          "id": 62800,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "288:2:106"
+        }
+      },
+      {
+        "id": 62803,
+        "nodeType": "ErrorDefinition",
+        "src": "292:24:106",
+        "nodes": [],
+        "errorSelector": "7c2411e9",
+        "name": "NotProjectOwner",
+        "nameLocation": "298:15:106",
+        "parameters": {
+          "id": 62802,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "313:2:106"
+        }
+      },
+      {
+        "id": 62805,
+        "nodeType": "ErrorDefinition",
+        "src": "317:22:106",
+        "nodes": [],
+        "errorSelector": "05a0491e",
+        "name": "NonRefundable",
+        "nameLocation": "323:13:106",
+        "parameters": {
+          "id": 62804,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "336:2:106"
+        }
+      },
+      {
+        "id": 62807,
+        "nodeType": "ErrorDefinition",
+        "src": "340:28:106",
+        "nodes": [],
+        "errorSelector": "b726922c",
+        "name": "StartDateNotReached",
+        "nameLocation": "346:19:106",
+        "parameters": {
+          "id": 62806,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "365:2:106"
+        }
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 106
+}

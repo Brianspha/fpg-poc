@@ -1,0 +1,436 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "node_modules/@prb/math/src/sd1x18/Errors.sol",
+    "id": 50427,
+    "exportedSymbols": {
+      "PRBMath_SD1x18_ToUD2x18_Underflow": [
+        50396
+      ],
+      "PRBMath_SD1x18_ToUD60x18_Underflow": [
+        50402
+      ],
+      "PRBMath_SD1x18_ToUint128_Underflow": [
+        50408
+      ],
+      "PRBMath_SD1x18_ToUint256_Underflow": [
+        50414
+      ],
+      "PRBMath_SD1x18_ToUint40_Overflow": [
+        50420
+      ],
+      "PRBMath_SD1x18_ToUint40_Underflow": [
+        50426
+      ],
+      "SD1x18": [
+        50431
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:884:58",
+    "nodes": [
+      {
+        "id": 50388,
+        "nodeType": "PragmaDirective",
+        "src": "32:25:58",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".19"
+        ]
+      },
+      {
+        "id": 50390,
+        "nodeType": "ImportDirective",
+        "src": "59:41:58",
+        "nodes": [],
+        "absolutePath": "node_modules/@prb/math/src/sd1x18/ValueType.sol",
+        "file": "./ValueType.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 50427,
+        "sourceUnit": 50442,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 50389,
+              "name": "SD1x18",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 50431,
+              "src": "68:6:58",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 50396,
+        "nodeType": "ErrorDefinition",
+        "src": "185:50:58",
+        "nodes": [],
+        "documentation": {
+          "id": 50391,
+          "nodeType": "StructuredDocumentation",
+          "src": "102:83:58",
+          "text": "@notice Thrown when trying to cast a SD1x18 number that doesn't fit in UD2x18."
+        },
+        "errorSelector": "c84fde82",
+        "name": "PRBMath_SD1x18_ToUD2x18_Underflow",
+        "nameLocation": "191:33:58",
+        "parameters": {
+          "id": 50395,
+          "nodeType": "ParameterList",
+          "parameters": [
+            {
+              "constant": false,
+              "id": 50394,
+              "mutability": "mutable",
+              "name": "x",
+              "nameLocation": "232:1:58",
+              "nodeType": "VariableDeclaration",
+              "scope": 50396,
+              "src": "225:8:58",
+              "stateVariable": false,
+              "storageLocation": "default",
+              "typeDescriptions": {
+                "typeIdentifier": "t_userDefinedValueType$_SD1x18_$50431",
+                "typeString": "SD1x18"
+              },
+              "typeName": {
+                "id": 50393,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 50392,
+                  "name": "SD1x18",
+                  "nameLocations": [
+                    "225:6:58"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 50431,
+                  "src": "225:6:58"
+                },
+                "referencedDeclaration": 50431,
+                "src": "225:6:58",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_userDefinedValueType$_SD1x18_$50431",
+                  "typeString": "SD1x18"
+                }
+              },
+              "visibility": "internal"
+            }
+          ],
+          "src": "224:10:58"
+        }
+      },
+      {
+        "id": 50402,
+        "nodeType": "ErrorDefinition",
+        "src": "321:51:58",
+        "nodes": [],
+        "documentation": {
+          "id": 50397,
+          "nodeType": "StructuredDocumentation",
+          "src": "237:84:58",
+          "text": "@notice Thrown when trying to cast a SD1x18 number that doesn't fit in UD60x18."
+        },
+        "errorSelector": "2f990a1f",
+        "name": "PRBMath_SD1x18_ToUD60x18_Underflow",
+        "nameLocation": "327:34:58",
+        "parameters": {
+          "id": 50401,
+          "nodeType": "ParameterList",
+          "parameters": [
+            {
+              "constant": false,
+              "id": 50400,
+              "mutability": "mutable",
+              "name": "x",
+              "nameLocation": "369:1:58",
+              "nodeType": "VariableDeclaration",
+              "scope": 50402,
+              "src": "362:8:58",
+              "stateVariable": false,
+              "storageLocation": "default",
+              "typeDescriptions": {
+                "typeIdentifier": "t_userDefinedValueType$_SD1x18_$50431",
+                "typeString": "SD1x18"
+              },
+              "typeName": {
+                "id": 50399,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 50398,
+                  "name": "SD1x18",
+                  "nameLocations": [
+                    "362:6:58"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 50431,
+                  "src": "362:6:58"
+                },
+                "referencedDeclaration": 50431,
+                "src": "362:6:58",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_userDefinedValueType$_SD1x18_$50431",
+                  "typeString": "SD1x18"
+                }
+              },
+              "visibility": "internal"
+            }
+          ],
+          "src": "361:10:58"
+        }
+      },
+      {
+        "id": 50408,
+        "nodeType": "ErrorDefinition",
+        "src": "458:51:58",
+        "nodes": [],
+        "documentation": {
+          "id": 50403,
+          "nodeType": "StructuredDocumentation",
+          "src": "374:84:58",
+          "text": "@notice Thrown when trying to cast a SD1x18 number that doesn't fit in uint128."
+        },
+        "errorSelector": "19fcc664",
+        "name": "PRBMath_SD1x18_ToUint128_Underflow",
+        "nameLocation": "464:34:58",
+        "parameters": {
+          "id": 50407,
+          "nodeType": "ParameterList",
+          "parameters": [
+            {
+              "constant": false,
+              "id": 50406,
+              "mutability": "mutable",
+              "name": "x",
+              "nameLocation": "506:1:58",
+              "nodeType": "VariableDeclaration",
+              "scope": 50408,
+              "src": "499:8:58",
+              "stateVariable": false,
+              "storageLocation": "default",
+              "typeDescriptions": {
+                "typeIdentifier": "t_userDefinedValueType$_SD1x18_$50431",
+                "typeString": "SD1x18"
+              },
+              "typeName": {
+                "id": 50405,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 50404,
+                  "name": "SD1x18",
+                  "nameLocations": [
+                    "499:6:58"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 50431,
+                  "src": "499:6:58"
+                },
+                "referencedDeclaration": 50431,
+                "src": "499:6:58",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_userDefinedValueType$_SD1x18_$50431",
+                  "typeString": "SD1x18"
+                }
+              },
+              "visibility": "internal"
+            }
+          ],
+          "src": "498:10:58"
+        }
+      },
+      {
+        "id": 50414,
+        "nodeType": "ErrorDefinition",
+        "src": "595:51:58",
+        "nodes": [],
+        "documentation": {
+          "id": 50409,
+          "nodeType": "StructuredDocumentation",
+          "src": "511:84:58",
+          "text": "@notice Thrown when trying to cast a SD1x18 number that doesn't fit in uint256."
+        },
+        "errorSelector": "9b5f93cd",
+        "name": "PRBMath_SD1x18_ToUint256_Underflow",
+        "nameLocation": "601:34:58",
+        "parameters": {
+          "id": 50413,
+          "nodeType": "ParameterList",
+          "parameters": [
+            {
+              "constant": false,
+              "id": 50412,
+              "mutability": "mutable",
+              "name": "x",
+              "nameLocation": "643:1:58",
+              "nodeType": "VariableDeclaration",
+              "scope": 50414,
+              "src": "636:8:58",
+              "stateVariable": false,
+              "storageLocation": "default",
+              "typeDescriptions": {
+                "typeIdentifier": "t_userDefinedValueType$_SD1x18_$50431",
+                "typeString": "SD1x18"
+              },
+              "typeName": {
+                "id": 50411,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 50410,
+                  "name": "SD1x18",
+                  "nameLocations": [
+                    "636:6:58"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 50431,
+                  "src": "636:6:58"
+                },
+                "referencedDeclaration": 50431,
+                "src": "636:6:58",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_userDefinedValueType$_SD1x18_$50431",
+                  "typeString": "SD1x18"
+                }
+              },
+              "visibility": "internal"
+            }
+          ],
+          "src": "635:10:58"
+        }
+      },
+      {
+        "id": 50420,
+        "nodeType": "ErrorDefinition",
+        "src": "731:49:58",
+        "nodes": [],
+        "documentation": {
+          "id": 50415,
+          "nodeType": "StructuredDocumentation",
+          "src": "648:83:58",
+          "text": "@notice Thrown when trying to cast a SD1x18 number that doesn't fit in uint40."
+        },
+        "errorSelector": "3568132d",
+        "name": "PRBMath_SD1x18_ToUint40_Overflow",
+        "nameLocation": "737:32:58",
+        "parameters": {
+          "id": 50419,
+          "nodeType": "ParameterList",
+          "parameters": [
+            {
+              "constant": false,
+              "id": 50418,
+              "mutability": "mutable",
+              "name": "x",
+              "nameLocation": "777:1:58",
+              "nodeType": "VariableDeclaration",
+              "scope": 50420,
+              "src": "770:8:58",
+              "stateVariable": false,
+              "storageLocation": "default",
+              "typeDescriptions": {
+                "typeIdentifier": "t_userDefinedValueType$_SD1x18_$50431",
+                "typeString": "SD1x18"
+              },
+              "typeName": {
+                "id": 50417,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 50416,
+                  "name": "SD1x18",
+                  "nameLocations": [
+                    "770:6:58"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 50431,
+                  "src": "770:6:58"
+                },
+                "referencedDeclaration": 50431,
+                "src": "770:6:58",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_userDefinedValueType$_SD1x18_$50431",
+                  "typeString": "SD1x18"
+                }
+              },
+              "visibility": "internal"
+            }
+          ],
+          "src": "769:10:58"
+        }
+      },
+      {
+        "id": 50426,
+        "nodeType": "ErrorDefinition",
+        "src": "865:50:58",
+        "nodes": [],
+        "documentation": {
+          "id": 50421,
+          "nodeType": "StructuredDocumentation",
+          "src": "782:83:58",
+          "text": "@notice Thrown when trying to cast a SD1x18 number that doesn't fit in uint40."
+        },
+        "errorSelector": "30de4027",
+        "name": "PRBMath_SD1x18_ToUint40_Underflow",
+        "nameLocation": "871:33:58",
+        "parameters": {
+          "id": 50425,
+          "nodeType": "ParameterList",
+          "parameters": [
+            {
+              "constant": false,
+              "id": 50424,
+              "mutability": "mutable",
+              "name": "x",
+              "nameLocation": "912:1:58",
+              "nodeType": "VariableDeclaration",
+              "scope": 50426,
+              "src": "905:8:58",
+              "stateVariable": false,
+              "storageLocation": "default",
+              "typeDescriptions": {
+                "typeIdentifier": "t_userDefinedValueType$_SD1x18_$50431",
+                "typeString": "SD1x18"
+              },
+              "typeName": {
+                "id": 50423,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 50422,
+                  "name": "SD1x18",
+                  "nameLocations": [
+                    "905:6:58"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 50431,
+                  "src": "905:6:58"
+                },
+                "referencedDeclaration": 50431,
+                "src": "905:6:58",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_userDefinedValueType$_SD1x18_$50431",
+                  "typeString": "SD1x18"
+                }
+              },
+              "visibility": "internal"
+            }
+          ],
+          "src": "904:10:58"
+        }
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 58
+}

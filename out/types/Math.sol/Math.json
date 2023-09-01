@@ -1,0 +1,197 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "node_modules/@sablier/v2-core/src/types/Math.sol",
+    "id": 61200,
+    "exportedSymbols": {
+      "SD59x18": [
+        52988
+      ],
+      "UD2x18": [
+        53359
+      ],
+      "UD60x18": [
+        55163
+      ],
+      "sd": [
+        50787
+      ],
+      "sd59x18": [
+        50804
+      ],
+      "ud": [
+        53622
+      ],
+      "ud2x18": [
+        53262
+      ],
+      "ud60x18": [
+        53639
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "81:383:98",
+    "nodes": [
+      {
+        "id": 61188,
+        "nodeType": "PragmaDirective",
+        "src": "81:25:98",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".19"
+        ]
+      },
+      {
+        "id": 61192,
+        "nodeType": "ImportDirective",
+        "src": "273:65:98",
+        "nodes": [],
+        "absolutePath": "node_modules/@prb/math/src/SD59x18.sol",
+        "file": "@prb/math/src/SD59x18.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 61200,
+        "sourceUnit": 50021,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 61189,
+              "name": "SD59x18",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 52988,
+              "src": "282:7:98",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 61190,
+              "name": "sd",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 50787,
+              "src": "291:2:98",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 61191,
+              "name": "sd59x18",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 50804,
+              "src": "295:7:98",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 61195,
+        "nodeType": "ImportDirective",
+        "src": "339:58:98",
+        "nodes": [],
+        "absolutePath": "node_modules/@prb/math/src/UD2x18.sol",
+        "file": "@prb/math/src/UD2x18.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 61200,
+        "sourceUnit": 50027,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 61193,
+              "name": "UD2x18",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 53359,
+              "src": "348:6:98",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 61194,
+              "name": "ud2x18",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 53262,
+              "src": "356:6:98",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 61199,
+        "nodeType": "ImportDirective",
+        "src": "398:65:98",
+        "nodes": [],
+        "absolutePath": "node_modules/@prb/math/src/UD60x18.sol",
+        "file": "@prb/math/src/UD60x18.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 61200,
+        "sourceUnit": 50036,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 61196,
+              "name": "UD60x18",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 55163,
+              "src": "407:7:98",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 61197,
+              "name": "ud",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 53622,
+              "src": "416:2:98",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 61198,
+              "name": "ud60x18",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 53639,
+              "src": "420:7:98",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      }
+    ],
+    "license": "GPL-3.0-or-later"
+  },
+  "id": 98
+}

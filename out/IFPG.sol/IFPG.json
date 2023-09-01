@@ -1,0 +1,2541 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "projectURL",
+          "type": "bytes"
+        }
+      ],
+      "name": "addProject",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "projectURL",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "branchName",
+          "type": "bytes"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "fundFeature",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "projectURL",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "branchName",
+          "type": "bytes"
+        }
+      ],
+      "name": "getFeatureDetails",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        },
+        {
+          "internalType": "uint40",
+          "name": "",
+          "type": "uint40"
+        },
+        {
+          "internalType": "uint40",
+          "name": "",
+          "type": "uint40"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "enum FeatureStatus",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "projectURL",
+          "type": "bytes"
+        }
+      ],
+      "name": "getProjectDetails",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes[]",
+          "name": "",
+          "type": "bytes[]"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getProjectURLs",
+      "outputs": [
+        {
+          "internalType": "bytes[]",
+          "name": "",
+          "type": "bytes[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract StreamCreator",
+          "name": "sablier",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "revocable",
+          "type": "bool"
+        }
+      ],
+      "name": "initialize",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "projectURL",
+          "type": "bytes"
+        }
+      ],
+      "name": "projectActive",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "projectURL",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "branchName",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "featureName",
+          "type": "bytes"
+        },
+        {
+          "internalType": "uint256",
+          "name": "startDate",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "duration",
+          "type": "uint256"
+        }
+      ],
+      "name": "requestFeatureFunding",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "projectURL",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "branchName",
+          "type": "bytes"
+        }
+      ],
+      "name": "startProject",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "projectURL",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "branchName",
+          "type": "bytes"
+        }
+      ],
+      "name": "stopFundingFeature",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "projectURL",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "branchName",
+          "type": "bytes"
+        },
+        {
+          "internalType": "enum FeatureStatus",
+          "name": "status",
+          "type": "uint8"
+        }
+      ],
+      "name": "updateFeatureStatus",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "addProject(bytes)": "1469df34",
+    "fundFeature(bytes,bytes,uint256)": "95ef6a66",
+    "getFeatureDetails(bytes,bytes)": "b5895e62",
+    "getProjectDetails(bytes)": "0f3326a7",
+    "getProjectURLs()": "33df4804",
+    "initialize(address,bool)": "400ada75",
+    "projectActive(bytes)": "af1b49f5",
+    "requestFeatureFunding(bytes,bytes,bytes,uint256,uint256)": "715ef953",
+    "startProject(bytes,bytes)": "645ced52",
+    "stopFundingFeature(bytes,bytes)": "ef2dc01a",
+    "updateFeatureStatus(bytes,bytes,uint8)": "3e79fb1c"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"projectURL\",\"type\":\"bytes\"}],\"name\":\"addProject\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"projectURL\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"branchName\",\"type\":\"bytes\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"fundFeature\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"projectURL\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"branchName\",\"type\":\"bytes\"}],\"name\":\"getFeatureDetails\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"},{\"internalType\":\"uint40\",\"name\":\"\",\"type\":\"uint40\"},{\"internalType\":\"uint40\",\"name\":\"\",\"type\":\"uint40\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"enum FeatureStatus\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"projectURL\",\"type\":\"bytes\"}],\"name\":\"getProjectDetails\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"bytes[]\",\"name\":\"\",\"type\":\"bytes[]\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getProjectURLs\",\"outputs\":[{\"internalType\":\"bytes[]\",\"name\":\"\",\"type\":\"bytes[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract StreamCreator\",\"name\":\"sablier\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"revocable\",\"type\":\"bool\"}],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"projectURL\",\"type\":\"bytes\"}],\"name\":\"projectActive\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"projectURL\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"branchName\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"featureName\",\"type\":\"bytes\"},{\"internalType\":\"uint256\",\"name\":\"startDate\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"duration\",\"type\":\"uint256\"}],\"name\":\"requestFeatureFunding\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"projectURL\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"branchName\",\"type\":\"bytes\"}],\"name\":\"startProject\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"projectURL\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"branchName\",\"type\":\"bytes\"}],\"name\":\"stopFundingFeature\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"projectURL\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"branchName\",\"type\":\"bytes\"},{\"internalType\":\"enum FeatureStatus\",\"name\":\"status\",\"type\":\"uint8\"}],\"name\":\"updateFeatureStatus\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"brianspha\",\"details\":\"This interface enables users to list projects, request funding for specific features, and contribute funds to those features.\",\"kind\":\"dev\",\"methods\":{\"addProject(bytes)\":{\"params\":{\"projectURL\":\"The GitHub/Gitlab URL of the project to be listed.\"}},\"fundFeature(bytes,bytes,uint256)\":{\"details\":\"Callers must approve the implementing contract to spend the [amount] tokens before using this function.Funding is streamed to the project owner based on the specified amount.\",\"params\":{\"amount\":\"The amount of funding in tokens.\",\"branchName\":\"The branch name for the feature to fund.\",\"projectURL\":\"The GitHub/Gitlab URL of the project to be listed.\"}},\"getFeatureDetails(bytes,bytes)\":{\"params\":{\"branchName\":\"The name of the branch containing the feature.\",\"projectURL\":\"The GitHub/Gitlab URL of the project.\"},\"returns\":{\"_0\":\"The feature's name, start date, duration, total funding amount, and current status.\"}},\"getProjectDetails(bytes)\":{\"params\":{\"projectURL\":\"The GitHub/Gitlab URL of the project.\"},\"returns\":{\"_0\":\"The project's creator address and an array of branch names.\"}},\"initialize(address,bool)\":{\"details\":\"Ideally, avoid front-running this initialization function.\",\"params\":{\"sablier\":\"The streaming contract responsible for creating linear streams.\"}},\"requestFeatureFunding(bytes,bytes,bytes,uint256,uint256)\":{\"params\":{\"branchName\":\"The name of the branch where the feature will be developed and tracked.\",\"duration\":\"The duration of developing the feature.\",\"featureName\":\"The name of the feature to request funding for.\",\"projectURL\":\"The GitHub/Gitlab URL of the project to be listed.\",\"startDate\":\"The start date for the feature development.\"}},\"startProject(bytes,bytes)\":{\"params\":{\"branchName\":\"The name of the initial branch for the project.\",\"projectURL\":\"The GitHub/Gitlab URL of the project to be listed.\"}},\"stopFundingFeature(bytes,bytes)\":{\"params\":{\"branchName\":\"The branch name for the feature to stop funding.\",\"projectURL\":\"The GitHub/Gitlab URL of the project to be listed.\"}},\"updateFeatureStatus(bytes,bytes,uint8)\":{\"params\":{\"branchName\":\"The branch name for the feature to update.\",\"projectURL\":\"The GitHub/Gitlab URL of the project to be listed.\",\"status\":\"The new status of the feature.\"}}},\"title\":\"IFPG - Funding Platform for GitHub Projects\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"addProject(bytes)\":{\"notice\":\"Allows anyone to list their project on the FPG platform.\"},\"fundFeature(bytes,bytes,uint256)\":{\"notice\":\"Allows anyone to support a listed feature by contributing funds.\"},\"getFeatureDetails(bytes,bytes)\":{\"notice\":\"Retrieves detailed information about a specific feature within a project.\"},\"getProjectDetails(bytes)\":{\"notice\":\"Retrieves detailed information about a project.\"},\"getProjectURLs()\":{\"notice\":\"Retrieves the URLs of all projects listed on the platform.\"},\"initialize(address,bool)\":{\"notice\":\"Initializes the contract with the provided streaming contract.\"},\"requestFeatureFunding(bytes,bytes,bytes,uint256,uint256)\":{\"notice\":\"Allows the owner of a project to request funding for a specific feature.\"},\"startProject(bytes,bytes)\":{\"notice\":\"Starts a new project by listing it on the FPG platform.\"},\"stopFundingFeature(bytes,bytes)\":{\"notice\":\"Allows contributors to stop funding a feature, refunding the remaining amount not yet streamed.\"},\"updateFeatureStatus(bytes,bytes,uint8)\":{\"notice\":\"Allows the project creator to update the status of a funded feature.\"}},\"notice\":\"Interface defining functions required for managing projects and funding features on the FPG platform\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/interfaces/IFPG.sol\":\"IFPG\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"appendCBOR\":false,\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":10000},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":@prb/=node_modules/@prb/\",\":@sablier/=node_modules/@sablier/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\"]},\"sources\":{\"node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x287b55befed2961a7eabd7d7b1b2839cbca8a5b80ef8dcbb25ed3d4c2002c305\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://bd39944e8fc06be6dbe2dd1d8449b5336e23c6a7ba3e8e9ae5ae0f37f35283f5\",\"dweb:/ipfs/QmPV3FGYjVwvKSgAXKUN3r9T9GwniZz83CxBpM7vyj2G53\"]},\"node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol\":{\"keccak256\":\"0x5bce51e11f7d194b79ea59fe00c9e8de9fa2c5530124960f29a24d4c740a3266\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7e66dfde185df46104c11bc89d08fa0760737aa59a2b8546a656473d810a8ea4\",\"dweb:/ipfs/QmXvyqtXPaPss2PD7eqPoSao5Szm2n6UMoiG8TZZDjmChR\"]},\"node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol\":{\"keccak256\":\"0x75b829ff2f26c14355d1cba20e16fe7b29ca58eb5fef665ede48bc0f9c6c74b9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a0a107160525724f9e1bbbab031defc2f298296dd9e331f16a6f7130cec32146\",\"dweb:/ipfs/QmemujxSd7gX8A9M8UwmNbz4Ms3U9FG9QfudUgxwvTmPWf\"]},\"node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f\",\"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy\"]},\"node_modules/@prb/math/src/Common.sol\":{\"keccak256\":\"0x70b3a76443312b2c6c500996306a18e3d91e5d56fed0d898d98ca0bfb6225053\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be75b034b8c27e96b375e862528afb52a2d11e75c4a25918e10d7db31cdec039\",\"dweb:/ipfs/QmQ4L3tvpDx2ophHRAW7Sc52QhVZzn4e5PKTgLwqt32F1B\"]},\"node_modules/@prb/math/src/SD59x18.sol\":{\"keccak256\":\"0xff25fe75f8e77d4c839fbe69198d273039575fa72f31ce9725bcacb80db65461\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7ed7bc89a4efa33fc9392de8104c8af609fd3372b323d7824a6a3ae888bad3be\",\"dweb:/ipfs/QmfCbW4geVSm7uJW4KUoXrejR2SywcRJrXwMBzUBWYiXJa\"]},\"node_modules/@prb/math/src/UD2x18.sol\":{\"keccak256\":\"0xfb624e24cd8bb790fa08e7827819de85504a86e20e961fa4ad126c65b6d90641\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://dd795b8df250e7eedc68e2dba1afbb60357ce8f22f21bed212b5a9046d2057d2\",\"dweb:/ipfs/QmUHtrSr8Gb6bvSe2rCWPA5YrJq72UiJARYr1gZqFVRsYH\"]},\"node_modules/@prb/math/src/UD60x18.sol\":{\"keccak256\":\"0xb98c6f74275914d279e8af6c502c2b1f50d5f6e1ed418d3b0153f5a193206c48\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a750edde2955f160806a51083a12185fb04e20efca0e3a7ebd127dc1acc049a9\",\"dweb:/ipfs/QmeAre3mThopoQPB9mSXZq6jck59QZ7JbDFR83urd2SLvp\"]},\"node_modules/@prb/math/src/sd1x18/Casting.sol\":{\"keccak256\":\"0x9e49e2b37c1bb845861740805edaaef3fe951a7b96eef16ce84fbf76e8278670\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d3f65f257f9f516f2b40ca30b1c999819777111bd59a92376df6c5823453165a\",\"dweb:/ipfs/QmVQRKMS6ibv6x9qWXLJp2KZw9qs6Yz1sYZQWoSBQM8Pkz\"]},\"node_modules/@prb/math/src/sd1x18/Constants.sol\":{\"keccak256\":\"0xb51aab4a2ea76f530dccbf3b7d4af24c8f3ceef67f3c574b58650466ea924a3f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b9fccf58b2b69179a311f996f772d9bf255fd1d0de9ba69ab89b45ef81008770\",\"dweb:/ipfs/QmTYE7xmFqUzQ2o8SmCpMu2GxkBJLjTtSWngoe7JXzsv2D\"]},\"node_modules/@prb/math/src/sd1x18/Errors.sol\":{\"keccak256\":\"0x836cb42ba619ca369fd4765bc47fefc3c3621369c5861882af14660aca5057ee\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://58873bcebf7398f63c6d3f234073fb6739fe4fae87428010cd0bc1aa68f53499\",\"dweb:/ipfs/QmZSZ9z4ZQUGRc1TRiL2F9AL7ysnGRXwRtocMa2zhxHFDp\"]},\"node_modules/@prb/math/src/sd1x18/ValueType.sol\":{\"keccak256\":\"0x2f86f1aa9fca42f40808b51a879b406ac51817647bdb9642f8a79dd8fdb754a7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://31559dfc012ebe40fcdb38c45e7edfa16406f11c6ea219e8676749f20dbbb5dd\",\"dweb:/ipfs/QmXeYzF9hYQphVExJRp41Vkebrs51k7xgr3jXfKgdD87XC\"]},\"node_modules/@prb/math/src/sd59x18/Casting.sol\":{\"keccak256\":\"0x3b21b60ec2998c3ae32f647412da51d3683b3f183a807198cc8d157499484f99\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://08a49ba7ebf592a89e1a81e5987351e7810e371f4c3d2356d9b5a9b58462c809\",\"dweb:/ipfs/QmcvyHaUzd74eYjcZWQgUDFJfYrU8kFohiB1H5cs8HgUDp\"]},\"node_modules/@prb/math/src/sd59x18/Constants.sol\":{\"keccak256\":\"0xe0a1ca1a7b5b2d637cff83a8caa3d2e67a6a34f7ee9df58a9ca5d5fa268c474a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3e9a6980e97a68f9148c350439bc0b3ca4126a4428752b151744097da3f650c8\",\"dweb:/ipfs/QmVRJqG378u46dnvjgYkcLjnvHW8yNv5ijLoUWPMGQscuC\"]},\"node_modules/@prb/math/src/sd59x18/Conversions.sol\":{\"keccak256\":\"0x9876a288dcbb2583c5361a3e60b5b30c7d4c89c8d2aa35364f2f521656d8db80\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c76a858b3462070671babff2d079f9368bc022017f34921092c93ee5751b99a5\",\"dweb:/ipfs/QmYQqUodEny8uqQeqXwYU5GDsHPMEUz5HvGF2ChjbmDWbL\"]},\"node_modules/@prb/math/src/sd59x18/Errors.sol\":{\"keccak256\":\"0x83ee24e41d235bc05cb641d2c5c16c67b17fa00e4593661a8d14350435d4df04\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://40cedd66b7ba40126b2668c2fbe8ccd6ae88bd5853c205ac54f643e49acd31c1\",\"dweb:/ipfs/QmWZz7bsQceUUzJiURQE5XtfzNW2Ammiz2WSNsZGxCYT7a\"]},\"node_modules/@prb/math/src/sd59x18/Helpers.sol\":{\"keccak256\":\"0x208570f1657cf730cb6c3d81aa14030e0d45cf906cdedea5059369d7df4bb716\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4c78ca900edafa9338d4e3649a55ab0c84f76468d8a22fb945ba6d01e70f8fed\",\"dweb:/ipfs/QmeP4hQYfNxcATd1FsasdD4ebyu2vrC9K1N68swxUJzzZD\"]},\"node_modules/@prb/math/src/sd59x18/Math.sol\":{\"keccak256\":\"0xedd0635769176ab99878a91ce267cee2ca107b30e6b0db10736573ff4d102868\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://51795a2077ea6f109656048530481bb10c7f2b29e868f9a02d7b134d1b30c787\",\"dweb:/ipfs/Qmb9wBJ5vPtKNbiz9bbWz8Ufs6qLJWKanyg1zmRmSwUVze\"]},\"node_modules/@prb/math/src/sd59x18/ValueType.sol\":{\"keccak256\":\"0xe03112d145dcd5863aff24e5f381debaae29d446acd5666f3d640e3d9af738d7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://abacb7cba4bd732c961cfe7d66c5eec924c7a9ffe0bf07fafc95b65a887071f6\",\"dweb:/ipfs/QmSBefftoSJDMdmp5CFAVvJjPHJXHhd11x1FzkcHQxLjoT\"]},\"node_modules/@prb/math/src/ud2x18/Casting.sol\":{\"keccak256\":\"0x07ec9a8adddfe6bf37f0d9ce7702c5620a6215340889701da0525ed190ccc099\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3500550c9ed259e5a876d14510d7e4a2226fac41e04535dddffaf9e3e6dc67e5\",\"dweb:/ipfs/QmbA5y7zdqsFELeNPj1WgkP28GXBcnfYajj3E6nangJo2F\"]},\"node_modules/@prb/math/src/ud2x18/Constants.sol\":{\"keccak256\":\"0xbd11da8ad79ffc8b7b8244c82632b0ca31970e190a8877ba1a69b4b8065dcea5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f0d3d5cb4711d83e0fe654b8338b6685b6e9d9f234c645813533129ae48fa14b\",\"dweb:/ipfs/QmZW47VmyizEwAxuv6tdeJmrMM58KvsiaRjidcBgqKg4CP\"]},\"node_modules/@prb/math/src/ud2x18/Errors.sol\":{\"keccak256\":\"0xdf1e22f0b4c8032bcc8b7f63fe3984e1387f3dc7b2e9ab381822249f75376d33\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://975f9beb25a1ebff9b29dd5555e1f4f14a4fbf178d15ebd3add5ed5f5985fdec\",\"dweb:/ipfs/QmbvTvdtSrZi7J4sJuv6zUsymT5UctJnx4DkGezXW25r59\"]},\"node_modules/@prb/math/src/ud2x18/ValueType.sol\":{\"keccak256\":\"0x2802edc9869db116a0b5c490cc5f8554742f747183fa30ac5e9c80bb967e61a1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e9657724f5032559c953cba61db0fbca71f6b50f51edb53a08f840cb74a36c95\",\"dweb:/ipfs/QmX2KF8v7ng13NaavyogM3SGR4jCMLUuqKkxFhtxvc7D7m\"]},\"node_modules/@prb/math/src/ud60x18/Casting.sol\":{\"keccak256\":\"0x5bb532da36921cbdac64d1f16de5d366ef1f664502e3b7c07d0ad06917551f85\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f0819da49f6a86a1fc2ece8e8a4292f8d102dc1043a1d0a545c26d020d1f36fe\",\"dweb:/ipfs/QmdzLoo99EBJv2GGiZZAAY8Bfr4ivFykzeSbpF48aJxFZ9\"]},\"node_modules/@prb/math/src/ud60x18/Constants.sol\":{\"keccak256\":\"0x2b80d26153d3fdcfb3a9ca772d9309d31ed1275f5b8b54c3ffb54d3652b37d90\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7e3a6673a156f635db94dc176baaa7274db8f9bec4461cd1152596253550ee3b\",\"dweb:/ipfs/Qmc9zT4kNSbMYaXcnbxNVqmb3P3m46ieaQxkwxqLwsvRA5\"]},\"node_modules/@prb/math/src/ud60x18/Conversions.sol\":{\"keccak256\":\"0xaf7fc2523413822de3b66ba339fe2884fb3b8c6f6cf38ec90a2c3e3aae71df6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://655c9fe2434ca039b67277d753a60d39f2938260c716a36d24b591acf8c4fb75\",\"dweb:/ipfs/QmbygBAjCoFe9oUp9QkJ45jqctThk7VSmiSVLHV4Z3WHVe\"]},\"node_modules/@prb/math/src/ud60x18/Errors.sol\":{\"keccak256\":\"0xa8c60d4066248df22c49c882873efbc017344107edabc48c52209abbc39cb1e3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8fb7e1103309b4f99e95bb638850c0321272d57bd3e6b0a6331d699ff103cbaf\",\"dweb:/ipfs/QmfLFHjVJv4ibEvMmh46qC5nCbeCYSfXgCTDWQqfW3jnyB\"]},\"node_modules/@prb/math/src/ud60x18/Helpers.sol\":{\"keccak256\":\"0xf5faff881391d2c060029499a666cc5f0bea90a213150bb476fae8f02a5df268\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://76105fa22bb1b5f1fa99abf9c4fbc9577a02c7bc204f271754c407f0d75489f5\",\"dweb:/ipfs/QmVNGZSTniDuZus5DdbFubqJXCLtTaZit7YPm4ntjr5Lgr\"]},\"node_modules/@prb/math/src/ud60x18/Math.sol\":{\"keccak256\":\"0xafe12d658b5bb495226df1841cbfbcb25e9fc443c6d41a85b5ac6aa7ec79ea29\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://357d345f960581548f27fb43fb2320101033c053b949f5cb4d75390a058df205\",\"dweb:/ipfs/QmYjQwVdwCWZDNkxUD4T1nwieP38o4HWtYUYjAmfpFpg3y\"]},\"node_modules/@prb/math/src/ud60x18/ValueType.sol\":{\"keccak256\":\"0xdd873b5124180d9b71498b3a7fe93b1c08c368bec741f7d5f8e17f78a0b70f31\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7df6700f747dd01b2520a900a8d6b5a4d239b8063c31384f40921afe22295c29\",\"dweb:/ipfs/QmSPSPQJKNSzGJu2ri5EfWjcLfA2xDHfUehyBp4FpUu2qZ\"]},\"node_modules/@sablier/v2-core/src/interfaces/IAdminable.sol\":{\"keccak256\":\"0xecc2d5f08b737e1acd5f641de59b262831c520adf8cd7290d02efe39e0ae443e\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://13c159aa3a2db6e2be6f2483c7e001dc84360220bdaf9a38247c213529a2d885\",\"dweb:/ipfs/QmZTfUR2FTfnC3Rohe8ntEvDwyW3K3RfruHZ98Phi48BGH\"]},\"node_modules/@sablier/v2-core/src/interfaces/ISablierV2Base.sol\":{\"keccak256\":\"0xb12e58a05389c958f79ebe1667e167c1e0bb681a18ae534f5e454abbd66f6821\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://1c57fabd0290e38c73c88cbf09ffe1675f3d9367fbba72ad647fbe729f5fd9f7\",\"dweb:/ipfs/QmZ2ybkhNR8CzqMi5fwSUZodZ9otYBGR4pVDp7fk78KpAM\"]},\"node_modules/@sablier/v2-core/src/interfaces/ISablierV2Comptroller.sol\":{\"keccak256\":\"0xfe089975be90f0efeeafc9ac9dfa5c301ca1f5c178177ac5589a8483a0aa84a3\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://c6b87d383df9fab91a62629107ebd44122d16de55a01c3996cbb155a1373bde7\",\"dweb:/ipfs/QmTLfmcHJh8ZYbLai1oAkjBak9fpMnv3HDaGoMQd3wFcNF\"]},\"node_modules/@sablier/v2-core/src/interfaces/ISablierV2Lockup.sol\":{\"keccak256\":\"0x0e37a224e498775d0e541d93f3be6cd78d57399be99d9b4885ac038c49d8e774\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://4d535aea117e7ff38552ccbbc9d435404a10299bab650e545c2c78a084aef246\",\"dweb:/ipfs/QmR6J7tFnv3mCKEHJoumGjYAJNvVEx1kjaTxwRuK3YTugo\"]},\"node_modules/@sablier/v2-core/src/interfaces/ISablierV2LockupLinear.sol\":{\"keccak256\":\"0x84b5aa5b1ccf92a53cc767180d47b12b6e2a6cf6fa5c750fe24fb3f3f468bdb6\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://272633f6592aa1b09be49b838335ea8f4a9872019864466a531b44acb62cac1c\",\"dweb:/ipfs/QmZTBSSRhDzFihbhw7xefiWhTnP1sGfRKuxRe6iFMPCSE8\"]},\"node_modules/@sablier/v2-core/src/interfaces/ISablierV2NFTDescriptor.sol\":{\"keccak256\":\"0x35172718298221f3aac87424252e4eaf7480ce901fe9a7b92d8fdd871ecdad3a\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://39d0d2d17d3f6ec4313a6313e85af2fd8a861930a8563a2b8e9ba1da099c6d73\",\"dweb:/ipfs/QmQmKYkqnLJrfEyDT2YwiXyzhYG4SaHpu6gsaFePqp2hxV\"]},\"node_modules/@sablier/v2-core/src/types/DataTypes.sol\":{\"keccak256\":\"0x3b1d42a5fedf5e5de718aa289aec0f72ad7b1a0e2b16515460c24942a30e9694\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://555451f8704595a0973ade27d8d199c363366ff6346c5425d156d332ea7bfb3b\",\"dweb:/ipfs/QmYkAyestxNeonNgfPCKQkzKsproZV7U3UGhMX2TQumNr1\"]},\"node_modules/@sablier/v2-core/src/types/Math.sol\":{\"keccak256\":\"0xa87ebebeec7024b83e15bef3661a3ec88f60fee9b24e5d305431ad8fc4c0ed6e\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://2347f6e3ebdfdbb8b21d0ecaa0d1e25f99273be72b046ce97e62cd2873200387\",\"dweb:/ipfs/QmNdpJ9UEDbFHV6Z1Mnf7MxXyGxkDJC5Qz3UvFoB7P5iHL\"]},\"node_modules/@sablier/v2-core/src/types/Tokens.sol\":{\"keccak256\":\"0xde100e0fd6910ceb42761bf36dc952418b98138d4ce08f68ee5866940cd93407\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://c95d2d8d04cdd86c59af181b7f65344f4abab468e160990ce0c9e5e580a1b430\",\"dweb:/ipfs/QmUMRQ9VvRxrwbcY1nWkzRVoByWhL7Uo9v7W5TJ3bcVXcq\"]},\"src/interfaces/IFPG.sol\":{\"keccak256\":\"0x9c6973ea9c2580a9d907199c272c6fc561e84ed4efdb381393665d0710d16bd0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6e7568d8c7a638539d869270047b761457072ef16bed3aa72f2ce2726a96706c\",\"dweb:/ipfs/QmUNB3NMG9D25JWKDe4YG9ihSEGVpY3uvEUNmcJwMk4754\"]},\"src/sablier/StreamCreator.sol\":{\"keccak256\":\"0xc57b9527f70defb58225b61b69a4efd8284a35ddb021466cc168070e2dcddd3c\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://53720bc3474397a713cc0eea2ee369285f21ce49f349729489b785e12f684dcb\",\"dweb:/ipfs/QmWudpbX7NodPNJhGgaYcHibKAJqCd6yJ7WhNrTGhfHc2v\"]},\"src/utils/FPGEnums.sol\":{\"keccak256\":\"0xfb5203a9932dfa47baad44aee45d23ddc83a9d173cf1b150c42fce1bebdc3816\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c2f304d66187f60f89d12ee05ec3cff0c725c06e9b04595c3ad8de74f502490f\",\"dweb:/ipfs/QmPJwrXbGUsk4AznKmGnzJrKsMBTkDKpNTAoy25YRsb3tM\"]},\"src/utils/FPGErrors.sol\":{\"keccak256\":\"0x0004ff47a8a27405e5e0726c1cce298f7474f71f3ca8df3128cc5a5e1fa4c7d3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5cee60bfc6d67a3307325e47b5df338c4e6e643de8c01b6018185b05f3543bcc\",\"dweb:/ipfs/QmeCCoJuKygUCvMTs6V6svtwATcXqxczyXdioF24QzXyQu\"]},\"src/utils/FPGEvents.sol\":{\"keccak256\":\"0xd75518fc9bd35254c535df233849f5ffb4dacab0a2cbc0d490b5fe5c35b260e6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1808ed5507fad229a1d86c44e51b04778fc237717a12831adf363d46bc9e9f82\",\"dweb:/ipfs/QmepGENj2C1PR42BKQhXYvbNYUBZPB1XMXNBnT8pa8oemv\"]},\"src/utils/FPGModifiers.sol\":{\"keccak256\":\"0xdb4fa87df58dfb52dc3b6829cc908f9e9f8ddfc56c320b31b8def4de3297bd01\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1506e88816515abb6743c1e1f92ed627f4d3cec7466c836d652ab965792ff86e\",\"dweb:/ipfs/QmTsW2hNevzCWdqEBWkGhR7PDateX7ykQ47CafiePSdpNb\"]},\"src/utils/FPGStructs.sol\":{\"keccak256\":\"0x4b4a40070df2b6f21fee51c836bdb5226e8410f2e0decf554c84f2d8041a7696\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1bf21fedff6984b6de8c1e2ad01ebffbbd1899f555c56fe5d22ad17e29baf4fd\",\"dweb:/ipfs/QmeaPi6h2FLWd8gLTWxpvpQHihGQECgwpcLP9D6pgpusam\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.20+commit.a1b79de6"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "projectURL",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "addProject"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "projectURL",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "branchName",
+              "type": "bytes"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "fundFeature"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "projectURL",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "branchName",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getFeatureDetails",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes",
+              "name": "",
+              "type": "bytes"
+            },
+            {
+              "internalType": "uint40",
+              "name": "",
+              "type": "uint40"
+            },
+            {
+              "internalType": "uint40",
+              "name": "",
+              "type": "uint40"
+            },
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            },
+            {
+              "internalType": "enum FeatureStatus",
+              "name": "",
+              "type": "uint8"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "projectURL",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "getProjectDetails",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes[]",
+              "name": "",
+              "type": "bytes[]"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getProjectURLs",
+          "outputs": [
+            {
+              "internalType": "bytes[]",
+              "name": "",
+              "type": "bytes[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract StreamCreator",
+              "name": "sablier",
+              "type": "address"
+            },
+            {
+              "internalType": "bool",
+              "name": "revocable",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "initialize"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "projectURL",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "projectActive",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "projectURL",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "branchName",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "featureName",
+              "type": "bytes"
+            },
+            {
+              "internalType": "uint256",
+              "name": "startDate",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "duration",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "requestFeatureFunding"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "projectURL",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "branchName",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "startProject"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "projectURL",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "branchName",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "stopFundingFeature"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "projectURL",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "branchName",
+              "type": "bytes"
+            },
+            {
+              "internalType": "enum FeatureStatus",
+              "name": "status",
+              "type": "uint8"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "updateFeatureStatus"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "addProject(bytes)": {
+            "params": {
+              "projectURL": "The GitHub/Gitlab URL of the project to be listed."
+            }
+          },
+          "fundFeature(bytes,bytes,uint256)": {
+            "details": "Callers must approve the implementing contract to spend the [amount] tokens before using this function.Funding is streamed to the project owner based on the specified amount.",
+            "params": {
+              "amount": "The amount of funding in tokens.",
+              "branchName": "The branch name for the feature to fund.",
+              "projectURL": "The GitHub/Gitlab URL of the project to be listed."
+            }
+          },
+          "getFeatureDetails(bytes,bytes)": {
+            "params": {
+              "branchName": "The name of the branch containing the feature.",
+              "projectURL": "The GitHub/Gitlab URL of the project."
+            },
+            "returns": {
+              "_0": "The feature's name, start date, duration, total funding amount, and current status."
+            }
+          },
+          "getProjectDetails(bytes)": {
+            "params": {
+              "projectURL": "The GitHub/Gitlab URL of the project."
+            },
+            "returns": {
+              "_0": "The project's creator address and an array of branch names."
+            }
+          },
+          "initialize(address,bool)": {
+            "details": "Ideally, avoid front-running this initialization function.",
+            "params": {
+              "sablier": "The streaming contract responsible for creating linear streams."
+            }
+          },
+          "requestFeatureFunding(bytes,bytes,bytes,uint256,uint256)": {
+            "params": {
+              "branchName": "The name of the branch where the feature will be developed and tracked.",
+              "duration": "The duration of developing the feature.",
+              "featureName": "The name of the feature to request funding for.",
+              "projectURL": "The GitHub/Gitlab URL of the project to be listed.",
+              "startDate": "The start date for the feature development."
+            }
+          },
+          "startProject(bytes,bytes)": {
+            "params": {
+              "branchName": "The name of the initial branch for the project.",
+              "projectURL": "The GitHub/Gitlab URL of the project to be listed."
+            }
+          },
+          "stopFundingFeature(bytes,bytes)": {
+            "params": {
+              "branchName": "The branch name for the feature to stop funding.",
+              "projectURL": "The GitHub/Gitlab URL of the project to be listed."
+            }
+          },
+          "updateFeatureStatus(bytes,bytes,uint8)": {
+            "params": {
+              "branchName": "The branch name for the feature to update.",
+              "projectURL": "The GitHub/Gitlab URL of the project to be listed.",
+              "status": "The new status of the feature."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "addProject(bytes)": {
+            "notice": "Allows anyone to list their project on the FPG platform."
+          },
+          "fundFeature(bytes,bytes,uint256)": {
+            "notice": "Allows anyone to support a listed feature by contributing funds."
+          },
+          "getFeatureDetails(bytes,bytes)": {
+            "notice": "Retrieves detailed information about a specific feature within a project."
+          },
+          "getProjectDetails(bytes)": {
+            "notice": "Retrieves detailed information about a project."
+          },
+          "getProjectURLs()": {
+            "notice": "Retrieves the URLs of all projects listed on the platform."
+          },
+          "initialize(address,bool)": {
+            "notice": "Initializes the contract with the provided streaming contract."
+          },
+          "requestFeatureFunding(bytes,bytes,bytes,uint256,uint256)": {
+            "notice": "Allows the owner of a project to request funding for a specific feature."
+          },
+          "startProject(bytes,bytes)": {
+            "notice": "Starts a new project by listing it on the FPG platform."
+          },
+          "stopFundingFeature(bytes,bytes)": {
+            "notice": "Allows contributors to stop funding a feature, refunding the remaining amount not yet streamed."
+          },
+          "updateFeatureStatus(bytes,bytes,uint8)": {
+            "notice": "Allows the project creator to update the status of a funded feature."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "@prb/=node_modules/@prb/",
+        "@sablier/=node_modules/@sablier/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 10000
+      },
+      "metadata": {
+        "bytecodeHash": "none",
+        "appendCBOR": false
+      },
+      "compilationTarget": {
+        "src/interfaces/IFPG.sol": "IFPG"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+        "keccak256": "0x287b55befed2961a7eabd7d7b1b2839cbca8a5b80ef8dcbb25ed3d4c2002c305",
+        "urls": [
+          "bzz-raw://bd39944e8fc06be6dbe2dd1d8449b5336e23c6a7ba3e8e9ae5ae0f37f35283f5",
+          "dweb:/ipfs/QmPV3FGYjVwvKSgAXKUN3r9T9GwniZz83CxBpM7vyj2G53"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+        "keccak256": "0x5bce51e11f7d194b79ea59fe00c9e8de9fa2c5530124960f29a24d4c740a3266",
+        "urls": [
+          "bzz-raw://7e66dfde185df46104c11bc89d08fa0760737aa59a2b8546a656473d810a8ea4",
+          "dweb:/ipfs/QmXvyqtXPaPss2PD7eqPoSao5Szm2n6UMoiG8TZZDjmChR"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
+        "keccak256": "0x75b829ff2f26c14355d1cba20e16fe7b29ca58eb5fef665ede48bc0f9c6c74b9",
+        "urls": [
+          "bzz-raw://a0a107160525724f9e1bbbab031defc2f298296dd9e331f16a6f7130cec32146",
+          "dweb:/ipfs/QmemujxSd7gX8A9M8UwmNbz4Ms3U9FG9QfudUgxwvTmPWf"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+        "keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+        "urls": [
+          "bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+          "dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/Common.sol": {
+        "keccak256": "0x70b3a76443312b2c6c500996306a18e3d91e5d56fed0d898d98ca0bfb6225053",
+        "urls": [
+          "bzz-raw://be75b034b8c27e96b375e862528afb52a2d11e75c4a25918e10d7db31cdec039",
+          "dweb:/ipfs/QmQ4L3tvpDx2ophHRAW7Sc52QhVZzn4e5PKTgLwqt32F1B"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/SD59x18.sol": {
+        "keccak256": "0xff25fe75f8e77d4c839fbe69198d273039575fa72f31ce9725bcacb80db65461",
+        "urls": [
+          "bzz-raw://7ed7bc89a4efa33fc9392de8104c8af609fd3372b323d7824a6a3ae888bad3be",
+          "dweb:/ipfs/QmfCbW4geVSm7uJW4KUoXrejR2SywcRJrXwMBzUBWYiXJa"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/UD2x18.sol": {
+        "keccak256": "0xfb624e24cd8bb790fa08e7827819de85504a86e20e961fa4ad126c65b6d90641",
+        "urls": [
+          "bzz-raw://dd795b8df250e7eedc68e2dba1afbb60357ce8f22f21bed212b5a9046d2057d2",
+          "dweb:/ipfs/QmUHtrSr8Gb6bvSe2rCWPA5YrJq72UiJARYr1gZqFVRsYH"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/UD60x18.sol": {
+        "keccak256": "0xb98c6f74275914d279e8af6c502c2b1f50d5f6e1ed418d3b0153f5a193206c48",
+        "urls": [
+          "bzz-raw://a750edde2955f160806a51083a12185fb04e20efca0e3a7ebd127dc1acc049a9",
+          "dweb:/ipfs/QmeAre3mThopoQPB9mSXZq6jck59QZ7JbDFR83urd2SLvp"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd1x18/Casting.sol": {
+        "keccak256": "0x9e49e2b37c1bb845861740805edaaef3fe951a7b96eef16ce84fbf76e8278670",
+        "urls": [
+          "bzz-raw://d3f65f257f9f516f2b40ca30b1c999819777111bd59a92376df6c5823453165a",
+          "dweb:/ipfs/QmVQRKMS6ibv6x9qWXLJp2KZw9qs6Yz1sYZQWoSBQM8Pkz"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd1x18/Constants.sol": {
+        "keccak256": "0xb51aab4a2ea76f530dccbf3b7d4af24c8f3ceef67f3c574b58650466ea924a3f",
+        "urls": [
+          "bzz-raw://b9fccf58b2b69179a311f996f772d9bf255fd1d0de9ba69ab89b45ef81008770",
+          "dweb:/ipfs/QmTYE7xmFqUzQ2o8SmCpMu2GxkBJLjTtSWngoe7JXzsv2D"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd1x18/Errors.sol": {
+        "keccak256": "0x836cb42ba619ca369fd4765bc47fefc3c3621369c5861882af14660aca5057ee",
+        "urls": [
+          "bzz-raw://58873bcebf7398f63c6d3f234073fb6739fe4fae87428010cd0bc1aa68f53499",
+          "dweb:/ipfs/QmZSZ9z4ZQUGRc1TRiL2F9AL7ysnGRXwRtocMa2zhxHFDp"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd1x18/ValueType.sol": {
+        "keccak256": "0x2f86f1aa9fca42f40808b51a879b406ac51817647bdb9642f8a79dd8fdb754a7",
+        "urls": [
+          "bzz-raw://31559dfc012ebe40fcdb38c45e7edfa16406f11c6ea219e8676749f20dbbb5dd",
+          "dweb:/ipfs/QmXeYzF9hYQphVExJRp41Vkebrs51k7xgr3jXfKgdD87XC"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd59x18/Casting.sol": {
+        "keccak256": "0x3b21b60ec2998c3ae32f647412da51d3683b3f183a807198cc8d157499484f99",
+        "urls": [
+          "bzz-raw://08a49ba7ebf592a89e1a81e5987351e7810e371f4c3d2356d9b5a9b58462c809",
+          "dweb:/ipfs/QmcvyHaUzd74eYjcZWQgUDFJfYrU8kFohiB1H5cs8HgUDp"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd59x18/Constants.sol": {
+        "keccak256": "0xe0a1ca1a7b5b2d637cff83a8caa3d2e67a6a34f7ee9df58a9ca5d5fa268c474a",
+        "urls": [
+          "bzz-raw://3e9a6980e97a68f9148c350439bc0b3ca4126a4428752b151744097da3f650c8",
+          "dweb:/ipfs/QmVRJqG378u46dnvjgYkcLjnvHW8yNv5ijLoUWPMGQscuC"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd59x18/Conversions.sol": {
+        "keccak256": "0x9876a288dcbb2583c5361a3e60b5b30c7d4c89c8d2aa35364f2f521656d8db80",
+        "urls": [
+          "bzz-raw://c76a858b3462070671babff2d079f9368bc022017f34921092c93ee5751b99a5",
+          "dweb:/ipfs/QmYQqUodEny8uqQeqXwYU5GDsHPMEUz5HvGF2ChjbmDWbL"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd59x18/Errors.sol": {
+        "keccak256": "0x83ee24e41d235bc05cb641d2c5c16c67b17fa00e4593661a8d14350435d4df04",
+        "urls": [
+          "bzz-raw://40cedd66b7ba40126b2668c2fbe8ccd6ae88bd5853c205ac54f643e49acd31c1",
+          "dweb:/ipfs/QmWZz7bsQceUUzJiURQE5XtfzNW2Ammiz2WSNsZGxCYT7a"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd59x18/Helpers.sol": {
+        "keccak256": "0x208570f1657cf730cb6c3d81aa14030e0d45cf906cdedea5059369d7df4bb716",
+        "urls": [
+          "bzz-raw://4c78ca900edafa9338d4e3649a55ab0c84f76468d8a22fb945ba6d01e70f8fed",
+          "dweb:/ipfs/QmeP4hQYfNxcATd1FsasdD4ebyu2vrC9K1N68swxUJzzZD"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd59x18/Math.sol": {
+        "keccak256": "0xedd0635769176ab99878a91ce267cee2ca107b30e6b0db10736573ff4d102868",
+        "urls": [
+          "bzz-raw://51795a2077ea6f109656048530481bb10c7f2b29e868f9a02d7b134d1b30c787",
+          "dweb:/ipfs/Qmb9wBJ5vPtKNbiz9bbWz8Ufs6qLJWKanyg1zmRmSwUVze"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/sd59x18/ValueType.sol": {
+        "keccak256": "0xe03112d145dcd5863aff24e5f381debaae29d446acd5666f3d640e3d9af738d7",
+        "urls": [
+          "bzz-raw://abacb7cba4bd732c961cfe7d66c5eec924c7a9ffe0bf07fafc95b65a887071f6",
+          "dweb:/ipfs/QmSBefftoSJDMdmp5CFAVvJjPHJXHhd11x1FzkcHQxLjoT"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud2x18/Casting.sol": {
+        "keccak256": "0x07ec9a8adddfe6bf37f0d9ce7702c5620a6215340889701da0525ed190ccc099",
+        "urls": [
+          "bzz-raw://3500550c9ed259e5a876d14510d7e4a2226fac41e04535dddffaf9e3e6dc67e5",
+          "dweb:/ipfs/QmbA5y7zdqsFELeNPj1WgkP28GXBcnfYajj3E6nangJo2F"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud2x18/Constants.sol": {
+        "keccak256": "0xbd11da8ad79ffc8b7b8244c82632b0ca31970e190a8877ba1a69b4b8065dcea5",
+        "urls": [
+          "bzz-raw://f0d3d5cb4711d83e0fe654b8338b6685b6e9d9f234c645813533129ae48fa14b",
+          "dweb:/ipfs/QmZW47VmyizEwAxuv6tdeJmrMM58KvsiaRjidcBgqKg4CP"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud2x18/Errors.sol": {
+        "keccak256": "0xdf1e22f0b4c8032bcc8b7f63fe3984e1387f3dc7b2e9ab381822249f75376d33",
+        "urls": [
+          "bzz-raw://975f9beb25a1ebff9b29dd5555e1f4f14a4fbf178d15ebd3add5ed5f5985fdec",
+          "dweb:/ipfs/QmbvTvdtSrZi7J4sJuv6zUsymT5UctJnx4DkGezXW25r59"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud2x18/ValueType.sol": {
+        "keccak256": "0x2802edc9869db116a0b5c490cc5f8554742f747183fa30ac5e9c80bb967e61a1",
+        "urls": [
+          "bzz-raw://e9657724f5032559c953cba61db0fbca71f6b50f51edb53a08f840cb74a36c95",
+          "dweb:/ipfs/QmX2KF8v7ng13NaavyogM3SGR4jCMLUuqKkxFhtxvc7D7m"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud60x18/Casting.sol": {
+        "keccak256": "0x5bb532da36921cbdac64d1f16de5d366ef1f664502e3b7c07d0ad06917551f85",
+        "urls": [
+          "bzz-raw://f0819da49f6a86a1fc2ece8e8a4292f8d102dc1043a1d0a545c26d020d1f36fe",
+          "dweb:/ipfs/QmdzLoo99EBJv2GGiZZAAY8Bfr4ivFykzeSbpF48aJxFZ9"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud60x18/Constants.sol": {
+        "keccak256": "0x2b80d26153d3fdcfb3a9ca772d9309d31ed1275f5b8b54c3ffb54d3652b37d90",
+        "urls": [
+          "bzz-raw://7e3a6673a156f635db94dc176baaa7274db8f9bec4461cd1152596253550ee3b",
+          "dweb:/ipfs/Qmc9zT4kNSbMYaXcnbxNVqmb3P3m46ieaQxkwxqLwsvRA5"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud60x18/Conversions.sol": {
+        "keccak256": "0xaf7fc2523413822de3b66ba339fe2884fb3b8c6f6cf38ec90a2c3e3aae71df6b",
+        "urls": [
+          "bzz-raw://655c9fe2434ca039b67277d753a60d39f2938260c716a36d24b591acf8c4fb75",
+          "dweb:/ipfs/QmbygBAjCoFe9oUp9QkJ45jqctThk7VSmiSVLHV4Z3WHVe"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud60x18/Errors.sol": {
+        "keccak256": "0xa8c60d4066248df22c49c882873efbc017344107edabc48c52209abbc39cb1e3",
+        "urls": [
+          "bzz-raw://8fb7e1103309b4f99e95bb638850c0321272d57bd3e6b0a6331d699ff103cbaf",
+          "dweb:/ipfs/QmfLFHjVJv4ibEvMmh46qC5nCbeCYSfXgCTDWQqfW3jnyB"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud60x18/Helpers.sol": {
+        "keccak256": "0xf5faff881391d2c060029499a666cc5f0bea90a213150bb476fae8f02a5df268",
+        "urls": [
+          "bzz-raw://76105fa22bb1b5f1fa99abf9c4fbc9577a02c7bc204f271754c407f0d75489f5",
+          "dweb:/ipfs/QmVNGZSTniDuZus5DdbFubqJXCLtTaZit7YPm4ntjr5Lgr"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud60x18/Math.sol": {
+        "keccak256": "0xafe12d658b5bb495226df1841cbfbcb25e9fc443c6d41a85b5ac6aa7ec79ea29",
+        "urls": [
+          "bzz-raw://357d345f960581548f27fb43fb2320101033c053b949f5cb4d75390a058df205",
+          "dweb:/ipfs/QmYjQwVdwCWZDNkxUD4T1nwieP38o4HWtYUYjAmfpFpg3y"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@prb/math/src/ud60x18/ValueType.sol": {
+        "keccak256": "0xdd873b5124180d9b71498b3a7fe93b1c08c368bec741f7d5f8e17f78a0b70f31",
+        "urls": [
+          "bzz-raw://7df6700f747dd01b2520a900a8d6b5a4d239b8063c31384f40921afe22295c29",
+          "dweb:/ipfs/QmSPSPQJKNSzGJu2ri5EfWjcLfA2xDHfUehyBp4FpUu2qZ"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@sablier/v2-core/src/interfaces/IAdminable.sol": {
+        "keccak256": "0xecc2d5f08b737e1acd5f641de59b262831c520adf8cd7290d02efe39e0ae443e",
+        "urls": [
+          "bzz-raw://13c159aa3a2db6e2be6f2483c7e001dc84360220bdaf9a38247c213529a2d885",
+          "dweb:/ipfs/QmZTfUR2FTfnC3Rohe8ntEvDwyW3K3RfruHZ98Phi48BGH"
+        ],
+        "license": "GPL-3.0-or-later"
+      },
+      "node_modules/@sablier/v2-core/src/interfaces/ISablierV2Base.sol": {
+        "keccak256": "0xb12e58a05389c958f79ebe1667e167c1e0bb681a18ae534f5e454abbd66f6821",
+        "urls": [
+          "bzz-raw://1c57fabd0290e38c73c88cbf09ffe1675f3d9367fbba72ad647fbe729f5fd9f7",
+          "dweb:/ipfs/QmZ2ybkhNR8CzqMi5fwSUZodZ9otYBGR4pVDp7fk78KpAM"
+        ],
+        "license": "GPL-3.0-or-later"
+      },
+      "node_modules/@sablier/v2-core/src/interfaces/ISablierV2Comptroller.sol": {
+        "keccak256": "0xfe089975be90f0efeeafc9ac9dfa5c301ca1f5c178177ac5589a8483a0aa84a3",
+        "urls": [
+          "bzz-raw://c6b87d383df9fab91a62629107ebd44122d16de55a01c3996cbb155a1373bde7",
+          "dweb:/ipfs/QmTLfmcHJh8ZYbLai1oAkjBak9fpMnv3HDaGoMQd3wFcNF"
+        ],
+        "license": "GPL-3.0-or-later"
+      },
+      "node_modules/@sablier/v2-core/src/interfaces/ISablierV2Lockup.sol": {
+        "keccak256": "0x0e37a224e498775d0e541d93f3be6cd78d57399be99d9b4885ac038c49d8e774",
+        "urls": [
+          "bzz-raw://4d535aea117e7ff38552ccbbc9d435404a10299bab650e545c2c78a084aef246",
+          "dweb:/ipfs/QmR6J7tFnv3mCKEHJoumGjYAJNvVEx1kjaTxwRuK3YTugo"
+        ],
+        "license": "GPL-3.0-or-later"
+      },
+      "node_modules/@sablier/v2-core/src/interfaces/ISablierV2LockupLinear.sol": {
+        "keccak256": "0x84b5aa5b1ccf92a53cc767180d47b12b6e2a6cf6fa5c750fe24fb3f3f468bdb6",
+        "urls": [
+          "bzz-raw://272633f6592aa1b09be49b838335ea8f4a9872019864466a531b44acb62cac1c",
+          "dweb:/ipfs/QmZTBSSRhDzFihbhw7xefiWhTnP1sGfRKuxRe6iFMPCSE8"
+        ],
+        "license": "GPL-3.0-or-later"
+      },
+      "node_modules/@sablier/v2-core/src/interfaces/ISablierV2NFTDescriptor.sol": {
+        "keccak256": "0x35172718298221f3aac87424252e4eaf7480ce901fe9a7b92d8fdd871ecdad3a",
+        "urls": [
+          "bzz-raw://39d0d2d17d3f6ec4313a6313e85af2fd8a861930a8563a2b8e9ba1da099c6d73",
+          "dweb:/ipfs/QmQmKYkqnLJrfEyDT2YwiXyzhYG4SaHpu6gsaFePqp2hxV"
+        ],
+        "license": "GPL-3.0-or-later"
+      },
+      "node_modules/@sablier/v2-core/src/types/DataTypes.sol": {
+        "keccak256": "0x3b1d42a5fedf5e5de718aa289aec0f72ad7b1a0e2b16515460c24942a30e9694",
+        "urls": [
+          "bzz-raw://555451f8704595a0973ade27d8d199c363366ff6346c5425d156d332ea7bfb3b",
+          "dweb:/ipfs/QmYkAyestxNeonNgfPCKQkzKsproZV7U3UGhMX2TQumNr1"
+        ],
+        "license": "GPL-3.0-or-later"
+      },
+      "node_modules/@sablier/v2-core/src/types/Math.sol": {
+        "keccak256": "0xa87ebebeec7024b83e15bef3661a3ec88f60fee9b24e5d305431ad8fc4c0ed6e",
+        "urls": [
+          "bzz-raw://2347f6e3ebdfdbb8b21d0ecaa0d1e25f99273be72b046ce97e62cd2873200387",
+          "dweb:/ipfs/QmNdpJ9UEDbFHV6Z1Mnf7MxXyGxkDJC5Qz3UvFoB7P5iHL"
+        ],
+        "license": "GPL-3.0-or-later"
+      },
+      "node_modules/@sablier/v2-core/src/types/Tokens.sol": {
+        "keccak256": "0xde100e0fd6910ceb42761bf36dc952418b98138d4ce08f68ee5866940cd93407",
+        "urls": [
+          "bzz-raw://c95d2d8d04cdd86c59af181b7f65344f4abab468e160990ce0c9e5e580a1b430",
+          "dweb:/ipfs/QmUMRQ9VvRxrwbcY1nWkzRVoByWhL7Uo9v7W5TJ3bcVXcq"
+        ],
+        "license": "GPL-3.0-or-later"
+      },
+      "src/interfaces/IFPG.sol": {
+        "keccak256": "0x9c6973ea9c2580a9d907199c272c6fc561e84ed4efdb381393665d0710d16bd0",
+        "urls": [
+          "bzz-raw://6e7568d8c7a638539d869270047b761457072ef16bed3aa72f2ce2726a96706c",
+          "dweb:/ipfs/QmUNB3NMG9D25JWKDe4YG9ihSEGVpY3uvEUNmcJwMk4754"
+        ],
+        "license": "MIT"
+      },
+      "src/sablier/StreamCreator.sol": {
+        "keccak256": "0xc57b9527f70defb58225b61b69a4efd8284a35ddb021466cc168070e2dcddd3c",
+        "urls": [
+          "bzz-raw://53720bc3474397a713cc0eea2ee369285f21ce49f349729489b785e12f684dcb",
+          "dweb:/ipfs/QmWudpbX7NodPNJhGgaYcHibKAJqCd6yJ7WhNrTGhfHc2v"
+        ],
+        "license": "GPL-3.0-or-later"
+      },
+      "src/utils/FPGEnums.sol": {
+        "keccak256": "0xfb5203a9932dfa47baad44aee45d23ddc83a9d173cf1b150c42fce1bebdc3816",
+        "urls": [
+          "bzz-raw://c2f304d66187f60f89d12ee05ec3cff0c725c06e9b04595c3ad8de74f502490f",
+          "dweb:/ipfs/QmPJwrXbGUsk4AznKmGnzJrKsMBTkDKpNTAoy25YRsb3tM"
+        ],
+        "license": "MIT"
+      },
+      "src/utils/FPGErrors.sol": {
+        "keccak256": "0x0004ff47a8a27405e5e0726c1cce298f7474f71f3ca8df3128cc5a5e1fa4c7d3",
+        "urls": [
+          "bzz-raw://5cee60bfc6d67a3307325e47b5df338c4e6e643de8c01b6018185b05f3543bcc",
+          "dweb:/ipfs/QmeCCoJuKygUCvMTs6V6svtwATcXqxczyXdioF24QzXyQu"
+        ],
+        "license": "MIT"
+      },
+      "src/utils/FPGEvents.sol": {
+        "keccak256": "0xd75518fc9bd35254c535df233849f5ffb4dacab0a2cbc0d490b5fe5c35b260e6",
+        "urls": [
+          "bzz-raw://1808ed5507fad229a1d86c44e51b04778fc237717a12831adf363d46bc9e9f82",
+          "dweb:/ipfs/QmepGENj2C1PR42BKQhXYvbNYUBZPB1XMXNBnT8pa8oemv"
+        ],
+        "license": "MIT"
+      },
+      "src/utils/FPGModifiers.sol": {
+        "keccak256": "0xdb4fa87df58dfb52dc3b6829cc908f9e9f8ddfc56c320b31b8def4de3297bd01",
+        "urls": [
+          "bzz-raw://1506e88816515abb6743c1e1f92ed627f4d3cec7466c836d652ab965792ff86e",
+          "dweb:/ipfs/QmTsW2hNevzCWdqEBWkGhR7PDateX7ykQ47CafiePSdpNb"
+        ],
+        "license": "MIT"
+      },
+      "src/utils/FPGStructs.sol": {
+        "keccak256": "0x4b4a40070df2b6f21fee51c836bdb5226e8410f2e0decf554c84f2d8041a7696",
+        "urls": [
+          "bzz-raw://1bf21fedff6984b6de8c1e2ad01ebffbbd1899f555c56fe5d22ad17e29baf4fd",
+          "dweb:/ipfs/QmeaPi6h2FLWd8gLTWxpvpQHihGQECgwpcLP9D6pgpusam"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/interfaces/IFPG.sol",
+    "id": 62447,
+    "exportedSymbols": {
+      "CallerBanned": [
+        62876
+      ],
+      "FPGEvents": [
+        62952
+      ],
+      "FPGModifiers": [
+        62955
+      ],
+      "FPGProject": [
+        62972
+      ],
+      "FeatureCompleted": [
+        62892
+      ],
+      "FeatureDetail": [
+        62988
+      ],
+      "FeatureStatus": [
+        62872
+      ],
+      "IFPG": [
+        62446
+      ],
+      "InvalidBranchName": [
+        62884
+      ],
+      "InvalidFeatureName": [
+        62886
+      ],
+      "NonRefundable": [
+        62896
+      ],
+      "NotProjectOwner": [
+        62894
+      ],
+      "NotRefundAvailable": [
+        62890
+      ],
+      "ProjectAlreadyActive": [
+        62880
+      ],
+      "ProjectConculded": [
+        62888
+      ],
+      "ProjectNotActive": [
+        62882
+      ],
+      "StartDateNotReached": [
+        62898
+      ],
+      "StreamCreator": [
+        62665
+      ],
+      "ZeroAddress": [
+        62878
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:4677:102",
+    "nodes": [
+      {
+        "id": 62324,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:102",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 62325,
+        "nodeType": "ImportDirective",
+        "src": "58:32:102",
+        "nodes": [],
+        "absolutePath": "src/utils/FPGErrors.sol",
+        "file": "../utils/FPGErrors.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 62447,
+        "sourceUnit": 62899,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 62326,
+        "nodeType": "ImportDirective",
+        "src": "91:33:102",
+        "nodes": [],
+        "absolutePath": "src/utils/FPGStructs.sol",
+        "file": "../utils/FPGStructs.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 62447,
+        "sourceUnit": 62989,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 62327,
+        "nodeType": "ImportDirective",
+        "src": "125:32:102",
+        "nodes": [],
+        "absolutePath": "src/utils/FPGEvents.sol",
+        "file": "../utils/FPGEvents.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 62447,
+        "sourceUnit": 62953,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 62328,
+        "nodeType": "ImportDirective",
+        "src": "158:35:102",
+        "nodes": [],
+        "absolutePath": "src/utils/FPGModifiers.sol",
+        "file": "../utils/FPGModifiers.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 62447,
+        "sourceUnit": 62956,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 62330,
+        "nodeType": "ImportDirective",
+        "src": "194:52:102",
+        "nodes": [],
+        "absolutePath": "src/utils/FPGEnums.sol",
+        "file": "../utils/FPGEnums.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 62447,
+        "sourceUnit": 62873,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 62329,
+              "name": "FeatureStatus",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 62872,
+              "src": "202:13:102",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 62332,
+        "nodeType": "ImportDirective",
+        "src": "247:59:102",
+        "nodes": [],
+        "absolutePath": "src/sablier/StreamCreator.sol",
+        "file": "../sablier/StreamCreator.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 62447,
+        "sourceUnit": 62666,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 62331,
+              "name": "StreamCreator",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 62665,
+              "src": "255:13:102",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 62446,
+        "nodeType": "ContractDefinition",
+        "src": "633:4075:102",
+        "nodes": [
+          {
+            "id": 62339,
+            "nodeType": "FunctionDefinition",
+            "src": "804:54:102",
+            "nodes": [],
+            "documentation": {
+              "id": 62334,
+              "nodeType": "StructuredDocumentation",
+              "src": "654:145:102",
+              "text": "@notice Allows anyone to list their project on the FPG platform.\n @param projectURL The GitHub/Gitlab URL of the project to be listed."
+            },
+            "functionSelector": "1469df34",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addProject",
+            "nameLocation": "813:10:102",
+            "parameters": {
+              "id": 62337,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 62336,
+                  "mutability": "mutable",
+                  "name": "projectURL",
+                  "nameLocation": "837:10:102",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62339,
+                  "src": "824:23:102",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 62335,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "824:5:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "823:25:102"
+            },
+            "returnParameters": {
+              "id": 62338,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "857:0:102"
+            },
+            "scope": 62446,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 62353,
+            "nodeType": "FunctionDefinition",
+            "src": "1336:199:102",
+            "nodes": [],
+            "documentation": {
+              "id": 62340,
+              "nodeType": "StructuredDocumentation",
+              "src": "864:467:102",
+              "text": "@notice Allows the owner of a project to request funding for a specific feature.\n @param projectURL The GitHub/Gitlab URL of the project to be listed.\n @param branchName The name of the branch where the feature will be developed and tracked.\n @param featureName The name of the feature to request funding for.\n @param startDate The start date for the feature development.\n @param duration The duration of developing the feature."
+            },
+            "functionSelector": "715ef953",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "requestFeatureFunding",
+            "nameLocation": "1345:21:102",
+            "parameters": {
+              "id": 62351,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 62342,
+                  "mutability": "mutable",
+                  "name": "projectURL",
+                  "nameLocation": "1389:10:102",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62353,
+                  "src": "1376:23:102",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 62341,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1376:5:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62344,
+                  "mutability": "mutable",
+                  "name": "branchName",
+                  "nameLocation": "1422:10:102",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62353,
+                  "src": "1409:23:102",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 62343,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1409:5:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62346,
+                  "mutability": "mutable",
+                  "name": "featureName",
+                  "nameLocation": "1455:11:102",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62353,
+                  "src": "1442:24:102",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 62345,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1442:5:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62348,
+                  "mutability": "mutable",
+                  "name": "startDate",
+                  "nameLocation": "1484:9:102",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62353,
+                  "src": "1476:17:102",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 62347,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1476:7:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62350,
+                  "mutability": "mutable",
+                  "name": "duration",
+                  "nameLocation": "1511:8:102",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62353,
+                  "src": "1503:16:102",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 62349,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1503:7:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1366:159:102"
+            },
+            "returnParameters": {
+              "id": 62352,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1534:0:102"
+            },
+            "scope": 62446,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 62363,
+            "nodeType": "FunctionDefinition",
+            "src": "2023:126:102",
+            "nodes": [],
+            "documentation": {
+              "id": 62354,
+              "nodeType": "StructuredDocumentation",
+              "src": "1541:477:102",
+              "text": "@notice Allows anyone to support a listed feature by contributing funds.\n @param projectURL The GitHub/Gitlab URL of the project to be listed.\n @param branchName The branch name for the feature to fund.\n @param amount The amount of funding in tokens.\n @dev Callers must approve the implementing contract to spend the [amount] tokens before using this function.\n @dev Funding is streamed to the project owner based on the specified amount."
+            },
+            "functionSelector": "95ef6a66",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "fundFeature",
+            "nameLocation": "2032:11:102",
+            "parameters": {
+              "id": 62361,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 62356,
+                  "mutability": "mutable",
+                  "name": "projectURL",
+                  "nameLocation": "2066:10:102",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62363,
+                  "src": "2053:23:102",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 62355,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2053:5:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62358,
+                  "mutability": "mutable",
+                  "name": "branchName",
+                  "nameLocation": "2099:10:102",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62363,
+                  "src": "2086:23:102",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 62357,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2086:5:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62360,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "2127:6:102",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62363,
+                  "src": "2119:14:102",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 62359,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2119:7:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2043:96:102"
+            },
+            "returnParameters": {
+              "id": 62362,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2148:0:102"
+            },
+            "scope": 62446,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 62371,
+            "nodeType": "FunctionDefinition",
+            "src": "2419:109:102",
+            "nodes": [],
+            "documentation": {
+              "id": 62364,
+              "nodeType": "StructuredDocumentation",
+              "src": "2155:259:102",
+              "text": "@notice Allows contributors to stop funding a feature, refunding the remaining amount not yet streamed.\n @param projectURL The GitHub/Gitlab URL of the project to be listed.\n @param branchName The branch name for the feature to stop funding."
+            },
+            "functionSelector": "ef2dc01a",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "stopFundingFeature",
+            "nameLocation": "2428:18:102",
+            "parameters": {
+              "id": 62369,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 62366,
+                  "mutability": "mutable",
+                  "name": "projectURL",
+                  "nameLocation": "2469:10:102",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62371,
+                  "src": "2456:23:102",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 62365,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2456:5:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62368,
+                  "mutability": "mutable",
+                  "name": "branchName",
+                  "nameLocation": "2502:10:102",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62371,
+                  "src": "2489:23:102",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 62367,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2489:5:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2446:72:102"
+            },
+            "returnParameters": {
+              "id": 62370,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2527:0:102"
+            },
+            "scope": 62446,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 62382,
+            "nodeType": "FunctionDefinition",
+            "src": "2818:140:102",
+            "nodes": [],
+            "documentation": {
+              "id": 62372,
+              "nodeType": "StructuredDocumentation",
+              "src": "2534:279:102",
+              "text": "@notice Allows the project creator to update the status of a funded feature.\n @param projectURL The GitHub/Gitlab URL of the project to be listed.\n @param branchName The branch name for the feature to update.\n @param status The new status of the feature."
+            },
+            "functionSelector": "3e79fb1c",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updateFeatureStatus",
+            "nameLocation": "2827:19:102",
+            "parameters": {
+              "id": 62380,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 62374,
+                  "mutability": "mutable",
+                  "name": "projectURL",
+                  "nameLocation": "2869:10:102",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62382,
+                  "src": "2856:23:102",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 62373,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2856:5:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62376,
+                  "mutability": "mutable",
+                  "name": "branchName",
+                  "nameLocation": "2902:10:102",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62382,
+                  "src": "2889:23:102",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 62375,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2889:5:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62379,
+                  "mutability": "mutable",
+                  "name": "status",
+                  "nameLocation": "2936:6:102",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62382,
+                  "src": "2922:20:102",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_FeatureStatus_$62872",
+                    "typeString": "enum FeatureStatus"
+                  },
+                  "typeName": {
+                    "id": 62378,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 62377,
+                      "name": "FeatureStatus",
+                      "nameLocations": [
+                        "2922:13:102"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 62872,
+                      "src": "2922:13:102"
+                    },
+                    "referencedDeclaration": 62872,
+                    "src": "2922:13:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_FeatureStatus_$62872",
+                      "typeString": "enum FeatureStatus"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2846:102:102"
+            },
+            "returnParameters": {
+              "id": 62381,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2957:0:102"
+            },
+            "scope": 62446,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 62391,
+            "nodeType": "FunctionDefinition",
+            "src": "3202:68:102",
+            "nodes": [],
+            "documentation": {
+              "id": 62383,
+              "nodeType": "StructuredDocumentation",
+              "src": "2964:233:102",
+              "text": "@notice Initializes the contract with the provided streaming contract.\n @dev Ideally, avoid front-running this initialization function.\n @param sablier The streaming contract responsible for creating linear streams."
+            },
+            "functionSelector": "400ada75",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initialize",
+            "nameLocation": "3211:10:102",
+            "parameters": {
+              "id": 62389,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 62386,
+                  "mutability": "mutable",
+                  "name": "sablier",
+                  "nameLocation": "3236:7:102",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62391,
+                  "src": "3222:21:102",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_StreamCreator_$62665",
+                    "typeString": "contract StreamCreator"
+                  },
+                  "typeName": {
+                    "id": 62385,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 62384,
+                      "name": "StreamCreator",
+                      "nameLocations": [
+                        "3222:13:102"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 62665,
+                      "src": "3222:13:102"
+                    },
+                    "referencedDeclaration": 62665,
+                    "src": "3222:13:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_StreamCreator_$62665",
+                      "typeString": "contract StreamCreator"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62388,
+                  "mutability": "mutable",
+                  "name": "revocable",
+                  "nameLocation": "3250:9:102",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62391,
+                  "src": "3245:14:102",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 62387,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3245:4:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3221:39:102"
+            },
+            "returnParameters": {
+              "id": 62390,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3269:0:102"
+            },
+            "scope": 62446,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 62399,
+            "nodeType": "FunctionDefinition",
+            "src": "3499:103:102",
+            "nodes": [],
+            "documentation": {
+              "id": 62392,
+              "nodeType": "StructuredDocumentation",
+              "src": "3276:218:102",
+              "text": "@notice Starts a new project by listing it on the FPG platform.\n @param projectURL The GitHub/Gitlab URL of the project to be listed.\n @param branchName The name of the initial branch for the project."
+            },
+            "functionSelector": "645ced52",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "startProject",
+            "nameLocation": "3508:12:102",
+            "parameters": {
+              "id": 62397,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 62394,
+                  "mutability": "mutable",
+                  "name": "projectURL",
+                  "nameLocation": "3543:10:102",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62399,
+                  "src": "3530:23:102",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 62393,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3530:5:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62396,
+                  "mutability": "mutable",
+                  "name": "branchName",
+                  "nameLocation": "3576:10:102",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62399,
+                  "src": "3563:23:102",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 62395,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3563:5:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3520:72:102"
+            },
+            "returnParameters": {
+              "id": 62398,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3601:0:102"
+            },
+            "scope": 62446,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 62406,
+            "nodeType": "FunctionDefinition",
+            "src": "3683:65:102",
+            "nodes": [],
+            "documentation": {
+              "id": 62400,
+              "nodeType": "StructuredDocumentation",
+              "src": "3608:70:102",
+              "text": "@notice Retrieves the URLs of all projects listed on the platform."
+            },
+            "functionSelector": "33df4804",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getProjectURLs",
+            "nameLocation": "3692:14:102",
+            "parameters": {
+              "id": 62401,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3706:2:102"
+            },
+            "returnParameters": {
+              "id": 62405,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 62404,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62406,
+                  "src": "3732:14:102",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "bytes[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 62402,
+                      "name": "bytes",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "3732:5:102",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_storage_ptr",
+                        "typeString": "bytes"
+                      }
+                    },
+                    "id": 62403,
+                    "nodeType": "ArrayTypeName",
+                    "src": "3732:7:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes_storage_$dyn_storage_ptr",
+                      "typeString": "bytes[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3731:16:102"
+            },
+            "scope": 62446,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 62417,
+            "nodeType": "FunctionDefinition",
+            "src": "3958:109:102",
+            "nodes": [],
+            "documentation": {
+              "id": 62407,
+              "nodeType": "StructuredDocumentation",
+              "src": "3754:199:102",
+              "text": "@notice Retrieves detailed information about a project.\n @param projectURL The GitHub/Gitlab URL of the project.\n @return The project's creator address and an array of branch names."
+            },
+            "functionSelector": "0f3326a7",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getProjectDetails",
+            "nameLocation": "3967:17:102",
+            "parameters": {
+              "id": 62410,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 62409,
+                  "mutability": "mutable",
+                  "name": "projectURL",
+                  "nameLocation": "4007:10:102",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62417,
+                  "src": "3994:23:102",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 62408,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3994:5:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3984:39:102"
+            },
+            "returnParameters": {
+              "id": 62416,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 62412,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62417,
+                  "src": "4042:7:102",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 62411,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4042:7:102",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62415,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62417,
+                  "src": "4051:14:102",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "bytes[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 62413,
+                      "name": "bytes",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "4051:5:102",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_storage_ptr",
+                        "typeString": "bytes"
+                      }
+                    },
+                    "id": 62414,
+                    "nodeType": "ArrayTypeName",
+                    "src": "4051:7:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes_storage_$dyn_storage_ptr",
+                      "typeString": "bytes[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4041:25:102"
+            },
+            "scope": 62446,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 62438,
+            "nodeType": "FunctionDefinition",
+            "src": "4400:209:102",
+            "nodes": [],
+            "documentation": {
+              "id": 62418,
+              "nodeType": "StructuredDocumentation",
+              "src": "4073:322:102",
+              "text": "@notice Retrieves detailed information about a specific feature within a project.\n @param projectURL The GitHub/Gitlab URL of the project.\n @param branchName The name of the branch containing the feature.\n @return The feature's name, start date, duration, total funding amount, and current status."
+            },
+            "functionSelector": "b5895e62",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getFeatureDetails",
+            "nameLocation": "4409:17:102",
+            "parameters": {
+              "id": 62423,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 62420,
+                  "mutability": "mutable",
+                  "name": "projectURL",
+                  "nameLocation": "4449:10:102",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62438,
+                  "src": "4436:23:102",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 62419,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4436:5:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62422,
+                  "mutability": "mutable",
+                  "name": "branchName",
+                  "nameLocation": "4482:10:102",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62438,
+                  "src": "4469:23:102",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 62421,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4469:5:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4426:72:102"
+            },
+            "returnParameters": {
+              "id": 62437,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 62425,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62438,
+                  "src": "4546:7:102",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 62424,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4546:7:102",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62427,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62438,
+                  "src": "4555:12:102",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 62426,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4555:5:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62429,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62438,
+                  "src": "4569:6:102",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  },
+                  "typeName": {
+                    "id": 62428,
+                    "name": "uint40",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4569:6:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint40",
+                      "typeString": "uint40"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62431,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62438,
+                  "src": "4577:6:102",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  },
+                  "typeName": {
+                    "id": 62430,
+                    "name": "uint40",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4577:6:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint40",
+                      "typeString": "uint40"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62433,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62438,
+                  "src": "4585:7:102",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 62432,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4585:7:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62436,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62438,
+                  "src": "4594:13:102",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_FeatureStatus_$62872",
+                    "typeString": "enum FeatureStatus"
+                  },
+                  "typeName": {
+                    "id": 62435,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 62434,
+                      "name": "FeatureStatus",
+                      "nameLocations": [
+                        "4594:13:102"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 62872,
+                      "src": "4594:13:102"
+                    },
+                    "referencedDeclaration": 62872,
+                    "src": "4594:13:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_FeatureStatus_$62872",
+                      "typeString": "enum FeatureStatus"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4545:63:102"
+            },
+            "scope": 62446,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 62445,
+            "nodeType": "FunctionDefinition",
+            "src": "4615:91:102",
+            "nodes": [],
+            "functionSelector": "af1b49f5",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "projectActive",
+            "nameLocation": "4624:13:102",
+            "parameters": {
+              "id": 62441,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 62440,
+                  "mutability": "mutable",
+                  "name": "projectURL",
+                  "nameLocation": "4660:10:102",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62445,
+                  "src": "4647:23:102",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 62439,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4647:5:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4637:39:102"
+            },
+            "returnParameters": {
+              "id": 62444,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 62443,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62445,
+                  "src": "4700:4:102",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 62442,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4700:4:102",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4699:6:102"
+            },
+            "scope": 62446,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IFPG",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 62333,
+          "nodeType": "StructuredDocumentation",
+          "src": "308:325:102",
+          "text": "@title IFPG - Funding Platform for GitHub Projects\n @author brianspha\n @notice Interface defining functions required for managing projects and funding features on the FPG platform\n @dev This interface enables users to list projects, request funding for specific features, and contribute funds to those features."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          62446
+        ],
+        "name": "IFPG",
+        "nameLocation": "643:4:102",
+        "scope": 62447,
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 102
+}
